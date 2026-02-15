@@ -1,0 +1,88 @@
+@use "../styles/variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap");
+@import "bootstrap/dist/css/bootstrap-grid.min.css";
+@import "bootstrap/dist/css/bootstrap-utilities.min.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bg-base;
+  color: $text-primary;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Nunito", system-ui, sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0;
+  color: $text-primary;
+}
+
+a {
+  color: $accent;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent-hover;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Scroll reveal
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// Section base
+.section {
+  padding: $section-py 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-py-mobile 0;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  letter-spacing: -0.025em;
+
+  @media (max-width: 767.98px) {
+    font-size: 1.85rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: $text-secondary;
+}

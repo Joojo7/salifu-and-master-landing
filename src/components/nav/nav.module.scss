@@ -1,0 +1,128 @@
+@use "../../styles/variables" as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+.scrolled {
+  background-color: rgba($bg-base, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid $border-default;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  width: 80px;
+  height: auto;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 0.875rem;
+  color: $text-secondary;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.cta {
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: $accent;
+  color: $bg-base;
+  padding: 0.5rem 1.25rem;
+  border-radius: $radius-sm;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    color: $bg-base;
+    background: $accent-hover;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: $text-primary;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}
+
+.active {
+  span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  span:nth-child(2) {
+    opacity: 0;
+  }
+
+  span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 300px;
+    height: 100dvh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    background: rgba($bg-base, 0.98);
+    backdrop-filter: blur(20px);
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .open {
+    right: 0;
+  }
+
+  .link {
+    font-size: 1.1rem;
+  }
+}

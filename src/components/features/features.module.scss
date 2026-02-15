@@ -1,0 +1,95 @@
+@use "../../styles/variables" as *;
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: $section-py 0;
+
+  @media (max-width: 767.98px) {
+    padding: $section-py-mobile 0;
+  }
+}
+
+.bgImage {
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba($bg-base, 0.7) 0%,
+    rgba($bg-base, 0.5) 40%,
+    rgba($bg-base, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.heading {
+  position: relative;
+  z-index: 2;
+  font-size: 2.5rem;
+  letter-spacing: -0.025em;
+  color: $text-primary;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+
+  @media (max-width: 767.98px) {
+    font-size: 1.85rem;
+  }
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background: rgba($bg-card, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: $radius-md;
+  padding: 1.75rem 1.25rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border-color: $accent;
+    transform: translateY(-4px);
+  }
+}
+
+.icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-size: 1rem;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 767.98px) {
+  .card {
+    padding: 1.25rem 1rem;
+  }
+
+  .cardTitle {
+    font-size: 0.9rem;
+  }
+
+  .cardDescription {
+    font-size: 0.8rem;
+  }
+}

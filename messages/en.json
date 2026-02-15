@@ -1,0 +1,188 @@
+{
+  "Metadata": {
+    "title": "Salifu & Master",
+    "description": "Pick up passengers. Make your sales. Survive the streets. A trotro driving game set in West Africa."
+  },
+  "Nav": {
+    "logo": "Salifu & Master",
+    "features": "Features",
+    "characters": "Characters",
+    "routes": "Routes",
+    "trailer": "Trailer",
+    "joinWaitlist": "Join Waitlist"
+  },
+  "Hero": {
+    "title": "Salifu & Master",
+    "tagline": "Pick up passengers. Make your sales. Survive the streets.",
+    "primaryCta": "Join the Waitlist",
+    "secondaryCta": "Watch Trailer"
+  },
+  "GameConcept": {
+    "pitch": "You're a trotro mate \u2014 a bus conductor hustling through the city. Pick up passengers, dodge traffic, manage your health, and make your sales before the day ends.",
+    "cards": {
+      "drive": {
+        "title": "Drive",
+        "description": "Navigate the city's busiest routes in your trotro"
+      },
+      "hustle": {
+        "title": "Hustle",
+        "description": "Pick up passengers, collect fares, meet your daily target"
+      },
+      "survive": {
+        "title": "Survive",
+        "description": "Manage hunger, health & sanity while Master watches"
+      }
+    }
+  },
+  "GameplayShowcase": {
+    "title": "See It In Action",
+    "subtitle": "Gameplay trailer and screenshots",
+    "trailerComingSoon": "Trailer Coming Soon",
+    "captions": {
+      "0": "Navigate busy city routes",
+      "1": "Pick up passengers at stops",
+      "2": "Buy food from Amelia",
+      "3": "Visit Serwaa for sanity",
+      "4": "Manage your vital stats",
+      "5": "Earn stars at day end"
+    }
+  },
+  "Characters": {
+    "title": "Meet the Cast",
+    "characters": {
+      "salifu": {
+        "name": "Salifu",
+        "role": "The Mate",
+        "description": "You. A trotro mate hustling the streets to make your daily sales."
+      },
+      "masterKofi": {
+        "name": "Master Kofi",
+        "role": "The Driver",
+        "description": "Your boss. He takes his cut \u2014 and he's watching your every move."
+      },
+      "serwaa": {
+        "name": "Serwaa",
+        "role": "The Girlfriend",
+        "description": "Your peace of mind. Visit her to restore your sanity \u2014 but it'll cost you."
+      },
+      "amelia": {
+        "name": "Amelia",
+        "role": "The Food Vendor",
+        "description": "\"Charley! You dey hungry?\" Waakye and Jollof to keep you going."
+      }
+    }
+  },
+  "RoutesSection": {
+    "title": "5 Routes. One City. Endless Hustle.",
+    "subtitle": "Season 1: Accra, Ghana",
+    "teaser": "More cities coming soon...",
+    "stopsLabel": "{count} stops",
+    "targetLabel": "Target: {amount} GHS",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "routes": {
+      "madinaKaneshie": {
+        "name": "Madina \u2192 Kaneshie",
+        "description": "The classic route through Accra's heart. Perfect for learning the trade."
+      },
+      "madinaTema": {
+        "name": "Madina \u2192 Tema",
+        "description": "The eastern corridor to Ghana's port city. Through Adenta and Spintex Road."
+      },
+      "lapazAchimota": {
+        "name": "Lapaz \u2192 Achimota",
+        "description": "Busy commercial stretch. More passengers, tighter windows."
+      },
+      "temaAshaiman": {
+        "name": "Tema \u2192 Ashaiman",
+        "description": "Industrial corridor. High fares, but unforgiving. Only veterans survive."
+      },
+      "kasoaMallam": {
+        "name": "Kasoa \u2192 Mallam",
+        "description": "The legendary gauntlet. Traffic chaos, desperate passengers, glory awaits."
+      }
+    }
+  },
+  "Features": {
+    "title": "Why You'll Love It",
+    "features": {
+      "threeMinuteRounds": {
+        "title": "3-Minute Rounds",
+        "description": "Quick, intense gameplay loops you can play anywhere."
+      },
+      "authenticCulture": {
+        "title": "Authentic Culture",
+        "description": "Real streets, real food, real language."
+      },
+      "upgradeTrotro": {
+        "title": "Upgrade Your Trotro",
+        "description": "3 vehicles and 12+ upgrades to unlock."
+      },
+      "meetCharacters": {
+        "title": "Meet the Characters",
+        "description": "Your girlfriend, your boss, the vendors \u2014 all with personality."
+      },
+      "earnStars": {
+        "title": "Earn Stars",
+        "description": "3-star rating system with deep progression."
+      },
+      "achievements": {
+        "title": "Achievements",
+        "description": "20+ achievements to hunt across every route."
+      }
+    }
+  },
+  "HowToPlay": {
+    "title": "How to Play",
+    "steps": {
+      "1": {
+        "title": "Pick a Route",
+        "description": "Choose from 5 routes across the city, each with unique challenges."
+      },
+      "2": {
+        "title": "Pick Up Passengers",
+        "description": "Tap to pick up and drop off passengers at each stop. Collect your fares."
+      },
+      "3": {
+        "title": "Make Your Sales",
+        "description": "Meet your daily target before time runs out. Earn stars and level up."
+      }
+    }
+  },
+  "CtaBanner": {
+    "heading": "Your trotro is waiting.",
+    "subtext": "Free. No download. Play in your browser.",
+    "cta": "Join the Waitlist"
+  },
+  "Waitlist": {
+    "title": "Be the First to Play",
+    "subtitle": "Join the waitlist and we'll let you know when the game launches.",
+    "placeholder": "Enter your email",
+    "submitButton": "Join",
+    "loadingButton": "Joining...",
+    "successIcon": "\uD83C\uDF89",
+    "successTitle": "You're on the list!",
+    "successMessage": "We'll let you know when the game launches.",
+    "privacy": "We'll only email you about the launch. No spam.",
+    "errorFallback": "Something went wrong"
+  },
+  "Footer": {
+    "logo": "Salifu & Master",
+    "badge": "Made in West Africa",
+    "copyright": "\u00A9 {year} Salifu & Master. All rights reserved.",
+    "links": {
+      "about": "About",
+      "pressKit": "Press Kit",
+      "contact": "Contact"
+    },
+    "social": {
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "tiktok": "TikTok",
+      "discord": "Discord"
+    }
+  }
+}

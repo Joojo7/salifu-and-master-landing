@@ -1,0 +1,32 @@
+@use "../../styles/variables" as *;
+
+.step {
+  padding: 1.5rem;
+}
+
+.stepNumber {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: $accent;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  background: $accent-light;
+  border-radius: $radius-sm;
+}
+
+.stepTitle {
+  font-size: 1.15rem;
+  color: $text-primary;
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  font-size: 0.9rem;
+  color: $text-secondary;
+  margin: 0;
+  line-height: 1.6;
+}
