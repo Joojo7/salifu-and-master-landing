@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { NAV_LINK_HREFS, LOGO_SRC } from "@/lib/constants";
+import { NAV_LINK_HREFS, NAV_LOGO_SRC } from "@/lib/constants";
 import styles from "./nav.module.scss";
 
 export function Nav() {
@@ -24,7 +24,7 @@ export function Nav() {
       <div className="container d-flex align-items-center justify-content-between">
         <a href="#" className={styles.logo}>
           <Image
-            src={LOGO_SRC}
+            src={NAV_LOGO_SRC}
             alt={t("logo")}
             width={80}
             height={30}
@@ -33,6 +33,13 @@ export function Nav() {
         </a>
 
         <div className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
+          <button
+            className={styles.close}
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
           {NAV_LINK_HREFS.map((link) => (
             <a
               key={link.href}

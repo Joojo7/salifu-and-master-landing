@@ -3,6 +3,7 @@ export const GAME_URL = "https://play.salifuandmaster.com";
 
 export const HERO_BANNER_SRC = "/assets/all-character-hero-banner.png";
 export const LOGO_SRC = "/assets/hero-logo.png";
+export const NAV_LOGO_SRC = "/assets/short-logo.png";
 export const PLAY_BUTTON_SRC = "/assets/hero-play-button.png";
 export const CHARACTERS_BANNER_SRC =
   "/assets/amelia-holding-food-serwaa-holding-food.png";
@@ -18,10 +19,10 @@ export const NAV_LINK_HREFS = [
 
 export const CONCEPT_CARD_KEYS = ["drive", "hustle", "survive"] as const;
 
-export const CONCEPT_ICON_MAP: Record<string, string> = {
-  drive: "\uD83D\uDE8C",
-  hustle: "\uD83D\uDCB0",
-  survive: "\u2764\uFE0F",
+export const CONCEPT_IMAGE_MAP: Record<string, string> = {
+  drive: "/assets/drive-grahpic.png",
+  hustle: "/assets/Hustle-graphic.png",
+  survive: "/assets/survive-graphic.png",
 };
 
 export const CHARACTER_KEYS = [
