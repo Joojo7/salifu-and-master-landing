@@ -8,7 +8,6 @@ import { RoutesSection } from "@/components/routes-section/routes-section";
 import { Features } from "@/components/features/features";
 import { HowToPlay } from "@/components/how-to-play/how-to-play";
 import { CtaBanner } from "@/components/cta-banner/cta-banner";
-import { Waitlist } from "@/components/waitlist/waitlist";
 import { Footer } from "@/components/footer/footer";
 import { ScrollReveal } from "@/components/scroll-reveal/scroll-reveal";
 
@@ -44,9 +43,6 @@ export default async function Home({ params }: Props) {
           <HowToPlay />
         </ScrollReveal>
         <CtaBanner />
-        <ScrollReveal>
-          <Waitlist />
-        </ScrollReveal>
       </main>
       <Footer />
     </>

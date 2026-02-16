@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { NAV_LINK_HREFS, NAV_LOGO_SRC } from "@/lib/constants";
+import { NAV_LINK_HREFS, NAV_LOGO_SRC, GAME_URL } from "@/lib/constants";
 import styles from "./nav.module.scss";
 
 export function Nav() {
@@ -51,11 +51,11 @@ export function Nav() {
             </a>
           ))}
           <a
-            href="#waitlist"
+            href={GAME_URL}
             className={styles.cta}
             onClick={handleLinkClick}
           >
-            {t("joinWaitlist")}
+            {t("play")}
           </a>
         </div>
 

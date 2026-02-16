@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { SCREENSHOT_COUNT, PLAY_BUTTON_SRC } from "@/lib/constants";
+import { SCREENSHOT_DATA, PLAY_BUTTON_SRC } from "@/lib/constants";
 import styles from "./gameplay-showcase.module.scss";
 
 export async function GameplayShowcase() {
@@ -26,11 +26,15 @@ export async function GameplayShowcase() {
         </div>
 
         <div className={styles.gallery}>
-          {Array.from({ length: SCREENSHOT_COUNT }, (_, i) => (
-            <div key={i} className={styles.screenshotSlot}>
-              <div className={styles.placeholder}>
-                <span className={styles.placeholderIcon}>&#128247;</span>
-              </div>
+          {SCREENSHOT_DATA.map((src, i) => (
+            <div key={src} className={styles.screenshotSlot}>
+              <Image
+                src={src}
+                alt={t(`captions.${i}`)}
+                width={520}
+                height={325}
+                className={styles.screenshot}
+              />
               <p className={styles.caption}>{t(`captions.${i}`)}</p>
             </div>
           ))}

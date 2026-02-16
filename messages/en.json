@@ -9,13 +9,12 @@
     "characters": "Characters",
     "routes": "Routes",
     "trailer": "Trailer",
-    "joinWaitlist": "Join Waitlist"
+    "play": "Play"
   },
   "Hero": {
     "title": "Salifu & Master",
     "tagline": "Pick up passengers. Make your sales. Survive the streets.",
-    "primaryCta": "Join the Waitlist",
-    "secondaryCta": "Watch Trailer"
+    "playCta": "Play Now"
   },
   "GameConcept": {
     "pitch": "You're a trotro mate \u2014 a bus conductor hustling through the city. Pick up passengers, dodge traffic, manage your health, and make your sales before the day ends.",
@@ -69,40 +68,33 @@
         "name": "Amelia",
         "role": "The Food Vendor",
         "description": "\"Charley! You dey hungry?\" Waakye and Jollof to keep you going."
+      },
+      "drPanie": {
+        "name": "Dr. Panie",
+        "role": "The Doctor",
+        "description": "Patch yourself up when the streets take their toll. Health comes at a price."
       }
     }
   },
   "RoutesSection": {
-    "title": "5 Routes. One City. Endless Hustle.",
-    "subtitle": "Season 1: Accra, Ghana",
-    "teaser": "More cities coming soon...",
-    "stopsLabel": "{count} stops",
-    "targetLabel": "Target: {amount} GHS",
-    "difficulty": {
-      "easy": "Easy",
-      "medium": "Medium",
-      "hard": "Hard"
-    },
-    "routes": {
-      "madinaKaneshie": {
-        "name": "Madina \u2192 Kaneshie",
-        "description": "The classic route through Accra's heart. Perfect for learning the trade."
+    "title": "Real Routes. Real Streets.",
+    "subtitle": "Drive actual trotro corridors across West African cities.",
+    "teaser": "New routes and cities added regularly.",
+    "highlights": {
+      "realStreets": {
+        "icon": "\uD83D\uDDFA\uFE0F",
+        "title": "Authentic Locations",
+        "description": "Every route is based on real roads and landmarks you'd find on the ground."
       },
-      "madinaTema": {
-        "name": "Madina \u2192 Tema",
-        "description": "The eastern corridor to Ghana's port city. Through Adenta and Spintex Road."
+      "difficulty": {
+        "icon": "\uD83D\uDCC8",
+        "title": "Rising Challenge",
+        "description": "Start easy and work your way up. Harder routes mean more traffic, tighter targets, and bigger payoffs."
       },
-      "lapazAchimota": {
-        "name": "Lapaz \u2192 Achimota",
-        "description": "Busy commercial stretch. More passengers, tighter windows."
-      },
-      "temaAshaiman": {
-        "name": "Tema \u2192 Ashaiman",
-        "description": "Industrial corridor. High fares, but unforgiving. Only veterans survive."
-      },
-      "kasoaMallam": {
-        "name": "Kasoa \u2192 Mallam",
-        "description": "The legendary gauntlet. Traffic chaos, desperate passengers, glory awaits."
+      "expanding": {
+        "icon": "\uD83C\uDF0D",
+        "title": "Always Growing",
+        "description": "New routes, new cities, and new challenges are added over time. The hustle never stops."
       }
     }
   },
@@ -155,23 +147,11 @@
   "CtaBanner": {
     "heading": "Your trotro is waiting.",
     "subtext": "Free. No download. Play in your browser.",
-    "cta": "Join the Waitlist"
-  },
-  "Waitlist": {
-    "title": "Be the First to Play",
-    "subtitle": "Join the waitlist and we'll let you know when the game launches.",
-    "placeholder": "Enter your email",
-    "submitButton": "Join",
-    "loadingButton": "Joining...",
-    "successIcon": "\uD83C\uDF89",
-    "successTitle": "You're on the list!",
-    "successMessage": "We'll let you know when the game launches.",
-    "privacy": "We'll only email you about the launch. No spam.",
-    "errorFallback": "Something went wrong"
+    "cta": "Play Now"
   },
   "Footer": {
     "logo": "Salifu & Master",
-    "badge": "Made in West Africa",
+    "badge": "Made with pancakes",
     "copyright": "\u00A9 {year} Salifu & Master. All rights reserved.",
     "links": {
       "about": "About",

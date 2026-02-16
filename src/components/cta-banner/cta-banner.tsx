@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { GAME_URL } from "@/lib/constants";
 import styles from "./cta-banner.module.scss";
 
 export async function CtaBanner() {
@@ -9,7 +10,7 @@ export async function CtaBanner() {
       <div className="container text-center">
         <h2 className={styles.heading}>{t("heading")}</h2>
         <p className={styles.subtext}>{t("subtext")}</p>
-        <a href="#waitlist" className={styles.cta}>
+        <a href={GAME_URL} className={styles.cta}>
           {t("cta")}
         </a>
       </div>

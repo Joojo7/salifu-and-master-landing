@@ -65,19 +65,11 @@
   scroll-snap-align: start;
 }
 
-.placeholder {
-  aspect-ratio: 16 / 10;
-  background: $bg-card;
-  border: 1px dashed $border-default;
+.screenshot {
+  width: 100%;
+  height: auto;
   border-radius: $radius-sm;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholderIcon {
-  font-size: 2rem;
-  opacity: 0.3;
+  border: 1px solid $border-default;
 }
 
 .caption {

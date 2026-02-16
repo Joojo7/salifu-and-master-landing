@@ -30,6 +30,7 @@ export const CHARACTER_KEYS = [
   "masterKofi",
   "serwaa",
   "amelia",
+  "drPanie",
 ] as const;
 
 export const CHARACTER_DATA: Record<
@@ -43,32 +44,14 @@ export const CHARACTER_DATA: Record<
   },
   serwaa: { image: "/characters/serwaa-wink.png", accentColor: "#9b59b6" },
   amelia: { image: "/characters/amelia-happy.png", accentColor: "#4ade80" },
+  drPanie: { image: "/characters/dr-panie-happy.png", accentColor: "#5bc0eb" },
 };
 
-export const ROUTE_KEYS = [
-  "madinaKaneshie",
-  "madinaTema",
-  "lapazAchimota",
-  "temaAshaiman",
-  "kasoaMallam",
+export const ROUTE_HIGHLIGHT_KEYS = [
+  "realStreets",
+  "difficulty",
+  "expanding",
 ] as const;
-
-export const ROUTE_DATA: Record<
-  string,
-  { difficulty: "Easy" | "Medium" | "Hard"; stops: number; target: number }
-> = {
-  madinaKaneshie: { difficulty: "Easy", stops: 4, target: 40 },
-  madinaTema: { difficulty: "Medium", stops: 7, target: 60 },
-  lapazAchimota: { difficulty: "Medium", stops: 5, target: 55 },
-  temaAshaiman: { difficulty: "Hard", stops: 6, target: 75 },
-  kasoaMallam: { difficulty: "Hard", stops: 7, target: 100 },
-};
-
-export const DIFFICULTY_COLORS: Record<string, string> = {
-  Easy: "#4ade80",
-  Medium: "#f9a825",
-  Hard: "#f87171",
-};
 
 export const FEATURE_KEYS = [
   "threeMinuteRounds",
@@ -90,7 +73,14 @@ export const FEATURE_ICON_MAP: Record<string, string> = {
 
 export const HOW_TO_PLAY_STEP_NUMBERS = [1, 2, 3] as const;
 
-export const SCREENSHOT_COUNT = 6;
+export const SCREENSHOT_DATA = [
+  "/screenshots/navigate-busy-city-routes.png",
+  "/screenshots/pick-up-passengers-at-stops.png",
+  "/screenshots/buy-food-from-amelia.png",
+  "/screenshots/visit-serwaa-for-sanity.png",
+  "/screenshots/manage-your-vital-stats.png",
+  "/screenshots/earn-stars-at-day-end.png",
+] as const;
 
 export const SOCIAL_LINK_DATA = [
   { key: "twitter", href: "#" },

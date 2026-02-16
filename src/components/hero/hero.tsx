@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { LOGO_SRC, HERO_BANNER_SRC } from "@/lib/constants";
+import { LOGO_SRC, HERO_BANNER_SRC, PLAY_BUTTON_SRC, GAME_URL } from "@/lib/constants";
 import styles from "./hero.module.scss";
 
 export async function Hero() {
@@ -31,12 +31,15 @@ export async function Hero() {
           </h1>
           <p className={styles.tagline}>{t("tagline")}</p>
 
-          <div className="d-flex gap-3 justify-content-center flex-wrap mt-4">
-            <a href="#waitlist" className={styles.primaryCta}>
-              {t("primaryCta")}
-            </a>
-            <a href="#showcase" className={styles.secondaryCta}>
-              {t("secondaryCta")}
+          <div className="d-flex justify-content-center mt-4">
+            <a href={GAME_URL} className={styles.playLink}>
+              <Image
+                src={PLAY_BUTTON_SRC}
+                alt={t("playCta")}
+                width={180}
+                height={72}
+                className={styles.playIcon}
+              />
             </a>
           </div>
         </div>
