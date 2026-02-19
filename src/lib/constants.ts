@@ -82,6 +82,18 @@ export const SCREENSHOT_DATA = [
   "/screenshots/earn-stars-at-day-end.png",
 ] as const;
 
+export const IN_GAME_SCREENSHOT_DATA = [
+  "/in-game-screenshots/main-menu.png",
+  "/in-game-screenshots/trotro-select-front.png",
+  "/in-game-screenshots/trotro-sprinter.png",
+  "/in-game-screenshots/upgrade-shop.png",
+  "/in-game-screenshots/city-map.png",
+  "/in-game-screenshots/gameplay-gbawe.png",
+  "/in-game-screenshots/gameplay-dansoman.png",
+  "/in-game-screenshots/gameplay-odorkor.png",
+  "/in-game-screenshots/gameplay-street.png",
+] as const;
+
 export const SOCIAL_LINK_DATA = [
   { key: "twitter", href: "#" },
   { key: "instagram", href: "#" },

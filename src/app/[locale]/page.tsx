@@ -3,6 +3,7 @@ import { Nav } from "@/components/nav/nav";
 import { Hero } from "@/components/hero/hero";
 import { GameConcept } from "@/components/game-concept/game-concept";
 import { GameplayShowcase } from "@/components/gameplay-showcase/gameplay-showcase";
+import { InGameScreenshots } from "@/components/in-game-screenshots/in-game-screenshots";
 import { Characters } from "@/components/characters/characters";
 import { RoutesSection } from "@/components/routes-section/routes-section";
 import { Features } from "@/components/features/features";
@@ -29,6 +30,9 @@ export default async function Home({ params }: Props) {
         </ScrollReveal>
         <ScrollReveal>
           <GameplayShowcase />
+        </ScrollReveal>
+        <ScrollReveal>
+          <InGameScreenshots />
         </ScrollReveal>
         <ScrollReveal>
           <Characters />

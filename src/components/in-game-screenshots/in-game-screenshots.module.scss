@@ -1,0 +1,46 @@
+@use "../../styles/variables" as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 576px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.item {
+  border-radius: $radius-md;
+  overflow: hidden;
+  background: $bg-card;
+  border: 1px solid $border-default;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    border-color: $accent;
+    box-shadow: $shadow-md;
+    transform: translateY(-4px);
+  }
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.caption {
+  font-size: 0.85rem;
+  color: $text-secondary;
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+}

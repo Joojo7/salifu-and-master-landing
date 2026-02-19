@@ -46,6 +46,21 @@
       "5": "Earn stars at day end"
     }
   },
+  "InGameScreenshots": {
+    "title": "Inside the Game",
+    "subtitle": "Menus, upgrades, and life on the streets of Accra.",
+    "captions": {
+      "0": "Main menu",
+      "1": "Pick your trotro",
+      "2": "Unlock bigger vehicles",
+      "3": "Buy upgrades for your mate",
+      "4": "Explore the Accra city map",
+      "5": "Pick up passengers at Gbawe",
+      "6": "Hustle through Dansoman",
+      "7": "Visit Serwaa at Odorkor",
+      "8": "Race to make your fares"
+    }
+  },
   "Characters": {
     "title": "Meet the Cast",
     "characters": {
