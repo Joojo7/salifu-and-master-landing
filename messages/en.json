@@ -7,7 +7,7 @@
     "logo": "Salifu & Master",
     "features": "Features",
     "characters": "Characters",
-    "routes": "Routes",
+    "cities": "Cities",
     "trailer": "Trailer",
     "play": "Play"
   },
@@ -48,13 +48,13 @@
   },
   "InGameScreenshots": {
     "title": "Inside the Game",
-    "subtitle": "Menus, upgrades, and life on the streets of Accra.",
+    "subtitle": "Menus, upgrades, and life on the streets of Ghana.",
     "captions": {
       "0": "Main menu",
       "1": "Pick your trotro",
       "2": "Unlock bigger vehicles",
       "3": "Buy upgrades for your mate",
-      "4": "Explore the Accra city map",
+      "4": "Explore the city map",
       "5": "Pick up passengers at Gbawe",
       "6": "Hustle through Dansoman",
       "7": "Visit Serwaa at Odorkor",
@@ -91,10 +91,37 @@
       }
     }
   },
+  "CitiesShowcase": {
+    "title": "Multiple Cities. One Hustle.",
+    "subtitle": "Explore real trotro corridors across Ghana's biggest cities.",
+    "comingSoon": "Coming Soon",
+    "cities": {
+      "accra": {
+        "name": "Greater Accra",
+        "description": "The bustling capital region. Navigate through Madina, Kaneshie, Circle and beyond.",
+        "routeCount": "7 routes"
+      },
+      "kumasi": {
+        "name": "Kumasi",
+        "description": "The Garden City. Navigate through Kejetia Market, Adum, and the Ashanti cultural heartland.",
+        "routeCount": "1 route"
+      },
+      "capeCost": {
+        "name": "Cape Coast",
+        "description": "The historic coastal city. Castles, fishing harbours, and winding streets await.",
+        "routeCount": "Routes TBA"
+      },
+      "tamale": {
+        "name": "Tamale",
+        "description": "The northern capital. Dusty roads, vibrant markets, and a whole new challenge.",
+        "routeCount": "Routes TBA"
+      }
+    }
+  },
   "RoutesSection": {
     "title": "Real Routes. Real Streets.",
-    "subtitle": "Drive actual trotro corridors across West African cities.",
-    "teaser": "New routes and cities added regularly.",
+    "subtitle": "Drive actual trotro corridors across Ghana's cities — from Accra to Kumasi and beyond.",
+    "teaser": "Kumasi just dropped. More cities on the way.",
     "highlights": {
       "realStreets": {
         "icon": "\uD83D\uDDFA\uFE0F",
@@ -109,7 +136,7 @@
       "expanding": {
         "icon": "\uD83C\uDF0D",
         "title": "Always Growing",
-        "description": "New routes, new cities, and new challenges are added over time. The hustle never stops."
+        "description": "Kumasi just launched, with Cape Coast and Tamale on the way. The hustle never stops."
       }
     }
   },
@@ -124,6 +151,10 @@
         "title": "Authentic Culture",
         "description": "Real streets, real food, real language."
       },
+      "multipleCities": {
+        "title": "Multiple Cities",
+        "description": "Hustle across Accra, Kumasi, and more cities coming soon."
+      },
       "upgradeTrotro": {
         "title": "Upgrade Your Trotro",
         "description": "3 vehicles and 12+ upgrades to unlock."
@@ -135,10 +166,6 @@
       "earnStars": {
         "title": "Earn Stars",
         "description": "3-star rating system with deep progression."
-      },
-      "achievements": {
-        "title": "Achievements",
-        "description": "20+ achievements to hunt across every route."
       }
     }
   },
@@ -146,8 +173,8 @@
     "title": "How to Play",
     "steps": {
       "1": {
-        "title": "Pick a Route",
-        "description": "Choose from 5 routes across the city, each with unique challenges."
+        "title": "Pick a City & Route",
+        "description": "Choose a city and route across Ghana, each with unique challenges."
       },
       "2": {
         "title": "Pick Up Passengers",

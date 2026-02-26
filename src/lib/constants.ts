@@ -13,7 +13,7 @@ export const FEATURES_BANNER_SRC =
 export const NAV_LINK_HREFS = [
   { key: "features", href: "#features" },
   { key: "characters", href: "#characters" },
-  { key: "routes", href: "#routes" },
+  { key: "cities", href: "#cities" },
   { key: "trailer", href: "#showcase" },
 ] as const;
 
@@ -47,6 +47,18 @@ export const CHARACTER_DATA: Record<
   drPanie: { image: "/characters/dr-panie-happy.png", accentColor: "#5bc0eb" },
 };
 
+export const CITY_KEYS = ["accra", "kumasi", "capeCost", "tamale"] as const;
+
+export const CITY_DATA: Record<
+  string,
+  { icon: string | null; emoji: string; comingSoon: boolean }
+> = {
+  accra: { icon: "/city-icons/accra.png", emoji: "", comingSoon: false },
+  kumasi: { icon: "/city-icons/kumasi.png", emoji: "", comingSoon: false },
+  capeCost: { icon: "/city-icons/cape-coast.png", emoji: "", comingSoon: true },
+  tamale: { icon: "/city-icons/tamale.png", emoji: "", comingSoon: true },
+};
+
 export const ROUTE_HIGHLIGHT_KEYS = [
   "realStreets",
   "difficulty",
@@ -56,19 +68,19 @@ export const ROUTE_HIGHLIGHT_KEYS = [
 export const FEATURE_KEYS = [
   "threeMinuteRounds",
   "authenticCulture",
+  "multipleCities",
   "upgradeTrotro",
   "meetCharacters",
   "earnStars",
-  "achievements",
 ] as const;
 
 export const FEATURE_ICON_MAP: Record<string, string> = {
   threeMinuteRounds: "\u23F1\uFE0F",
   authenticCulture: "\uD83C\uDF0D",
+  multipleCities: "\uD83D\uDDFA\uFE0F",
   upgradeTrotro: "\uD83D\uDD27",
   meetCharacters: "\uD83D\uDC65",
   earnStars: "\u2B50",
-  achievements: "\uD83C\uDFC6",
 };
 
 export const HOW_TO_PLAY_STEP_NUMBERS = [1, 2, 3] as const;
