@@ -1,5 +1,5 @@
 export const SITE_URL = "https://salifuandmaster.com";
-export const GAME_URL = "https://play.salifuandmaster.com";
+export const GAME_URL = "https://temp-fixes.salifu-and-master.pages.dev/";
 
 export const HERO_BANNER_SRC = "/assets/all-character-hero-banner.png";
 export const LOGO_SRC = "/assets/hero-logo.png";
