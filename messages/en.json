@@ -99,7 +99,7 @@
       "accra": {
         "name": "Greater Accra",
         "description": "The bustling capital region. Navigate through Madina, Kaneshie, Circle and beyond.",
-        "routeCount": "7 routes"
+        "routeCount": "8 routes"
       },
       "kumasi": {
         "name": "Kumasi",
@@ -108,8 +108,8 @@
       },
       "capeCost": {
         "name": "Cape Coast",
-        "description": "The historic coastal city. Castles, fishing harbours, and winding streets await.",
-        "routeCount": "Routes TBA"
+        "description": "The historic coastal city. Drive past castles, fishing harbours, and winding hillside streets.",
+        "routeCount": "5 routes"
       },
       "tamale": {
         "name": "Tamale",
@@ -120,8 +120,8 @@
   },
   "RoutesSection": {
     "title": "Real Routes. Real Streets.",
-    "subtitle": "Drive actual trotro corridors across Ghana's cities — from Accra to Kumasi and beyond.",
-    "teaser": "Kumasi just dropped. More cities on the way.",
+    "subtitle": "Drive actual trotro corridors across Ghana's cities — from Accra to Cape Coast and beyond.",
+    "teaser": "Cape Coast just dropped. More cities on the way.",
     "highlights": {
       "realStreets": {
         "icon": "\uD83D\uDDFA\uFE0F",
@@ -130,13 +130,13 @@
       },
       "difficulty": {
         "icon": "\uD83D\uDCC8",
-        "title": "Rising Challenge",
-        "description": "Start easy and work your way up. Harder routes mean more traffic, tighter targets, and bigger payoffs."
+        "title": "Choose Your Difficulty",
+        "description": "Pick your challenge level before each run. Harder difficulty means more traffic, tighter targets, and bigger payoffs."
       },
       "expanding": {
         "icon": "\uD83C\uDF0D",
         "title": "Always Growing",
-        "description": "Kumasi just launched, with Cape Coast and Tamale on the way. The hustle never stops."
+        "description": "3 cities and 14 routes live, with Tamale and more on the way. The hustle never stops."
       }
     }
   },
@@ -152,20 +152,20 @@
         "description": "Real streets, real food, real language."
       },
       "multipleCities": {
-        "title": "Multiple Cities",
-        "description": "Hustle across Accra, Kumasi, and more cities coming soon."
+        "title": "3 Cities, 14 Routes",
+        "description": "Hustle across Accra, Kumasi, and Cape Coast with more coming soon."
       },
       "upgradeTrotro": {
         "title": "Upgrade Your Trotro",
-        "description": "3 vehicles and 12+ upgrades to unlock."
+        "description": "3 vehicles and 14 upgrades to unlock."
       },
-      "meetCharacters": {
-        "title": "Meet the Characters",
-        "description": "Your girlfriend, your boss, the vendors \u2014 all with personality."
+      "leaderboard": {
+        "title": "Compete on the Leaderboard",
+        "description": "Seasonal rankings. See how you stack up against other mates."
       },
-      "earnStars": {
-        "title": "Earn Stars",
-        "description": "3-star rating system with deep progression."
+      "freeRoam": {
+        "title": "Free Roam Mode",
+        "description": "Cruise through all 55 Accra stops at your own pace. No pressure."
       }
     }
   },
@@ -174,7 +174,7 @@
     "steps": {
       "1": {
         "title": "Pick a City & Route",
-        "description": "Choose a city and route across Ghana, each with unique challenges."
+        "description": "Choose a city, route, and difficulty level across Ghana."
       },
       "2": {
         "title": "Pick Up Passengers",
@@ -182,7 +182,7 @@
       },
       "3": {
         "title": "Make Your Sales",
-        "description": "Meet your daily target before time runs out. Earn stars and level up."
+        "description": "Meet your daily target before time runs out. Earn stars and climb the leaderboard."
       }
     }
   },

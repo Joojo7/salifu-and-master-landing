@@ -1,5 +1,5 @@
 export const SITE_URL = "https://salifuandmaster.com";
-export const GAME_URL = "https://temp-fixes.salifu-and-master.pages.dev/";
+export const GAME_URL = "https://play.salifuandmaster.com/";
 
 export const HERO_BANNER_SRC = "/assets/all-character-hero-banner.png";
 export const LOGO_SRC = "/assets/hero-logo.png";
@@ -55,7 +55,7 @@ export const CITY_DATA: Record<
 > = {
   accra: { icon: "/city-icons/accra.png", emoji: "", comingSoon: false },
   kumasi: { icon: "/city-icons/kumasi.png", emoji: "", comingSoon: false },
-  capeCost: { icon: "/city-icons/cape-coast.png", emoji: "", comingSoon: true },
+  capeCost: { icon: "/city-icons/cape-coast.png", emoji: "", comingSoon: false },
   tamale: { icon: "/city-icons/tamale.png", emoji: "", comingSoon: true },
 };
 
@@ -70,8 +70,8 @@ export const FEATURE_KEYS = [
   "authenticCulture",
   "multipleCities",
   "upgradeTrotro",
-  "meetCharacters",
-  "earnStars",
+  "leaderboard",
+  "freeRoam",
 ] as const;
 
 export const FEATURE_ICON_MAP: Record<string, string> = {
@@ -79,8 +79,8 @@ export const FEATURE_ICON_MAP: Record<string, string> = {
   authenticCulture: "\uD83C\uDF0D",
   multipleCities: "\uD83D\uDDFA\uFE0F",
   upgradeTrotro: "\uD83D\uDD27",
-  meetCharacters: "\uD83D\uDC65",
-  earnStars: "\u2B50",
+  leaderboard: "\uD83C\uDFC6",
+  freeRoam: "\uD83D\uDEB6",
 };
 
 export const HOW_TO_PLAY_STEP_NUMBERS = [1, 2, 3] as const;

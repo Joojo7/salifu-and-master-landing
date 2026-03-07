@@ -30,6 +30,9 @@ export async function generateMetadata({
     icons: {
       icon: "/assets/short-logo.png",
     },
+    other: {
+      "google-adsense-account": "ca-pub-2882403014606841",
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
