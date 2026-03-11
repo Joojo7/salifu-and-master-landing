@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: $section-py 0;
+  background: $bg-elevated;
+}
+
+.heading {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: $accent;
+}
+
+.subtext {
+  font-size: 1rem;
+  color: $text-secondary;
+  margin: 0.75rem 0 1.5rem;
+}
+
+.cta {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  background: $accent;
+  color: $bg-base;
+  padding: 0.875rem 2.5rem;
+  border-radius: $radius-md;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    color: $bg-base;
+    background: $accent-hover;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section {
+    padding: $section-py-mobile 0;
+  }
+}

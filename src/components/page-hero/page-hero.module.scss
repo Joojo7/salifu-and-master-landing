@@ -1,0 +1,62 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  padding: 8rem 0 $section-py;
+  background: linear-gradient(180deg, $bg-base 0%, $bg-elevated 100%);
+  text-align: center;
+}
+
+.title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: $text-primary;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: $text-secondary;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.cta {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  background: $accent;
+  color: $bg-base;
+  padding: 0.875rem 2.5rem;
+  border-radius: $radius-md;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    color: $bg-base;
+    background: $accent-hover;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.imageWrapper {
+  margin-top: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: $radius-lg;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 767.98px) {
+  .hero {
+    padding: 7rem 0 $section-py-mobile;
+  }
+}

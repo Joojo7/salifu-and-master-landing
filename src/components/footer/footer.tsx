@@ -1,10 +1,11 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 import { FOOTER_LINK_DATA, SOCIAL_LINK_DATA, LOGO_SRC } from "@/lib/constants";
 import styles from "./footer.module.scss";
 
 export async function Footer() {
   const t = await getTranslations("Footer");
+  const locale = await getLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -20,7 +21,7 @@ export async function Footer() {
 
         <div className="d-flex gap-3 justify-content-center mb-3">
           {FOOTER_LINK_DATA.map((link) => (
-            <a key={link.key} href={link.href} className={styles.link}>
+            <a key={link.key} href={`/${locale}${link.href}`} className={styles.link}>
               {t(`links.${link.key}`)}
             </a>
           ))}

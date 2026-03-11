@@ -9,15 +9,20 @@
     "characters": "Characters",
     "cities": "Cities",
     "trailer": "Trailer",
-    "play": "Play"
+    "play": "Play",
+    "howToPlay": "How to Play",
+    "about": "About"
   },
   "Hero": {
     "title": "Salifu & Master",
     "tagline": "Pick up passengers. Make your sales. Survive the streets.",
     "playCta": "Play Now"
   },
+  "PageHero": {
+    "playNow": "Play Now"
+  },
   "GameConcept": {
-    "pitch": "You're a trotro mate \u2014 a bus conductor hustling through the city. Pick up passengers, dodge traffic, manage your health, and make your sales before the day ends.",
+    "pitch": "You're a trotro mate — a bus conductor hustling through the city. Pick up passengers, dodge traffic, manage your health, and make your sales before the day ends.",
     "cards": {
       "drive": {
         "title": "Drive",
@@ -72,12 +77,12 @@
       "masterKofi": {
         "name": "Master Kofi",
         "role": "The Driver",
-        "description": "Your boss. He takes his cut \u2014 and he's watching your every move."
+        "description": "Your boss. He takes his cut — and he's watching your every move."
       },
       "serwaa": {
         "name": "Serwaa",
         "role": "The Girlfriend",
-        "description": "Your peace of mind. Visit her to restore your sanity \u2014 but it'll cost you."
+        "description": "Your peace of mind. Visit her to restore your sanity — but it'll cost you."
       },
       "amelia": {
         "name": "Amelia",
@@ -186,6 +191,138 @@
       }
     }
   },
+  "HowToPlayPage": {
+    "title": "How to Play",
+    "subtitle": "Everything you need to know to start hustling",
+    "metaDescription": "Learn how to play Salifu & Master. A complete guide to driving trotros, picking up passengers, managing resources, and making your daily sales.",
+    "overview": {
+      "title": "Game Overview",
+      "description": "Salifu & Master is a trotro conductor simulator set in the bustling cities of Ghana. You play as Salifu, a young mate working under Master Kofi, navigating real routes through Accra, Kumasi, and Cape Coast. Your job is to pick up passengers at each stop along the route, collect their fares, and hit your daily sales target before the three-minute round ends. Every run is a balancing act between earning enough cedis, keeping yourself fed and healthy, and staying sane under the pressure of the streets. The decisions you make about when to spend and when to save determine whether you walk away with stars or stumble home empty-handed."
+    },
+    "steps": {
+      "1": {
+        "title": "Pick a City and Route",
+        "description": "Before each run, you choose which city to hustle in and which trotro route to drive. Each city offers a different set of routes based on real roads and neighbourhoods across Ghana. Routes vary in length, number of stops, and the fares passengers are willing to pay. You also select a difficulty level, which affects how much traffic you face, how tight your sales target is, and how quickly your resources deplete. Beginners should start with shorter routes on easy difficulty to learn the rhythm of the game before tackling the longer, more demanding corridors."
+      },
+      "2": {
+        "title": "Pick Up Passengers",
+        "description": "As your trotro moves along the route, it stops at designated passenger stops based on real locations in each city. At each stop, passengers appear waiting by the roadside, and you tap to collect them and their fares. The number of passengers varies from stop to stop, and some stops are busier than others depending on the time of day and the route you have chosen. Fares are added directly to your earnings for the day. The faster you collect passengers and the more stops you serve, the closer you get to hitting your daily sales target and earning bonus stars."
+      },
+      "3": {
+        "title": "Manage Your Resources",
+        "description": "Salifu has three vital stats that you need to keep an eye on throughout each run: hunger, health, and sanity. These stats gradually decrease as you work, and if any of them drops to zero, your performance suffers and your run may end early. To restore your stats, you can visit NPCs along the route. Amelia the food vendor sells waakye and jollof rice to restore your hunger. Dr. Panie runs a small roadside clinic where you can patch up your health. Serwaa, your girlfriend, helps restore your sanity when the stress of the hustle gets too much. Each visit costs cedis, so you need to weigh the cost of staying healthy against your need to hit your sales target."
+      },
+      "4": {
+        "title": "Make Your Sales",
+        "description": "Every run has a daily sales target set by Master Kofi, the driver who owns the trotro. At the end of the three-minute round, Master Kofi takes his cut from your total earnings first. Whatever remains counts toward your target. If you meet the base target, you earn one star. Exceed it and hit the bonus targets, and you can earn up to three stars per run. Stars are the main measure of your progress in the game and contribute to your position on the seasonal leaderboard. The best mates in Ghana compete for the top spots each season, so every cedi counts. Plan your spending carefully and maximise your passenger pickups to climb the ranks."
+      }
+    },
+    "tips": {
+      "title": "Pro Tips",
+      "earning": {
+        "title": "Earning More Money",
+        "description": "Focus on routes with more stops and higher passenger density to maximise your fare collection each run. Upgrading your trotro to a larger vehicle lets you carry more passengers at once, which means more cedis per stop. Pay attention to which routes offer the best fare-to-distance ratio and replay them to build up your earnings before moving on to harder challenges."
+      },
+      "resources": {
+        "title": "Managing Resources",
+        "description": "Do not wait until your stats are critically low before visiting an NPC. Keeping your hunger, health, and sanity above the halfway mark ensures you perform at your best throughout the entire run. Learn the location of each NPC on your chosen route so you can plan your visits efficiently. Amelia is the cheapest option, so prioritise eating regularly and save Dr. Panie visits for when you truly need them."
+      },
+      "strategy": {
+        "title": "General Strategy",
+        "description": "Start each session by picking a route you know well to warm up and build some cedis. Once you are comfortable, push into harder difficulty levels where the rewards are greater but the margin for error is thinner. Keep an eye on the leaderboard to see what scores the top players are hitting, and use that as a benchmark for your own runs. Consistency beats luck in Salifu & Master, so develop a routine and stick to it."
+      }
+    }
+  },
+  "CharactersPage": {
+    "title": "Characters",
+    "subtitle": "Meet the people of Salifu & Master",
+    "metaDescription": "Meet the characters of Salifu & Master: Salifu the mate, Master Kofi the driver, Serwaa, Amelia the food vendor, and Dr. Panie.",
+    "characters": {
+      "salifu": {
+        "name": "Salifu",
+        "role": "The Mate",
+        "backstory": "Salifu is a young trotro mate trying to make a living on the busy streets of Ghana. Every morning he climbs aboard Master Kofi's trotro, hangs out the side door, and calls out destinations to pull in passengers. Life as a mate is tough and the pay depends entirely on how many fares he can collect each day, but Salifu is determined to hustle his way to something better.",
+        "gameplay": "You control Salifu directly throughout each run. Tap to pick up passengers at stops, decide when to visit NPCs to restore your stats, and manage your cedis to hit the daily sales target. Every decision you make as Salifu determines whether you end the day with stars or empty pockets."
+      },
+      "masterKofi": {
+        "name": "Master Kofi",
+        "role": "The Driver",
+        "backstory": "Master Kofi is a veteran trotro driver who has been navigating Ghana's roads for over twenty years. He owns the vehicle and knows every shortcut, pothole, and police checkpoint across the city. Kofi is tough but fair. He expects his mates to work hard and bring in the money, but he also looks out for those who earn his respect over time.",
+        "gameplay": "Master Kofi sets the daily sales target for each run and takes his cut from your total earnings at the end of the day. The remaining amount is what counts toward your target. Meeting his expectations earns you stars, while falling short means going home with nothing to show for your effort."
+      },
+      "serwaa": {
+        "name": "Serwaa",
+        "role": "The Girlfriend",
+        "backstory": "Serwaa is Salifu's girlfriend and his escape from the chaos of the streets. She lives near one of the stops along several routes and is always happy to see him pull up, even if it is just for a few minutes between passenger runs. Her calm presence and warm conversation are exactly what Salifu needs when the pressure of the hustle starts to weigh on him.",
+        "gameplay": "Visiting Serwaa restores Salifu's sanity stat, which depletes steadily as you work through each run. Stopping by costs a few cedis, so you need to balance the mental relief she provides against the money you could be earning picking up more passengers."
+      },
+      "amelia": {
+        "name": "Amelia",
+        "role": "The Food Vendor",
+        "backstory": "Amelia runs a roadside food stall that has become legendary among trotro crews across the city. She serves up steaming plates of waakye with shito and perfectly spiced jollof rice that keeps drivers and mates coming back day after day. Her stall is always busy, and she knows most of her regulars by name, including Salifu, who she treats like a younger brother.",
+        "gameplay": "Amelia restores Salifu's hunger stat when you visit her stall. She offers different meals at different price points, making her the most affordable NPC to visit. Keeping your hunger topped up is essential for maintaining performance throughout a run, so plan your route to swing by her stall regularly."
+      },
+      "drPanie": {
+        "name": "Dr. Panie",
+        "role": "The Doctor",
+        "backstory": "Dr. Panie operates a small roadside clinic that serves the trotro community and local residents alike. He has seen every kind of injury the streets can dish out, from minor scrapes to serious knocks, and he patches people up quickly and without too many questions. His clinic may not look like much, but his hands are steady and his medicine cabinet is well stocked.",
+        "gameplay": "Dr. Panie restores Salifu's health stat, which takes a hit from the physical toll of hanging off a moving trotro all day. He is the most expensive NPC to visit, so save your trips to his clinic for when your health is dangerously low. Letting your health drop too far can cut your run short entirely."
+      }
+    }
+  },
+  "CitiesPage": {
+    "title": "Cities of Ghana",
+    "subtitle": "Explore the real cities behind the game",
+    "metaDescription": "Discover the cities of Salifu & Master. Drive trotro routes through Greater Accra, Kumasi, Cape Coast, and Tamale, each inspired by real Ghanaian streets and culture.",
+    "cities": {
+      "accra": {
+        "name": "Greater Accra",
+        "description": "Greater Accra is the capital region of Ghana and home to over four million people, making it the largest and most densely populated metropolitan area in the country. The city's trotro network is a lifeline for millions of commuters who rely on shared minibuses to get to work, market, and school every single day. From the chaos of Circle interchange to the residential sprawl of Tema and Kasoa, Accra's roads never sleep.",
+        "routes": "Accra features 8 playable routes covering major corridors like Madina to Tema, Kasoa to Mallam, Lapaz to Achimota, and Afienya to Odorkor. Each route follows real roads and passes through recognisable neighbourhoods, giving players an authentic taste of daily commuting in Ghana's capital.",
+        "culture": "Accra is a city of contrasts where gleaming office towers stand alongside open-air markets selling everything from plantain to phone accessories. It is a melting pot of ethnicities, languages, and traditions, united by the shared experience of navigating its famously congested streets. The trotro is the heartbeat of Accra, and no visit to the city is complete without a ride in one."
+      },
+      "kumasi": {
+        "name": "Kumasi",
+        "description": "Kumasi is the second-largest city in Ghana and the historic capital of the Ashanti Kingdom. Known as the Garden City for its lush greenery, Kumasi is centred around Kejetia Market, one of the largest open-air markets in West Africa. The city pulses with trade, culture, and a proud sense of Ashanti identity that permeates everything from its architecture to its street food.",
+        "routes": "Kumasi currently features 1 playable route that takes you through the commercial heart of the city. As development continues, more routes will be added to capture the full breadth of Kumasi's sprawling trotro network, from Adum to Bantama and beyond.",
+        "culture": "Kumasi is the seat of the Ashanti king, the Asantehene, and the spiritual home of kente cloth weaving, one of Ghana's most recognisable cultural exports. The city's identity is deeply rooted in tradition, from the elaborate funeral celebrations to the bustling trade that has defined Kumasi as a commercial powerhouse for centuries."
+      },
+      "capeCost": {
+        "name": "Cape Coast",
+        "description": "Cape Coast is a historic coastal city in Ghana's Central Region, known worldwide for Cape Coast Castle, a UNESCO World Heritage Site that stands as a sobering reminder of the transatlantic slave trade. Beyond its history, Cape Coast is home to the University of Cape Coast and a vibrant fishing community that has shaped the city's character for generations. The streets wind through hills overlooking the Atlantic Ocean, creating a driving experience unlike any other city in the game.",
+        "routes": "Cape Coast features 5 playable routes that weave through the city's hillside streets, past the castle, along the coast, and through residential and university neighbourhoods. The routes capture the unique geography of a coastal city where narrow roads and steep gradients make every run a fresh challenge.",
+        "culture": "Cape Coast's UNESCO heritage status draws visitors from around the world, but the city's true soul lies in its fishing communities, its vibrant festivals, and the warm hospitality of its people. The Fetu Afahye festival, celebrated every September, brings the entire city together in a colourful display of music, dance, and tradition that has been observed for centuries."
+      },
+      "tamale": {
+        "name": "Tamale",
+        "description": "Tamale is the capital of Ghana's Northern Region and the fastest-growing city in West Africa. Set against the backdrop of the Guinea savannah, Tamale has a distinctly different feel from the southern cities, with wide dusty roads, sprawling markets, and a predominantly Dagomba population whose traditions date back centuries. The city serves as the gateway to northern Ghana and beyond.",
+        "routes": "Tamale routes are coming soon. The development team is working to capture the unique character of northern Ghana's roads, from the main highways connecting Tamale to surrounding towns to the bustling routes that thread through the city's central markets and residential areas.",
+        "culture": "Tamale is the gateway to northern Ghana and a city where tradition runs deep. The Damba festival, one of the most important celebrations in the north, honours the birth of the Prophet Muhammad and features spectacular displays of horsemanship, drumming, and dancing. The city's markets are famous for smoked guinea fowl, shea butter, and hand-woven smocks that are worn with pride across the region."
+      }
+    }
+  },
+  "AboutPage": {
+    "title": "About Salifu & Master",
+    "subtitle": "The story behind the game",
+    "metaDescription": "Learn about Salifu & Master, a browser-based trotro conductor simulator set in Ghana. Discover why we built this game and the real culture behind it.",
+    "whatIs": {
+      "title": "What is Salifu & Master?",
+      "description": "Salifu & Master is a free browser-based simulation game where you play as a trotro mate hustling through the streets of Ghana. Your job is to pick up passengers at real-world stops, collect fares, manage your hunger, health, and sanity, and hit your daily sales target before the three-minute round ends. The game features multiple cities including Accra, Kumasi, and Cape Coast, each with routes based on actual roads and neighbourhoods. With upgradeable vehicles, seasonal leaderboards, and an ever-expanding map, Salifu & Master captures the energy and chaos of everyday life on Ghana's most iconic form of public transport."
+    },
+    "trotros": {
+      "title": "What is a Trotro?",
+      "description": "A trotro is a shared minibus that serves as the backbone of public transportation across Ghana and much of West Africa. The name comes from the Ga word 'tro', meaning a coin or fare, reflecting the affordable nature of the service. Each trotro operates with a driver who owns or leases the vehicle and a mate who hangs out the side door calling out destinations, collecting fares, and managing passengers. Trotros follow fixed routes but have no official timetable, departing only when enough passengers have boarded. They are packed, loud, and often decorated with colourful slogans and religious messages. For millions of Ghanaians, the trotro is not just transport but a daily ritual and a shared cultural experience that cuts across class, age, and ethnicity."
+    },
+    "why": {
+      "title": "Why We Built This",
+      "description": "We built Salifu & Master to capture a slice of everyday Ghanaian life that rarely makes it into video games. The trotro experience is universal in Ghana. Nearly everyone has a story about a memorable ride, a loud mate, or a driver who somehow navigated an impossible traffic jam. We wanted to take that shared experience and turn it into something interactive that people around the world can enjoy. Whether you grew up riding trotros or have never set foot in West Africa, this game is our way of sharing the hustle, the humour, and the humanity of life on Ghana's streets with everyone."
+    },
+    "howToPlayBrief": {
+      "title": "How It Works",
+      "description": "Each round lasts three minutes. Pick a city and route, collect passengers at stops along the way, manage your resources by visiting NPCs, and try to earn enough cedis to meet your daily sales target. The better you perform, the more stars you earn and the higher you climb on the leaderboard.",
+      "linkText": "Read the full guide"
+    }
+  },
   "CtaBanner": {
     "heading": "Your trotro is waiting.",
     "subtext": "Free. No download. Play in your browser.",
@@ -197,6 +334,9 @@
     "copyright": "\u00A9 {year} Salifu & Master. All rights reserved.",
     "links": {
       "about": "About",
+      "howToPlay": "How to Play",
+      "characters": "Characters",
+      "cities": "Cities",
       "pressKit": "Press Kit",
       "contact": "Contact"
     },

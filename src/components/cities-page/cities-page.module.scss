@@ -1,0 +1,45 @@
+@use "../../styles/variables" as *;
+
+.content {
+  padding: $section-py 0;
+  background-color: $bg-base;
+}
+
+.citySection {
+  padding: 2rem 0;
+  border-bottom: 1px solid $border-default;
+
+  &.last {
+    border-bottom: none;
+  }
+}
+
+.cityIcon {
+  border-radius: $radius-lg;
+}
+
+.cityName {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: $text-primary;
+}
+
+.comingSoon {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: $text-tertiary;
+  font-style: italic;
+}
+
+.paragraph {
+  color: $text-secondary;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.subheading {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: $accent;
+}

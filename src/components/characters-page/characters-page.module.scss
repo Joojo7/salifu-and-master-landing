@@ -1,0 +1,43 @@
+@use "../../styles/variables" as *;
+
+.content {
+  padding: $section-py 0;
+  background: $bg-base;
+
+  @media (max-width: 767px) {
+    padding: $section-py-mobile 0;
+  }
+}
+
+.portrait {
+  display: inline-block;
+  border: 2px solid var(--accent);
+  border-radius: $radius-lg;
+  padding: 1rem;
+  background: $bg-card;
+}
+
+.name {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: $text-primary;
+}
+
+.role {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.paragraph {
+  color: $text-secondary;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.gameplayTitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: $text-primary;
+}

@@ -1,0 +1,49 @@
+@use "../../styles/variables" as *;
+
+.content {
+  padding: $section-py 0;
+  background: $bg-base;
+
+  @media (max-width: 767px) {
+    padding: $section-py-mobile 0;
+  }
+}
+
+.sectionTitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: $text-primary;
+}
+
+.paragraph {
+  color: $text-secondary;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: $radius-lg;
+  border: 1px solid $border-default;
+}
+
+.tipCard {
+  background: $bg-card;
+  border: 1px solid $border-default;
+  border-radius: $radius-lg;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.tipTitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: $accent;
+}
+
+.tipText {
+  color: $text-secondary;
+  line-height: 1.7;
+}

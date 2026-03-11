@@ -12,9 +12,14 @@ export const FEATURES_BANNER_SRC =
 
 export const NAV_LINK_HREFS = [
   { key: "features", href: "#features" },
-  { key: "characters", href: "#characters" },
-  { key: "cities", href: "#cities" },
   { key: "trailer", href: "#showcase" },
+] as const;
+
+export const NAV_PAGE_LINKS = [
+  { key: "characters", href: "/characters" },
+  { key: "cities", href: "/cities" },
+  { key: "howToPlay", href: "/how-to-play" },
+  { key: "about", href: "/about" },
 ] as const;
 
 export const CONCEPT_CARD_KEYS = ["drive", "hustle", "survive"] as const;
@@ -106,6 +111,13 @@ export const IN_GAME_SCREENSHOT_DATA = [
   "/in-game-screenshots/gameplay-street.png",
 ] as const;
 
+export const PAGE_HERO_IMAGES: Record<string, string> = {
+  howToPlay: "/in-game-screenshots/gameplay-gbawe.png",
+  characters: "/screenshots/pick-up-passengers-at-stops.png",
+  cities: "/in-game-screenshots/city-map.png",
+  about: "/in-game-screenshots/main-menu.png",
+};
+
 export const SOCIAL_LINK_DATA = [
   { key: "twitter", href: "#" },
   { key: "instagram", href: "#" },
@@ -114,7 +126,8 @@ export const SOCIAL_LINK_DATA = [
 ] as const;
 
 export const FOOTER_LINK_DATA = [
-  { key: "about", href: "#" },
-  { key: "pressKit", href: "#" },
-  { key: "contact", href: "#" },
+  { key: "about", href: "/about" },
+  { key: "howToPlay", href: "/how-to-play" },
+  { key: "characters", href: "/characters" },
+  { key: "cities", href: "/cities" },
 ] as const;
