@@ -1,24 +1,49 @@
 @use "../../styles/variables" as *;
 
 .hero {
-  padding: 8rem 0 $section-py;
-  background: linear-gradient(180deg, $bg-base 0%, $bg-elevated 100%);
+  position: relative;
+  padding: 10rem 0 5rem;
   text-align: center;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bgImage {
+  object-fit: cover;
+  filter: blur(3px);
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
 }
 
 .title {
   font-family: "Nunito", sans-serif;
   font-weight: 800;
   font-size: clamp(2rem, 5vw, 3rem);
-  color: $text-primary;
+  color: #fff;
   margin-bottom: 1rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .subtitle {
   font-size: clamp(1rem, 2.5vw, 1.25rem);
-  color: $text-secondary;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
   margin: 0 auto 2rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .cta {
@@ -41,22 +66,9 @@
   }
 }
 
-.imageWrapper {
-  margin-top: 2.5rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  border-radius: $radius-lg;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
 @media (max-width: 767.98px) {
   .hero {
-    padding: 7rem 0 $section-py-mobile;
+    padding: 8rem 0 3rem;
+    min-height: 320px;
   }
 }

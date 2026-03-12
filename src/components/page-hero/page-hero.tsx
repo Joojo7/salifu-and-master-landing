@@ -14,21 +14,20 @@ export async function PageHero({
 
   return (
     <section className={styles.hero}>
-      <div className="container text-center">
+      <Image
+        src={imageSrc}
+        alt={imageAlt}
+        fill
+        priority
+        className={styles.bgImage}
+      />
+      <div className={styles.overlay} />
+      <div className={`container text-center ${styles.content}`}>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
         <a href={GAME_URL} className={styles.cta}>
           {t("playNow")}
         </a>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={800}
-            height={450}
-            className={styles.image}
-          />
-        </div>
       </div>
     </section>
   );

@@ -12,7 +12,6 @@ export const FEATURES_BANNER_SRC =
 
 export const NAV_LINK_HREFS = [
   { key: "features", href: "#features" },
-  { key: "trailer", href: "#showcase" },
 ] as const;
 
 export const NAV_PAGE_LINKS = [
