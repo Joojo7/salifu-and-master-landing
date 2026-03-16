@@ -328,6 +328,187 @@
     "subtext": "Free. No download. Play in your browser.",
     "cta": "Play Now"
   },
+  "PrivacyPage": {
+    "title": "Privacy Policy",
+    "subtitle": "How we handle your data",
+    "metaDescription": "Privacy Policy for Salifu & Master. Learn how we collect, use, and protect your personal information when you play our trotro driving game.",
+    "lastUpdated": "Last updated: {date}",
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "welcome": "Welcome to Salifu & Master. This Privacy Policy explains how we collect, use, and protect your information when you use our browser-based trotro driving game and visit our website.",
+        "agreement": "By using Salifu & Master, you agree to the collection and use of information as described in this policy."
+      },
+      "informationCollected": {
+        "title": "Information We Collect",
+        "googleSignIn": {
+          "title": "Google Sign-In",
+          "description": "When you sign in with Google, we receive the following information:",
+          "items": {
+            "email": "Your email address",
+            "displayName": "Your display name",
+            "photoUrl": "Your profile photo URL"
+          }
+        },
+        "gameplayData": {
+          "title": "Gameplay Data",
+          "description": "We collect gameplay data to save your progress and enable leaderboard features:",
+          "items": {
+            "progress": "Game progress and completed routes",
+            "routes": "Routes played and cities visited",
+            "earnings": "In-game earnings and scores",
+            "upgrades": "Vehicle upgrades and unlocked items"
+          }
+        },
+        "analytics": {
+          "title": "Analytics",
+          "description": "We use analytics tools to understand how players interact with the game and to improve the experience. This data is aggregated and does not personally identify you."
+        },
+        "localStorage": {
+          "title": "Local Storage",
+          "description": "We use your browser's local storage to save game settings, preferences, and session data so you can pick up where you left off."
+        }
+      },
+      "advertising": {
+        "title": "Advertising",
+        "description": "Salifu & Master displays ads through Google AdSense to support the development and hosting of the game. These ads are served by Google and may use cookies to personalise the ads shown to you.",
+        "cookies": "Google may use cookies to serve ads based on your prior visits to this and other websites. You can opt out of personalised advertising by visiting",
+        "learnMore": "Google Ads Settings."
+      },
+      "dataUsage": {
+        "title": "How We Use Your Data",
+        "description": "We use the information we collect for the following purposes:",
+        "items": {
+          "provide": "To provide and maintain the game experience",
+          "sync": "To sync your game progress across devices",
+          "improve": "To improve gameplay and fix bugs",
+          "ads": "To display relevant advertisements through Google AdSense",
+          "analyze": "To analyse usage patterns and improve the game"
+        }
+      },
+      "dataSecurity": {
+        "title": "Data Security",
+        "storage": "Your game data is stored securely using Google Firebase. We use industry-standard security measures to protect your information.",
+        "security": "While we take reasonable steps to protect your data, no method of electronic storage is completely secure. We cannot guarantee absolute security.",
+        "noSell": "We do not sell your personal information to third parties."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "description": "We use the following third-party services that may collect information about you:",
+        "services": {
+          "googleSignIn": {
+            "name": "Google Sign-In",
+            "description": "For authentication and account management.",
+            "link": "Google Privacy Policy",
+            "url": "https://policies.google.com/privacy"
+          },
+          "adsense": {
+            "name": "Google AdSense",
+            "description": "For displaying advertisements.",
+            "link": "Google Ads Privacy",
+            "url": "https://policies.google.com/technologies/ads"
+          },
+          "firebase": {
+            "name": "Google Firebase",
+            "description": "For data storage and game backend services.",
+            "link": "Firebase Privacy",
+            "url": "https://firebase.google.com/support/privacy"
+          }
+        }
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "description": "You have the following rights regarding your data:",
+        "items": {
+          "deletion": {
+            "title": "Account Deletion",
+            "description": "You can request deletion of your account and all associated data by contacting us."
+          },
+          "optOut": {
+            "title": "Opt Out of Personalised Ads",
+            "description": "You can opt out of personalised advertising through Google Ads Settings."
+          },
+          "clearData": {
+            "title": "Clear Local Data",
+            "description": "You can clear your browser's local storage at any time to remove locally stored game data."
+          },
+          "access": {
+            "title": "Data Access",
+            "description": "You can request a copy of the personal data we hold about you by contacting us."
+          }
+        }
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "If you have any questions about this Privacy Policy or your data, please contact us at:"
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "description": "We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the date below."
+      }
+    }
+  },
+  "TermsPage": {
+    "title": "Terms of Service",
+    "subtitle": "Rules and guidelines for using Salifu & Master",
+    "metaDescription": "Terms of Service for Salifu & Master. Read the rules, guidelines, and legal terms for playing our trotro driving game.",
+    "lastUpdated": "Last updated: {date}",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "description": "By accessing or playing Salifu & Master, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the game or website. These terms apply to all visitors, players, and users of the service."
+      },
+      "gameDescription": {
+        "title": "Description of Service",
+        "description": "Salifu & Master is a free-to-play, browser-based trotro conductor simulation game set in Ghana. The game is provided as-is and is accessible through any modern web browser. We reserve the right to modify, suspend, or discontinue any aspect of the game at any time without prior notice."
+      },
+      "accountsAndData": {
+        "title": "Accounts and Data",
+        "description": "You may sign in using your Google account to save your progress and access leaderboard features. By creating an account, you acknowledge that:",
+        "items": {
+          "googleSignIn": "You are responsible for maintaining the security of your Google account used to sign in",
+          "gameplayData": "Your gameplay data, scores, and progress are stored on our servers to provide the game experience",
+          "deletion": "You may request deletion of your account and associated data at any time by contacting us"
+        }
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "description": "All content in Salifu & Master, including but not limited to game mechanics, characters, artwork, music, text, and code, is the intellectual property of Salifu & Master and is protected by applicable copyright and trademark laws. You may not reproduce, distribute, modify, or create derivative works from any part of the game without explicit written permission."
+      },
+      "userConduct": {
+        "title": "User Conduct",
+        "description": "When using Salifu & Master, you agree not to:",
+        "items": {
+          "noExploits": "Use cheats, exploits, automation software, or any unauthorised third-party tools to gain an unfair advantage",
+          "noReverseEngineer": "Attempt to reverse engineer, decompile, or extract the source code of the game",
+          "noHarassment": "Engage in any behaviour that disrupts the experience for other players or the operation of the service",
+          "noMisrepresent": "Misrepresent your identity or impersonate another person on the leaderboard or in any game feature"
+        }
+      },
+      "advertising": {
+        "title": "Advertising",
+        "description": "Salifu & Master displays advertisements through Google AdSense to support the free operation of the game. By using the game, you consent to the display of ads. Ad content is provided by third-party networks and does not represent endorsement by Salifu & Master.",
+        "privacy": "For more information about how ad-related data is collected, please see our",
+        "privacyLink": "Privacy Policy"
+      },
+      "disclaimer": {
+        "title": "Disclaimer of Warranties",
+        "description": "Salifu & Master is provided on an \"as is\" and \"as available\" basis without warranties of any kind, either express or implied. We do not guarantee that the game will be uninterrupted, error-free, or free of harmful components. Your use of the game is at your own risk."
+      },
+      "limitation": {
+        "title": "Limitation of Liability",
+        "description": "To the fullest extent permitted by law, Salifu & Master and its creators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the game, even if we have been advised of the possibility of such damages."
+      },
+      "changes": {
+        "title": "Changes to These Terms",
+        "description": "We reserve the right to update or modify these Terms of Service at any time. Changes will be posted on this page with an updated date. Your continued use of the game after any changes constitutes acceptance of the new terms."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "description": "If you have any questions about these Terms of Service, please contact us at:"
+      }
+    }
+  },
   "Footer": {
     "logo": "Salifu & Master",
     "badge": "Made with pancakes",
@@ -337,14 +518,11 @@
       "howToPlay": "How to Play",
       "characters": "Characters",
       "cities": "Cities",
-      "pressKit": "Press Kit",
-      "contact": "Contact"
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
     },
     "social": {
-      "twitter": "Twitter",
-      "instagram": "Instagram",
-      "tiktok": "TikTok",
-      "discord": "Discord"
+      "twitter": "Twitter"
     }
   }
 }

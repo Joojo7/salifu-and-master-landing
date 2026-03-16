@@ -1,0 +1,48 @@
+@use "../../styles/variables" as *;
+
+.content {
+  padding: $section-py 0;
+  background: $bg-base;
+
+  @media (max-width: 767px) {
+    padding: $section-py-mobile 0;
+  }
+}
+
+.sectionTitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: $text-primary;
+}
+
+.paragraph {
+  color: $text-secondary;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 800px;
+}
+
+.list {
+  color: $text-secondary;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 800px;
+  padding-left: 1.25rem;
+}
+
+.link {
+  color: $accent;
+  font-weight: 700;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-hover;
+  }
+}
+
+.contactEmail {
+  color: $accent;
+  font-weight: 700;
+  font-size: 1.05rem;
+}

@@ -115,13 +115,12 @@ export const PAGE_HERO_IMAGES: Record<string, string> = {
   characters: "/screenshots/pick-up-passengers-at-stops.png",
   cities: "/in-game-screenshots/city-map.png",
   about: "/in-game-screenshots/main-menu.png",
+  privacy: "/in-game-screenshots/main-menu.png",
+  terms: "/in-game-screenshots/main-menu.png",
 };
 
 export const SOCIAL_LINK_DATA = [
-  { key: "twitter", href: "#" },
-  { key: "instagram", href: "#" },
-  { key: "tiktok", href: "#" },
-  { key: "discord", href: "#" },
+  { key: "twitter", href: "https://x.com/salifumate?s=21" },
 ] as const;
 
 export const FOOTER_LINK_DATA = [
@@ -129,4 +128,6 @@ export const FOOTER_LINK_DATA = [
   { key: "howToPlay", href: "/how-to-play" },
   { key: "characters", href: "/characters" },
   { key: "cities", href: "/cities" },
+  { key: "privacy", href: "/privacy" },
+  { key: "terms", href: "/terms" },
 ] as const;
