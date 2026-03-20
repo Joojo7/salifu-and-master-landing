@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { LOGO_SRC, HERO_BANNER_SRC, PLAY_BUTTON_SRC, GAME_URL } from "@/lib/constants";
+import { LOGO_SRC, HERO_BG_SRC, GAME_URL } from "@/lib/constants";
 import styles from "./hero.module.scss";
 
 export async function Hero() {
@@ -8,45 +8,43 @@ export async function Hero() {
 
   return (
     <section className={styles.hero}>
-      <Image
-        src={HERO_BANNER_SRC}
-        alt="Salifu and Master Kofi with their trotro"
-        fill
-        className={styles.bannerImage}
-        priority
-      />
+      <div className={styles.bgWrap}>
+        <Image
+          src={HERO_BG_SRC}
+          alt=""
+          fill
+          className={styles.bgImage}
+          priority
+          sizes="100vw"
+        />
+      </div>
       <div className={styles.overlay} />
 
-      <div className="container position-relative text-center">
-        <div className={styles.content}>
-          <h1 className={styles.title}>
-            <Image
-              src={LOGO_SRC}
-              alt={t("title")}
-              width={360}
-              height={135}
-              className={styles.logoImage}
-              priority
-            />
-          </h1>
-          <p className={styles.tagline}>{t("tagline")}</p>
-
-          <div className="d-flex justify-content-center mt-4">
-            <a href={GAME_URL} className={styles.playLink}>
-              <Image
-                src={PLAY_BUTTON_SRC}
-                alt={t("playCta")}
-                width={180}
-                height={72}
-                className={styles.playIcon}
-              />
-            </a>
-          </div>
+      <div className={`${styles.content} text-center`}>
+        <h1 className={styles.logoWrap}>
+          <Image
+            src={LOGO_SRC}
+            alt={t("title")}
+            width={400}
+            height={150}
+            className={styles.logoImage}
+            priority
+          />
+        </h1>
+        <p className={styles.tagline}>{t("tagline")}</p>
+        <div className={styles.buttons}>
+          <a href={GAME_URL} className={styles.playBtn}>
+            {t("playNow")}
+          </a>
+          <a href="#features" className={styles.learnBtn}>
+            {t("learnMore")}
+          </a>
         </div>
+        <p className={styles.subtext}>{t("subtext")}</p>
       </div>
 
       <div className={styles.scrollHint}>
-        <span className={styles.arrow} />
+        <span className={styles.chevron} />
       </div>
     </section>
   );

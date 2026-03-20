@@ -1,0 +1,63 @@
+@use "../../styles/variables" as *;
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  min-height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid $text-tertiary;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 200ms ease, border-color 200ms ease;
+
+  &:hover {
+    border-color: $text-secondary;
+  }
+}
+
+.activeDot {
+  background-color: $accent;
+  border-color: $accent;
+}
+
+.arrows {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.arrow {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid $border-hover;
+  background: transparent;
+  color: $text-primary;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 200ms ease, background-color 200ms ease;
+
+  &:hover {
+    border-color: $text-secondary;
+    background-color: rgba($bg-elevated, 0.5);
+  }
+}

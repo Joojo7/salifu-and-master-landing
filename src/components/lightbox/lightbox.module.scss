@@ -1,0 +1,77 @@
+@use "../../styles/variables" as *;
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 200ms ease;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: $text-primary;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity 200ms ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba($bg-base, 0.5);
+  border: 1px solid $border-default;
+  color: $text-primary;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba($bg-base, 0.8);
+  }
+}
+
+.prevBtn {
+  left: 1.5rem;
+}
+
+.nextBtn {
+  right: 1.5rem;
+}
+
+.imageWrap {
+  position: relative;
+  width: 90vw;
+  height: 80vh;
+  max-width: 1200px;
+  cursor: default;
+}
+
+.image {
+  object-fit: contain;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

@@ -1,0 +1,115 @@
+@use "../../styles/variables" as *;
+
+.section {
+  background-color: $bg-base;
+  padding: $section-py 0;
+  overflow: hidden;
+
+  @media (max-width: 767.98px) {
+    padding: $section-py-mobile 0;
+  }
+}
+
+.sectionTitle {
+  color: $text-primary;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: $text-secondary;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid $border-hover;
+  background: transparent;
+  color: $text-primary;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 200ms ease, background-color 200ms ease;
+
+  &:hover {
+    border-color: $text-secondary;
+    background-color: rgba($bg-elevated, 0.5);
+  }
+}
+
+.track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0 calc((100vw - 1140px) / 2);
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 1199.98px) {
+    padding: 0 1rem;
+  }
+}
+
+.card {
+  flex-shrink: 0;
+  width: 280px;
+  background-color: $bg-card;
+  border: 2px solid $accent;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  transition: transform 300ms ease, box-shadow 300ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.phoneFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  background: $bg-base;
+  max-height: 340px;
+  overflow: hidden;
+}
+
+.phoneImage {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.cardBody {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.cardTitle {
+  color: $text-primary;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.375rem;
+}
+
+.cardText {
+  color: $text-secondary;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin: 0;
+}

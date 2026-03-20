@@ -113,7 +113,7 @@ export const IN_GAME_SCREENSHOT_DATA = [
 export const PAGE_HERO_IMAGES: Record<string, string> = {
   howToPlay: "/in-game-screenshots/gameplay-gbawe.png",
   characters: "/screenshots/pick-up-passengers-at-stops.png",
-  cities: "/in-game-screenshots/city-map.png",
+  cities: "/assets/trotro_station.png",
   about: "/in-game-screenshots/main-menu.png",
   privacy: "/in-game-screenshots/main-menu.png",
   terms: "/in-game-screenshots/main-menu.png",
@@ -128,6 +128,81 @@ export const FOOTER_LINK_DATA = [
   { key: "howToPlay", href: "/how-to-play" },
   { key: "characters", href: "/characters" },
   { key: "cities", href: "/cities" },
+  { key: "contact", href: "/contact" },
   { key: "privacy", href: "/privacy" },
   { key: "terms", href: "/terms" },
 ] as const;
+
+export const DESKTOP_SCREENSHOT_SRC = {
+  shopIvecoDaily: "/screenshots/desktop-in-game/shop-iveco-daily.png",
+  shopHyundaiCounty: "/screenshots/desktop-in-game/shop-hyundai-county.png",
+  shopToyotaHiace: "/screenshots/desktop-in-game/shop-toyota-hiace.png",
+  shopPeugeotJ5: "/screenshots/desktop-in-game/shop-peugeot-j5.png",
+  shopRenaultEstafette: "/screenshots/desktop-in-game/shop-renault-estafette.png",
+  gameplaySunsetDriving: "/screenshots/desktop-in-game/gameplay-sunset-driving.png",
+  gameplayIntersection: "/screenshots/desktop-in-game/gameplay-intersection.png",
+  gameplayPeugeotSide: "/screenshots/desktop-in-game/gameplay-peugeot-side.png",
+  passengerPickup: "/screenshots/desktop-in-game/passenger-pickup.png",
+};
+
+export const MOBILE_SCREENSHOT_SRC = {
+  masterKofiDialogue: "/screenshots/mobile-in-game/master-kofi-dialogue.png",
+  ameliaDialogue: "/screenshots/mobile-in-game/amelia-dialogue.png",
+  goScreen: "/screenshots/mobile-in-game/go-screen.png",
+  mobileDriving: "/screenshots/mobile-in-game/mobile-driving.png",
+  mobileDrivingCloseup: "/screenshots/mobile-in-game/mobile-driving-closeup.png",
+  leaderboard: "/screenshots/mobile-in-game/leaderboard.png",
+  shop: "/screenshots/mobile-in-game/shop.png",
+  trotroShop: "/screenshots/mobile-in-game/trotro-shop.png",
+};
+
+export const FEATURE_CAROUSEL_KEYS = [
+  "trotroShop",
+  "routes",
+  "crew",
+  "hustle",
+  "upgrade",
+] as const;
+
+export const FEATURE_CAROUSEL_DATA: Record<
+  (typeof FEATURE_CAROUSEL_KEYS)[number],
+  { image: string }
+> = {
+  trotroShop: { image: DESKTOP_SCREENSHOT_SRC.shopHyundaiCounty },
+  routes: { image: DESKTOP_SCREENSHOT_SRC.gameplaySunsetDriving },
+  crew: { image: CHARACTERS_BANNER_SRC },
+  hustle: { image: DESKTOP_SCREENSHOT_SRC.passengerPickup },
+  upgrade: { image: DESKTOP_SCREENSHOT_SRC.shopToyotaHiace },
+};
+
+export const GALLERY_DESKTOP_SCREENSHOTS = [
+  { src: DESKTOP_SCREENSHOT_SRC.gameplaySunsetDriving, alt: "Driving through the city at sunset" },
+  { src: DESKTOP_SCREENSHOT_SRC.gameplayIntersection, alt: "Navigating a busy intersection" },
+  { src: DESKTOP_SCREENSHOT_SRC.gameplayPeugeotSide, alt: "Peugeot J5 on the open road" },
+  { src: DESKTOP_SCREENSHOT_SRC.passengerPickup, alt: "Picking up passengers at a stop" },
+  { src: DESKTOP_SCREENSHOT_SRC.shopRenaultEstafette, alt: "Renault Estafette in the shop" },
+  { src: DESKTOP_SCREENSHOT_SRC.shopPeugeotJ5, alt: "Peugeot J5 stats and pricing" },
+];
+
+export const GALLERY_MOBILE_SCREENSHOTS = [
+  { src: MOBILE_SCREENSHOT_SRC.mobileDriving, alt: "Mobile gameplay on Coastal Road" },
+  { src: MOBILE_SCREENSHOT_SRC.masterKofiDialogue, alt: "Master Kofi giving instructions" },
+  { src: MOBILE_SCREENSHOT_SRC.goScreen, alt: "GO! Round starting" },
+  { src: MOBILE_SCREENSHOT_SRC.trotroShop, alt: "Browse trotros on mobile" },
+  { src: MOBILE_SCREENSHOT_SRC.leaderboard, alt: "Compete on the leaderboard" },
+  { src: MOBILE_SCREENSHOT_SRC.shop, alt: "Upgrade your mate" },
+  { src: MOBILE_SCREENSHOT_SRC.ameliaDialogue, alt: "Amelia offers you food" },
+  { src: MOBILE_SCREENSHOT_SRC.mobileDrivingCloseup, alt: "Close-up street driving" },
+];
+
+export const HERO_BG_SRC = DESKTOP_SCREENSHOT_SRC.gameplaySunsetDriving;
+export const CTA_BANNER_BG_SRC = "/branding/salifu_in_trotro2.png";
+
+export const GALLERY_BG_SCREENSHOTS = [
+  "/in-game-screenshots/gameplay-gbawe.png",
+  "/in-game-screenshots/gameplay-dansoman.png",
+  "/in-game-screenshots/gameplay-street.png",
+  "/in-game-screenshots/gameplay-odorkor.png",
+  "/in-game-screenshots/trotro-sprinter.png",
+  "/in-game-screenshots/city-map.png",
+];

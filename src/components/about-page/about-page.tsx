@@ -4,6 +4,11 @@ import styles from "./about-page.module.scss";
 
 const SECTION_KEYS = ["whatIs", "trotros", "why"] as const;
 
+const CREATOR_LINKS = [
+  { key: "portfolio", href: "https://www.joojodontoh.tech/" },
+  { key: "linkedin", href: "https://www.linkedin.com/in/joojo-dontoh-57843b65/" },
+] as const;
+
 export async function AboutContent() {
   const t = await getTranslations("AboutPage");
   const locale = await getLocale();
@@ -28,6 +33,24 @@ export async function AboutContent() {
           <Link href={`/${locale}/how-to-play`} className={styles.link}>
             {t("howToPlayBrief.linkText")} &rarr;
           </Link>
+        </div>
+
+        <div className="mb-5">
+          <h2 className={styles.sectionTitle}>{t("creator.title")}</h2>
+          <p className={styles.paragraph}>{t("creator.description")}</p>
+          <div className="d-flex gap-3">
+            {CREATOR_LINKS.map((link) => (
+              <a
+                key={link.key}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                {t(`creator.${link.key}`)} &rarr;
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

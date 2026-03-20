@@ -16,6 +16,9 @@
   "Hero": {
     "title": "Salifu & Master",
     "tagline": "Pick up passengers. Make your sales. Survive the streets.",
+    "playNow": "Play Now",
+    "learnMore": "Learn More",
+    "subtext": "Free. No download. Play in your browser.",
     "playCta": "Play Now"
   },
   "PageHero": {
@@ -64,6 +67,69 @@
       "6": "Hustle through Dansoman",
       "7": "Visit Serwaa at Odorkor",
       "8": "Race to make your fares"
+    }
+  },
+  "FeaturesCarousel": {
+    "trotroShop": {
+      "title": "The Trotro Shop",
+      "description": "Browse and buy trotros — from the classic Peugeot J5 to the Hyundai County. Each vehicle has unique capacity, speed, and master's cut stats."
+    },
+    "routes": {
+      "title": "Real Ghanaian Routes",
+      "description": "Drive actual routes across Accra, Kumasi, and Cape Coast. 14 routes with real street names and landmarks."
+    },
+    "crew": {
+      "title": "Meet the Crew",
+      "description": "Master Kofi runs the show. Amelia sells jollof. Serwaa keeps you sharp. Every character shapes your journey."
+    },
+    "hustle": {
+      "title": "Hustle & Survive",
+      "description": "Pick up passengers, manage your resources, dodge traffic. Every route is a test of skill and timing."
+    },
+    "upgrade": {
+      "title": "Upgrade & Compete",
+      "description": "Earn money, unlock better trotros, climb the leaderboard. Your fleet is your legacy."
+    }
+  },
+  "ScreenshotGallery": {
+    "sectionTitle": "See It In Action"
+  },
+  "MobileShowcase": {
+    "title": "Play Anywhere",
+    "subtitle": "Optimized for mobile. Same hustle, smaller screen.",
+    "cards": {
+      "0": {
+        "title": "Hit the Road",
+        "description": "Drive through Ghana's busiest streets right from your phone. Tap to pick up passengers and make your daily sales."
+      },
+      "1": {
+        "title": "Meet Your Boss",
+        "description": "Master Kofi sets the rules. Listen to his instructions before each run — your earnings depend on it."
+      },
+      "2": {
+        "title": "Ready, Set, Go!",
+        "description": "Every round starts with a countdown. Three minutes to prove you're the best mate on the streets."
+      },
+      "3": {
+        "title": "Pick Your Ride",
+        "description": "Browse the trotro shop and pick your vehicle. Each one has different capacity, speed, and master's cut."
+      },
+      "4": {
+        "title": "Climb the Ranks",
+        "description": "Compete on the seasonal leaderboard. See how you stack up against other mates across Ghana."
+      },
+      "5": {
+        "title": "Level Up Your Mate",
+        "description": "Unlock upgrades for Salifu. Reduce hunger, boost health, and stay sane longer on the streets."
+      },
+      "6": {
+        "title": "Grab a Plate",
+        "description": "Amelia's got jollof on the fire. Visit her stall to restore your hunger before the round ends."
+      },
+      "7": {
+        "title": "Navigate the Streets",
+        "description": "Weave through traffic and hit every stop. The closer you look, the more passengers you'll find."
+      }
     }
   },
   "Characters": {
@@ -321,6 +387,36 @@
       "title": "How It Works",
       "description": "Each round lasts three minutes. Pick a city and route, collect passengers at stops along the way, manage your resources by visiting NPCs, and try to earn enough cedis to meet your daily sales target. The better you perform, the more stars you earn and the higher you climb on the leaderboard.",
       "linkText": "Read the full guide"
+    },
+    "creator": {
+      "title": "About the Creator",
+      "description": "Salifu & Master is built by Joojo Dontoh, a Ghanaian software engineer and Technical Lead based in Kuala Lumpur, Malaysia. With experience building platforms at bp, Astro, and AirAsia, Joojo created this game to capture a slice of everyday Ghanaian life that rarely makes it into video games. Growing up riding trotros through Accra's busiest streets inspired the characters, routes, and hustle that define the game.",
+      "portfolio": "Portfolio",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "ContactPage": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with the team",
+    "metaDescription": "Contact the Salifu & Master team. Reach out for questions, feedback, or business inquiries about our trotro driving game.",
+    "intro": "Have a question, found a bug, or just want to say hello? We'd love to hear from you. Reach out through any of the channels below.",
+    "methods": {
+      "email": {
+        "label": "Email",
+        "href": "mailto:designblox00@gmail.com",
+        "display": "designblox00@gmail.com",
+        "description": "For general inquiries, bug reports, account issues, or business partnerships."
+      },
+      "twitter": {
+        "label": "Twitter / X",
+        "href": "https://x.com/salifumate?s=21",
+        "display": "@salifumate",
+        "description": "Follow us for updates, patch notes, and community highlights."
+      }
+    },
+    "feedback": {
+      "title": "Feedback & Suggestions",
+      "description": "We're always looking to improve. If you have ideas for new routes, features, or improvements, send us an email and we'll take a look. Player feedback shapes what we build next."
     }
   },
   "CtaBanner": {
@@ -518,6 +614,7 @@
       "howToPlay": "How to Play",
       "characters": "Characters",
       "cities": "Cities",
+      "contact": "Contact",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },

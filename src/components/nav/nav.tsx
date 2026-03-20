@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import { NAV_LINK_HREFS, NAV_PAGE_LINKS, NAV_LOGO_SRC, GAME_URL } from "@/lib/constants";
+import { NAV_PAGE_LINKS, NAV_LOGO_SRC, GAME_URL } from "@/lib/constants";
 import styles from "./nav.module.scss";
 
 export function Nav() {
@@ -12,14 +12,16 @@ export function Nav() {
   const locale = useLocale();
   const pathname = usePathname();
   const isHomePage = pathname === `/${locale}` || pathname === `/${locale}/`;
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(!isHomePage);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    if (!isHomePage) return;
+    const handleScroll = () => setScrolled(window.scrollY > 100);
     window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomePage]);
 
   const handleLinkClick = () => setMenuOpen(false);
 
@@ -44,17 +46,6 @@ export function Nav() {
           >
             ✕
           </button>
-          {isHomePage &&
-            NAV_LINK_HREFS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={styles.link}
-                onClick={handleLinkClick}
-              >
-                {t(link.key)}
-              </a>
-            ))}
           {NAV_PAGE_LINKS.map((link) => (
             <a
               key={link.href}
@@ -73,6 +64,10 @@ export function Nav() {
             {t("play")}
           </a>
         </div>
+
+        <a href={GAME_URL} className={styles.ctaMobile}>
+          {t("play")}
+        </a>
 
         <button
           className={`${styles.hamburger} ${menuOpen ? styles.active : ""}`}

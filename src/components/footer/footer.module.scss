@@ -1,50 +1,110 @@
 @use "../../styles/variables" as *;
 
 .footer {
-  padding: 3rem 0 2rem;
+  background-color: $bg-card;
   border-top: 1px solid $border-default;
-  background: $bg-card;
+  padding: 1.5rem 0 1rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logoImage {
-  width: 140px;
+  width: 80px;
   height: auto;
-  margin-bottom: 1rem;
-}
-
-.link {
-  font-size: 0.85rem;
-  color: $text-secondary;
-
-  &:hover {
-    color: $text-primary;
-  }
-}
-
-.socialLink {
-  font-size: 0.8rem;
-  color: $text-secondary;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid $border-default;
-  border-radius: $radius-sm;
-
-  &:hover {
-    color: $accent;
-    border-color: $accent;
-  }
-}
-
-.badge {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: $text-secondary;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
 }
 
 .copyright {
-  font-size: 0.7rem;
   color: $text-tertiary;
+  font-size: 0.75rem;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  color: $text-secondary;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  position: relative;
+  transition: color 200ms ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $accent;
+    transition: width 200ms ease;
+  }
+
+  &:hover {
+    color: $text-primary;
+
+    &::after {
+      width: 100%;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.socialLink {
+  color: $text-secondary;
+  text-decoration: none;
+  font-size: 0.8125rem;
+  transition: color 200ms ease;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.divider {
+  height: 1px;
+  background-color: $border-default;
+  margin: 1rem 0 0.75rem;
+}
+
+.badge {
+  text-align: center;
+  color: $text-tertiary;
+  font-size: 0.6875rem;
   margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .row {
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .brand {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navLinks {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.75rem 1.5rem;
+    justify-content: center;
+  }
 }

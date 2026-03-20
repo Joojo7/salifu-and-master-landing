@@ -1,13 +1,9 @@
 import { setRequestLocale } from "next-intl/server";
 import { Nav } from "@/components/nav/nav";
 import { Hero } from "@/components/hero/hero";
-import { GameConcept } from "@/components/game-concept/game-concept";
-import { InGameScreenshots } from "@/components/in-game-screenshots/in-game-screenshots";
-import { Characters } from "@/components/characters/characters";
-import { CitiesShowcase } from "@/components/cities-showcase/cities-showcase";
-import { RoutesSection } from "@/components/routes-section/routes-section";
-import { Features } from "@/components/features/features";
-import { HowToPlay } from "@/components/how-to-play/how-to-play";
+import { FeaturesCarousel } from "@/components/features-carousel/features-carousel";
+import { ScreenshotGallery } from "@/components/screenshot-gallery/screenshot-gallery";
+import { MobileShowcase } from "@/components/screenshot-gallery/phone-mockup";
 import { CtaBanner } from "@/components/cta-banner/cta-banner";
 import { Footer } from "@/components/footer/footer";
 import { ScrollReveal } from "@/components/scroll-reveal/scroll-reveal";
@@ -25,28 +21,16 @@ export default async function Home({ params }: Props) {
       <Nav />
       <main>
         <Hero />
+        <FeaturesCarousel />
         <ScrollReveal>
-          <GameConcept />
+          <ScreenshotGallery />
         </ScrollReveal>
         <ScrollReveal>
-          <InGameScreenshots />
+          <MobileShowcase />
         </ScrollReveal>
         <ScrollReveal>
-          <Characters />
+          <CtaBanner />
         </ScrollReveal>
-        <ScrollReveal>
-          <CitiesShowcase />
-        </ScrollReveal>
-        <ScrollReveal>
-          <RoutesSection />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Features />
-        </ScrollReveal>
-        <ScrollReveal>
-          <HowToPlay />
-        </ScrollReveal>
-        <CtaBanner />
       </main>
       <Footer />
     </>
