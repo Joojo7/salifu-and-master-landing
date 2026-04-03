@@ -1,0 +1,44 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: $section-py-mobile 0;
+
+  @media (min-width: 768px) {
+    padding: $section-py 0;
+  }
+}
+
+.filters {
+  margin-bottom: 1.5rem;
+}
+
+.filterPill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: $text-secondary;
+  background: $bg-elevated;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  border: 1px solid $border-default;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.empty {
+  color: $text-tertiary;
+  padding: 4rem 0;
+  font-size: 1.1rem;
+}

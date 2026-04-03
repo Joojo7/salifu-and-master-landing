@@ -60,7 +60,7 @@ export function FeaturesCarousel() {
             />
           </button>
 
-          <div className={styles.activeCard}>
+          <div key={`card-${activeIndex}`} className={styles.activeCard}>
             <Image
               src={FEATURE_CAROUSEL_DATA[activeKey].image}
               alt={t(`${activeKey}.title`)}
@@ -90,7 +90,7 @@ export function FeaturesCarousel() {
           onDotClick={setActiveIndex}
         />
 
-        <div className={styles.textArea}>
+        <div key={`text-${activeIndex}`} className={styles.textArea}>
           <h3 className={styles.title}>{t(`${activeKey}.title`)}</h3>
           <p className={styles.description}>{t(`${activeKey}.description`)}</p>
         </div>

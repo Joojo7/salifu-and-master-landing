@@ -11,7 +11,8 @@
     "trailer": "Trailer",
     "play": "Play",
     "howToPlay": "How to Play",
-    "about": "About"
+    "about": "About",
+    "news": "News"
   },
   "Hero": {
     "title": "Salifu & Master",
@@ -621,5 +622,14 @@
     "social": {
       "twitter": "Twitter"
     }
+  },
+  "NewsSection": {
+    "title": "Latest News",
+    "seeAll": "See All"
+  },
+  "NewsPage": {
+    "title": "News",
+    "subtitle": "What we are building, how we are building it, and why it matters.",
+    "metaDescription": "Dev logs, feature deep-dives, and behind-the-scenes stories from the Salifu & Master team."
   }
 }

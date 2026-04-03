@@ -51,6 +51,10 @@ Landing page for the Salifu & Master trotro driving game. Next.js (App Router), 
 - Only use comments to explain "why" when the reasoning isn't apparent from context
 - Delete commented-out code; version control keeps history
 
+## Writing
+
+- **Never use em dashes** - Do not use the character "—" (em dash) anywhere in content or code. Use commas, periods, colons, or rewrite the sentence instead.
+
 ## Workflow
 
 - **Avoid refactoring as part of a task** - Keep changes focused on the requested task

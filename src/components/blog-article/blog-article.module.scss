@@ -1,0 +1,180 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: $section-py-mobile 0;
+
+  @media (min-width: 768px) {
+    padding: $section-py 0;
+  }
+}
+
+.article {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $border-default;
+}
+
+.backLink {
+  font-size: 0.85rem;
+  color: $text-tertiary;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.bannerWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: $radius-md;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.bannerImage {
+  object-fit: cover;
+}
+
+.category {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $accent;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: $text-tertiary;
+}
+
+.readTime {
+  font-size: 0.8rem;
+  color: $text-tertiary;
+}
+
+.title {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0.75rem 0 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 2.75rem;
+  }
+}
+
+.summary {
+  font-size: 1.1rem;
+  color: $text-secondary;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: $text-tertiary;
+  background: $bg-elevated;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+
+.content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $text-secondary;
+
+  h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $text-primary;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-primary;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    color: $accent;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $accent-hover;
+    }
+  }
+
+  ul,
+  ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  code {
+    background: $bg-elevated;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+
+  pre {
+    background: $bg-elevated;
+    border: 1px solid $border-default;
+    border-radius: $radius-md;
+    padding: 1.25rem;
+    overflow-x: auto;
+    margin-bottom: 1.5rem;
+
+    code {
+      background: none;
+      padding: 0;
+    }
+  }
+
+  blockquote {
+    border-left: 3px solid $accent;
+    padding-left: 1.25rem;
+    margin-left: 0;
+    color: $text-secondary;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: $radius-md;
+    margin: 1.5rem 0;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid $border-default;
+    margin: 2rem 0;
+  }
+}

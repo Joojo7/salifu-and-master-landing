@@ -5,6 +5,7 @@ import { FeaturesCarousel } from "@/components/features-carousel/features-carous
 import { ScreenshotGallery } from "@/components/screenshot-gallery/screenshot-gallery";
 import { MobileShowcase } from "@/components/screenshot-gallery/phone-mockup";
 import { CtaBanner } from "@/components/cta-banner/cta-banner";
+import { NewsSection } from "@/components/news-section/news-section";
 import { Footer } from "@/components/footer/footer";
 import { ScrollReveal } from "@/components/scroll-reveal/scroll-reveal";
 
@@ -27,6 +28,9 @@ export default async function Home({ params }: Props) {
         </ScrollReveal>
         <ScrollReveal>
           <MobileShowcase />
+        </ScrollReveal>
+        <ScrollReveal>
+          <NewsSection locale={locale} />
         </ScrollReveal>
         <ScrollReveal>
           <CtaBanner />
