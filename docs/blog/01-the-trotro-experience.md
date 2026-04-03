@@ -5,7 +5,7 @@ category: core-gameplay
 status: ready
 publishDate: null
 banner: /blog-images/01-the-trotro-experience.png
-twitterThread: null
+twitterThread: twitter-drafts/the-trotro-experience-thread.md
 tags:
   - gameplay
   - trotro
