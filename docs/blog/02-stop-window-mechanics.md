@@ -1,13 +1,16 @@
 ---
-title: "Stop Window Mechanics"
+title: Stop Window Mechanics
 slug: stop-window-mechanics
 category: core-gameplay
 status: ready
 publishDate: null
 banner: /blog-images/02-stop-window-mechanics.png
-twitterThread: null
-tags: [gameplay, mechanics, passengers]
-summary: "Timed boarding and dropoff at each stop. Miss the window, miss the passengers."
+twitterThread: twitter-drafts/stop-window-mechanics-thread.md
+tags:
+  - gameplay
+  - mechanics
+  - passengers
+summary: 'Timed boarding and dropoff at each stop. Miss the window, miss the passengers.'
 ---
 
 # Stop Window Mechanics
