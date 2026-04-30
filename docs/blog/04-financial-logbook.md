@@ -1,13 +1,18 @@
 ---
-title: "The Financial Logbook"
+title: The Financial Logbook
 slug: financial-logbook
 category: core-gameplay
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/financial-logbook-thread.md
 banner: /blog-images/04-financial-logbook.png
-tags: [economy, logbook, earnings]
-summary: "Every fare in, every cedi out. The day's whole P&L on one page, before Master takes his cut."
+tags:
+  - economy
+  - logbook
+  - earnings
+summary: >-
+  Every fare in, every cedi out. The day's whole P&L on one page, before Master
+  takes his cut.
 ---
 
 # The Financial Logbook
