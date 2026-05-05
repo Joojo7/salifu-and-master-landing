@@ -1,13 +1,16 @@
 ---
-title: "Meet Master"
+title: Meet Master
 slug: meet-master
 category: characters
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/meet-master-thread.md
 banner: /blog-images/05-meet-master.png
-tags: [npc, master, story]
-summary: "Your boss, the bus owner. He takes his cut and he's not happy when you fail."
+tags:
+  - npc
+  - master
+  - story
+summary: 'Your boss, the bus owner. He takes his cut and he''s not happy when you fail.'
 ---
 
 # Meet Master
