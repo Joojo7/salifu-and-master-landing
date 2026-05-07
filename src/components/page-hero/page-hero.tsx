@@ -21,14 +21,16 @@ export async function PageHero({
         priority
         className={styles.bgImage}
       />
-      <div className={styles.overlay} />
-      <div className={`container text-center ${styles.content}`}>
+      <div className={styles.overlay} aria-hidden="true" />
+      <div className={`container ${styles.content}`}>
+        <span className={styles.kicker}>★ {title}</span>
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>{subtitle}</p>
         <a href={GAME_URL} className={styles.cta}>
-          {t("playNow")}
+          ▶ {t("playNow")}
         </a>
       </div>
+      <div className={styles.bottomStrip} aria-hidden="true" />
     </section>
   );
 }

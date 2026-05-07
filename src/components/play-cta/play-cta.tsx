@@ -7,11 +7,16 @@ export async function PlayCta() {
 
   return (
     <section className={styles.section}>
-      <div className="container text-center">
-        <h2 className={styles.heading}>{t("heading")}</h2>
+      <div className={`container ${styles.inner}`}>
+        <span className={styles.kicker}>{t("kicker")}</span>
+        <h2 className={styles.heading}>
+          {t("headingLine1")}
+          <br />
+          {t("headingLine2")}
+        </h2>
         <p className={styles.subtext}>{t("subtext")}</p>
         <a href={GAME_URL} className={styles.cta}>
-          {t("cta")}
+          ▶ {t("cta")}
         </a>
       </div>
     </section>

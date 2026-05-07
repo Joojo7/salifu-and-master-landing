@@ -1,43 +1,133 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
 
 .content {
-  padding: $section-py 0;
-  background: $bg-base;
+  padding: 5rem 0;
+  background: $paper;
+  position: relative;
+  overflow: hidden;
 
-  @media (max-width: 767px) {
-    padding: $section-py-mobile 0;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1.2px, transparent 1.4px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 3rem 0;
   }
 }
 
-.portrait {
-  display: inline-block;
-  border: 2px solid var(--accent);
-  border-radius: $radius-lg;
-  padding: 1rem;
-  background: $bg-card;
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
 }
 
-.name {
-  font-family: "Nunito", sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  color: $text-primary;
+.card {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.6rem;
+  background: #fff;
+  border: $stroke;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s;
+
+  &:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 $ink; }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+}
+
+.reversed {
+  grid-template-columns: 1fr 380px;
+
+  .photo { order: 2; }
+  .body { order: 1; }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+
+    .photo { order: 1; }
+    .body { order: 2; }
+  }
+}
+
+.yellow { background: $yellow; }
+.red { background: $red; color: #fff; }
+.purple { background: $purple; color: #fff; }
+.green { background: $green; color: #fff; }
+.blue { background: $blue; color: #fff; }
+
+.photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  background: #fff;
+  border: $stroke-thin;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1.2px, transparent 1.4px);
+    background-size: 9px 9px;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  img { object-fit: cover; }
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .role {
-  font-weight: 700;
-  color: var(--accent);
-  font-size: 1.1rem;
+  align-self: flex-start;
+  font-family: $font-poster;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  background: $ink;
+  color: $yellow;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
 }
 
-.paragraph {
-  color: $text-secondary;
-  line-height: 1.8;
-  font-size: 1.05rem;
+.name {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+  line-height: 1;
 }
 
 .gameplayTitle {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  color: $text-primary;
+  font-family: $font-poster;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0.6rem 0 0;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
 }

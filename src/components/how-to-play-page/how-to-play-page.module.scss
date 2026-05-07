@@ -1,49 +1,184 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
 
 .content {
-  padding: $section-py 0;
-  background: $bg-base;
+  padding: 5rem 0;
+  background: $paper;
+  position: relative;
+  overflow: hidden;
 
-  @media (max-width: 767px) {
-    padding: $section-py-mobile 0;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1.2px, transparent 1.4px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
+
+  @media (max-width: $bp-mobile) {
+    padding: 3rem 0;
   }
 }
 
-.sectionTitle {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 1.75rem;
-  color: $text-primary;
+.kicker { @include kicker; }
+
+.overview {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  border: $stroke;
+  border-radius: $radius-lg;
+  box-shadow: $shadow;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.overviewText {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: $ink;
+  margin: 0;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
+  background: #fff;
+  border: $stroke;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 $ink; }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.reversed {
+  .media { order: 2; }
+  .body { order: 1; }
+
+  @media (max-width: $bp-mobile) {
+    .media { order: 1; }
+    .body { order: 2; }
+  }
+}
+
+.yellow .body { background: $yellow; color: $ink; }
+.red .body { background: $red; color: #fff; }
+.blue .body { background: $blue; color: #fff; }
+.green .body { background: $green; color: #fff; }
+
+.yellow .stepNum { background: $ink; color: $yellow; }
+.red .stepNum { background: $yellow; color: $ink; }
+.blue .stepNum { background: $yellow; color: $ink; }
+.green .stepNum { background: $yellow; color: $ink; }
+
+.media {
+  position: relative;
+  background: $ink;
+  min-height: 320px;
+
+  img { object-fit: cover; }
+}
+
+.body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.stepNum {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  border: $stroke-thin;
+  font-family: $font-poster;
+  font-size: 1.4rem;
+  box-shadow: $shadow-sm;
+  margin-bottom: 0.4rem;
+}
+
+.stepTitle {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin: 0;
+  line-height: 1.05;
 }
 
 .paragraph {
-  color: $text-secondary;
-  line-height: 1.8;
-  font-size: 1.05rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
 }
 
-.screenshot {
+.tipsSection {
+  margin-top: 4rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.tipGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
   width: 100%;
-  height: auto;
-  border-radius: $radius-lg;
-  border: 1px solid $border-default;
+
+  @media (max-width: $bp-mobile) { grid-template-columns: 1fr; }
 }
 
 .tipCard {
-  background: $bg-card;
-  border: 1px solid $border-default;
+  border: $stroke;
   border-radius: $radius-lg;
-  padding: 1.5rem;
-  height: 100%;
+  padding: 1.4rem;
+  box-shadow: $shadow;
+  transition: transform 0.2s;
+
+  &:hover { transform: translateY(-4px) rotate(-1deg); }
+
+  &.yellow { background: $yellow; color: $ink; }
+  &.red { background: $red; color: #fff; }
+  &.blue { background: $blue; color: #fff; }
 }
 
 .tipTitle {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  color: $accent;
+  font-family: $font-display;
+  font-style: italic;
+  font-size: 1.4rem;
+  margin: 0 0 0.6rem;
 }
 
 .tipText {
-  color: $text-secondary;
-  line-height: 1.7;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }

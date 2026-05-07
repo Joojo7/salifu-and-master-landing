@@ -1,32 +1,50 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
 
 .section {
-  padding: $section-py-mobile 0;
+  padding: 4rem 0;
+  background: $paper;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1.2px, transparent 1.4px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
 
   @media (min-width: 768px) {
-    padding: $section-py 0;
+    padding: 5rem 0;
   }
 }
 
 .filters {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+  position: relative;
+  z-index: 2;
 }
 
 .filterPill {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: $text-secondary;
-  background: $bg-elevated;
-  padding: 0.3rem 0.75rem;
-  border-radius: 20px;
-  border: 1px solid $border-default;
+  font-family: $font-poster;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $ink;
+  background: $yellow;
+  padding: 0.4rem 0.85rem;
+  border-radius: $radius-pill;
+  border: 2px solid $ink;
+  box-shadow: $shadow-sm;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.5rem;
+  position: relative;
+  z-index: 2;
 
   @media (min-width: 576px) {
     grid-template-columns: repeat(2, 1fr);
@@ -38,7 +56,10 @@
 }
 
 .empty {
-  color: $text-tertiary;
+  color: $ink;
   padding: 4rem 0;
   font-size: 1.1rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
 }

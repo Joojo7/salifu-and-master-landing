@@ -1,32 +1,64 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
 
 .section {
-  padding: $section-py-mobile 0;
+  padding: 4rem 0;
+  background: $paper;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1.2px, transparent 1.4px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
 
   @media (min-width: 768px) {
-    padding: $section-py 0;
+    padding: 5rem 0;
   }
 }
 
 .article {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
+  background: #fff;
+  border: $stroke;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  padding: 2rem 2rem 2.4rem;
+  position: relative;
+  z-index: 2;
+  color: $ink;
+
+  @media (min-width: 768px) {
+    padding: 2.6rem 3rem 3rem;
+  }
 }
 
 .header {
-  padding-bottom: 2rem;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid $border-default;
+  padding-bottom: 1.6rem;
+  margin-bottom: 1.6rem;
+  border-bottom: 2px dashed $ink;
 }
 
 .backLink {
-  font-size: 0.85rem;
-  color: $text-tertiary;
-  text-decoration: none;
-  transition: color 0.2s;
+  font-family: $font-poster;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: $ink;
+  background: $yellow;
+  padding: 0.4rem 0.8rem;
+  border-radius: $radius-pill;
+  border: 2px solid $ink;
+  box-shadow: $shadow-sm;
+  display: inline-block;
 
   &:hover {
-    color: $accent;
+    color: $ink;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 $ink;
   }
 }
 
@@ -35,8 +67,10 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   border-radius: $radius-md;
+  border: $stroke-thin;
   overflow: hidden;
-  margin-top: 1rem;
+  margin-top: 1.4rem;
+  box-shadow: $shadow-sm;
 }
 
 .bannerImage {
@@ -44,92 +78,96 @@
 }
 
 .category {
-  font-family: "Nunito", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-family: $font-poster;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: $accent;
+  background: $ink;
+  color: $yellow;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
 }
 
-.date {
-  font-size: 0.8rem;
-  color: $text-tertiary;
-}
-
+.date,
 .readTime {
-  font-size: 0.8rem;
-  color: $text-tertiary;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #555;
 }
 
 .title {
-  font-family: "Nunito", sans-serif;
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin: 0.75rem 0 1rem;
-
-  @media (min-width: 768px) {
-    font-size: 2.75rem;
-  }
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  line-height: 1.05;
+  margin: 1rem 0 0.8rem;
+  color: $ink;
 }
 
 .summary {
-  font-size: 1.1rem;
-  color: $text-secondary;
+  font-size: 1.15rem;
+  color: #333;
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .tag {
-  font-size: 0.75rem;
-  color: $text-tertiary;
-  background: $bg-elevated;
-  padding: 0.2rem 0.6rem;
+  font-family: $font-poster;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: $ink;
+  background: $yellow;
+  padding: 0.2rem 0.55rem;
   border-radius: 4px;
+  border: 1.5px solid $ink;
 }
 
 .content {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: $text-secondary;
+  color: $ink;
 
   h2 {
-    font-family: "Nunito", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: $text-primary;
+    font-family: $font-display;
+    font-style: italic;
+    font-size: 1.7rem;
+    font-weight: 900;
+    color: $ink;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
   }
 
   h3 {
-    font-family: "Nunito", sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: $text-primary;
+    font-family: $font-display;
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: $ink;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
   }
 
   p {
     margin-bottom: 1.25rem;
+    color: #222;
   }
 
   a {
-    color: $accent;
+    color: $red;
     text-decoration: underline;
     text-underline-offset: 2px;
+    font-weight: 600;
 
-    &:hover {
-      color: $accent-hover;
-    }
+    &:hover { color: $red-dark; }
   }
 
   ul,
   ol {
     padding-left: 1.5rem;
     margin-bottom: 1.25rem;
+    color: #222;
   }
 
   li {
@@ -137,44 +175,53 @@
   }
 
   code {
-    background: $bg-elevated;
+    background: $paper-2;
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
     font-size: 0.9rem;
+    border: 1px solid $ink;
+    color: $ink;
   }
 
   pre {
-    background: $bg-elevated;
-    border: 1px solid $border-default;
+    background: $ink;
+    color: #fff7ea;
+    border: $stroke-thin;
     border-radius: $radius-md;
     padding: 1.25rem;
     overflow-x: auto;
     margin-bottom: 1.5rem;
+    box-shadow: $shadow-sm;
 
     code {
       background: none;
+      border: none;
       padding: 0;
+      color: inherit;
     }
   }
 
   blockquote {
-    border-left: 3px solid $accent;
-    padding-left: 1.25rem;
-    margin-left: 0;
-    color: $text-secondary;
+    border-left: 6px solid $red;
+    background: $paper-2;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    color: $ink;
     font-style: italic;
-    margin-bottom: 1.5rem;
+    border-radius: 0 $radius-md $radius-md 0;
   }
 
   img {
     max-width: 100%;
+    border: $stroke-thin;
     border-radius: $radius-md;
     margin: 1.5rem 0;
+    box-shadow: $shadow-sm;
   }
 
   hr {
     border: none;
-    border-top: 1px solid $border-default;
+    border-top: 2px dashed $ink;
     margin: 2rem 0;
   }
 }

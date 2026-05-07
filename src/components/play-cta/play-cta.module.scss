@@ -1,45 +1,80 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
 
 .section {
-  padding: $section-py 0;
-  background: $bg-elevated;
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+  background: $red;
+  border-top: $stroke;
+  border-bottom: $stroke;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.28) 1.4px, transparent 1.6px);
+    background-size: 12px 12px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg, transparent 0 60px, rgba(255, 205, 28, 0.12) 60px 62px);
+    pointer-events: none;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  color: #fff;
+}
+
+.kicker {
+  display: inline-block;
+  background: $yellow;
+  color: $ink;
+  font-family: $font-poster;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid $ink;
+  transform: rotate(-2deg);
 }
 
 .heading {
-  font-family: "Nunito", sans-serif;
-  font-weight: 800;
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  color: $accent;
+  font-family: $font-display;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.95;
+  text-shadow: 6px 6px 0 $ink;
+  margin: 0;
+  color: #fff;
 }
 
 .subtext {
-  font-size: 1rem;
-  color: $text-secondary;
-  margin: 0.75rem 0 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: $ink;
+  padding: 0.55rem 1.1rem;
+  border-radius: $radius-pill;
+  margin: 0;
+  color: #fff;
 }
 
 .cta {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 600;
-  background: $accent;
-  color: $bg-base;
-  padding: 0.875rem 2.5rem;
-  border-radius: $radius-md;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    color: $bg-base;
-    background: $accent-hover;
-  }
-
-  &:active {
-    transform: translateY(1px);
-  }
+  @include btn($yellow, $ink);
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
 }
 
-@media (max-width: 767.98px) {
-  .section {
-    padding: $section-py-mobile 0;
-  }
+@media (max-width: $bp-mobile) {
+  .section { padding: 4rem 0; }
 }

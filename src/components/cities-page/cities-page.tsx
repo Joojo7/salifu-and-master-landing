@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { CITY_KEYS, CITY_DATA } from "@/lib/constants";
+import { CITY_PAGE_CARDS } from "@/lib/landing-data";
 import styles from "./cities-page.module.scss";
 
 export async function CitiesContent() {
@@ -9,50 +9,49 @@ export async function CitiesContent() {
   return (
     <section className={styles.content}>
       <div className="container">
-        {CITY_KEYS.map((key, index) => {
-          const city = CITY_DATA[key];
-          const isLast = index === CITY_KEYS.length - 1;
-
-          return (
-            <div
-              key={key}
-              className={`${styles.citySection} ${isLast ? styles.last : ""}`}
-            >
-              <div className="row align-items-start g-4">
-                <div className="col-12 col-md-3 text-center">
-                  {city.icon && (
+        <div className={styles.list}>
+          {CITY_PAGE_CARDS.map((city, i) => {
+            const reversed = i % 2 !== 0;
+            return (
+              <article
+                key={city.key}
+                className={`${styles.card} ${styles[city.color]} ${reversed ? styles.reversed : ""}`}
+              >
+                <div className={styles.icon}>
+                  {city.iconId ? (
                     <Image
-                      src={city.icon}
-                      alt={t(`cities.${key}.name`)}
-                      width={120}
-                      height={120}
-                      className={styles.cityIcon}
+                      src={`/map-icons-svg/${city.iconId}.svg`}
+                      alt={t(`cities.${city.key}.name`)}
+                      width={220}
+                      height={220}
                     />
+                  ) : (
+                    <span className={styles.iconTba}>TBA</span>
                   )}
                 </div>
-                <div className="col-12 col-md-9">
-                  <h2 className={styles.cityName}>
-                    {t(`cities.${key}.name`)}
+                <div className={styles.body}>
+                  <div className={styles.titleRow}>
+                    <h2 className={styles.name}>{t(`cities.${city.key}.name`)}</h2>
                     {city.comingSoon && (
-                      <span className={styles.comingSoon}> Coming Soon</span>
+                      <span className={styles.soonBadge}>{t("comingSoon")}</span>
                     )}
-                  </h2>
+                  </div>
                   <p className={styles.paragraph}>
-                    {t(`cities.${key}.description`)}
+                    {t(`cities.${city.key}.description`)}
                   </p>
-                  <h3 className={styles.subheading}>Routes</h3>
+                  <h3 className={styles.subhead}>{t("routesHeading")}</h3>
                   <p className={styles.paragraph}>
-                    {t(`cities.${key}.routes`)}
+                    {t(`cities.${city.key}.routes`)}
                   </p>
-                  <h3 className={styles.subheading}>Culture</h3>
+                  <h3 className={styles.subhead}>{t("cultureHeading")}</h3>
                   <p className={styles.paragraph}>
-                    {t(`cities.${key}.culture`)}
+                    {t(`cities.${city.key}.culture`)}
                   </p>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              </article>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -1,45 +1,166 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
 
 .content {
-  padding: $section-py 0;
-  background-color: $bg-base;
-}
+  padding: 5rem 0;
+  background: $paper;
+  position: relative;
+  overflow: hidden;
 
-.citySection {
-  padding: 2rem 0;
-  border-bottom: 1px solid $border-default;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1.2px, transparent 1.4px);
+    background-size: 16px 16px;
+    pointer-events: none;
+  }
 
-  &.last {
-    border-bottom: none;
+  @media (max-width: $bp-mobile) {
+    padding: 3rem 0;
   }
 }
 
-.cityIcon {
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.8rem;
+  background: #fff;
+  border: $stroke;
   border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 $ink; }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -60px;
+    bottom: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    opacity: 0.18;
+    pointer-events: none;
+  }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 1.4rem;
+  }
 }
 
-.cityName {
-  font-family: "Nunito", sans-serif;
-  font-weight: 800;
-  font-size: 2rem;
-  color: $text-primary;
+.reversed {
+  grid-template-columns: 1fr 280px;
+
+  .icon { order: 2; }
+  .body { order: 1; }
+
+  &::after {
+    right: auto;
+    left: -60px;
+  }
+
+  @media (max-width: $bp-mobile) {
+    grid-template-columns: 1fr;
+
+    .icon { order: 1; }
+    .body { order: 2; }
+  }
 }
 
-.comingSoon {
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: $text-tertiary;
+.red { background: $red; color: #fff; &::after { background: $ink; } }
+.green { background: $green; color: #fff; &::after { background: $ink; } }
+.blue { background: $blue; color: #fff; &::after { background: $ink; } }
+.coral { background: $coral; color: #fff; &::after { background: $ink; } }
+
+.icon {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border: $stroke-thin;
+  border-radius: $radius-md;
+  padding: 12px;
+  box-shadow: $shadow-sm;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+    object-fit: contain;
+  }
+}
+
+.iconTba {
+  font-family: $font-poster;
+  font-size: 2.4rem;
+  letter-spacing: 0.1em;
+  color: $ink;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-family: $font-display;
   font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0;
+  line-height: 1;
+}
+
+.soonBadge {
+  display: inline-flex;
+  align-items: center;
+  background: $ink;
+  color: $yellow;
+  font-family: $font-poster;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+}
+
+.subhead {
+  font-family: $font-poster;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0.6rem 0 0;
 }
 
 .paragraph {
-  color: $text-secondary;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
-.subheading {
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  color: $accent;
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0;
 }
