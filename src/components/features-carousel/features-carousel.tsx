@@ -1,98 +1,89 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { FEATURE_CAROUSEL_KEYS, FEATURE_CAROUSEL_DATA } from "@/lib/constants";
-import { CarouselControls } from "./carousel-controls";
+import { useTranslations } from "next-intl";
+import { FEATURES } from "@/lib/landing-data";
 import styles from "./features-carousel.module.scss";
 
-const AUTO_ADVANCE_MS = 6000;
+const AUTOPLAY_MS = 6000;
 
 export function FeaturesCarousel() {
   const t = useTranslations("FeaturesCarousel");
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const total = FEATURE_CAROUSEL_KEYS.length;
+  const [index, setIndex] = useState(0);
+  const hovering = useRef(false);
 
-  const goNext = useCallback(() => {
-    setActiveIndex((prev) => (prev + 1) % total);
-  }, [total]);
-
-  const goPrev = useCallback(() => {
-    setActiveIndex((prev) => (prev - 1 + total) % total);
-  }, [total]);
+  const goTo = (i: number) => setIndex((i + FEATURES.length) % FEATURES.length);
 
   useEffect(() => {
-    if (paused) return;
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReducedMotion) return;
+    const interval = setInterval(() => {
+      if (!hovering.current) setIndex((i) => (i + 1) % FEATURES.length);
+    }, AUTOPLAY_MS);
+    return () => clearInterval(interval);
+  }, []);
 
-    const timer = setInterval(goNext, AUTO_ADVANCE_MS);
-    return () => clearInterval(timer);
-  }, [paused, goNext]);
-
-  const prevIndex = (activeIndex - 1 + total) % total;
-  const nextIndex = (activeIndex + 1) % total;
-  const activeKey = FEATURE_CAROUSEL_KEYS[activeIndex];
+  const active = FEATURES[index];
+  const prev = FEATURES[(index - 1 + FEATURES.length) % FEATURES.length];
+  const next = FEATURES[(index + 1) % FEATURES.length];
 
   return (
     <section
+      className={styles.features}
       id="features"
-      className={styles.section}
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
+      onMouseEnter={() => { hovering.current = true; }}
+      onMouseLeave={() => { hovering.current = false; }}
     >
-      <div className={styles.bgLines} />
-      <div className="container position-relative">
-        <h2 className={styles.heading}>Features</h2>
+      <div className="container">
+        <div className={styles.head}>
+          <div className="head-l">
+            <span className="kicker">{t("kicker")}</span>
+            <h2>{t("title")}</h2>
+            <p>{t("sub")}</p>
+          </div>
+          <div className="head-r">
+            <div className={styles.arrows}>
+              <button onClick={() => goTo(index - 1)} aria-label={t("prev")}>←</button>
+              <button onClick={() => goTo(index + 1)} aria-label={t("next")}>→</button>
+            </div>
+          </div>
+        </div>
 
         <div className={styles.track}>
-          <button className={styles.peekCard} onClick={goPrev} aria-label="Previous feature">
-            <Image
-              src={FEATURE_CAROUSEL_DATA[FEATURE_CAROUSEL_KEYS[prevIndex]].image}
-              alt=""
-              fill
-              sizes="25vw"
-              className={styles.peekImage}
-            />
+          <button
+            className={`${styles.card} ${styles.peek}`}
+            onClick={() => goTo(index - 1)}
+            aria-label={t("prev")}
+          >
+            <Image src={prev.img} alt="" fill sizes="20vw" />
+            <span className={styles.peekArrow}>←</span>
           </button>
-
-          <div key={`card-${activeIndex}`} className={styles.activeCard}>
-            <Image
-              src={FEATURE_CAROUSEL_DATA[activeKey].image}
-              alt={t(`${activeKey}.title`)}
-              fill
-              sizes="(max-width: 768px) 100vw, 55vw"
-              className={styles.activeImage}
-              priority
-            />
-          </div>
-
-          <button className={styles.peekCard} onClick={goNext} aria-label="Next feature">
-            <Image
-              src={FEATURE_CAROUSEL_DATA[FEATURE_CAROUSEL_KEYS[nextIndex]].image}
-              alt=""
-              fill
-              sizes="25vw"
-              className={styles.peekImage}
-            />
+          <article className={`${styles.card} ${styles.active}`}>
+            <Image src={active.img} alt={t(`items.${active.key}.title`)} fill sizes="60vw" />
+            <span className={styles.burst}>{t(`items.${active.key}.burst`)}</span>
+            <div className={styles.caption}>
+              <h3>{t(`items.${active.key}.title`)}</h3>
+              <p>{t(`items.${active.key}.desc`)}</p>
+            </div>
+          </article>
+          <button
+            className={`${styles.card} ${styles.peek}`}
+            onClick={() => goTo(index + 1)}
+            aria-label={t("next")}
+          >
+            <Image src={next.img} alt="" fill sizes="20vw" />
+            <span className={styles.peekArrow}>→</span>
           </button>
         </div>
 
-        <CarouselControls
-          total={total}
-          activeIndex={activeIndex}
-          onPrev={goPrev}
-          onNext={goNext}
-          onDotClick={setActiveIndex}
-        />
-
-        <div key={`text-${activeIndex}`} className={styles.textArea}>
-          <h3 className={styles.title}>{t(`${activeKey}.title`)}</h3>
-          <p className={styles.description}>{t(`${activeKey}.description`)}</p>
+        <div className={styles.dots}>
+          {FEATURES.map((f, i) => (
+            <button
+              key={f.key}
+              onClick={() => goTo(i)}
+              className={i === index ? styles.dotActive : ""}
+              aria-label={`Go to feature ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

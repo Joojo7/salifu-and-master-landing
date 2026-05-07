@@ -2,9 +2,35 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Familjen_Grotesk, Fraunces, Bowlby_One_SC, Caveat } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/constants";
 import "../globals.scss";
+
+const fontBody = Familjen_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+});
+
+const fontDisplay = Fraunces({
+  subsets: ["latin"],
+  weight: ["700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
+});
+
+const fontPoster = Bowlby_One_SC({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-poster",
+});
+
+const fontHand = Caveat({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  variable: "--font-hand",
+});
 
 type Props = {
   children: React.ReactNode;
@@ -55,8 +81,10 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
 
+  const fontClasses = `${fontBody.variable} ${fontDisplay.variable} ${fontPoster.variable} ${fontHand.variable}`;
+
   return (
-    <html lang={locale}>
+    <html lang={locale} className={fontClasses}>
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>

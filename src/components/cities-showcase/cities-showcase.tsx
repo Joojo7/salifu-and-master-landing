@@ -1,60 +1,60 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import { CITY_KEYS, CITY_DATA } from "@/lib/constants";
+import { CITY_CARDS } from "@/lib/landing-data";
 import styles from "./cities-showcase.module.scss";
 
 export async function CitiesShowcase() {
   const t = await getTranslations("CitiesShowcase");
 
   return (
-    <section id="cities" className="section">
-      <div className="container text-center">
-        <h2 className="section-title mb-2">{t("title")}</h2>
-        <p className="section-subtitle mb-4">{t("subtitle")}</p>
+    <section className={styles.cities} id="cities">
+      <div className="container">
+        <div className={styles.head}>
+          <div className="head-l">
+            <span className="kicker">{t("kicker")}</span>
+            <h2>
+              {t("titleLine1")}
+              <br />
+              {t("titleLine2")}
+            </h2>
+            <p>{t("sub")}</p>
+          </div>
+        </div>
 
-        <div className="row g-4 justify-content-center">
-          {CITY_KEYS.map((key) => {
-            const city = CITY_DATA[key];
-            const isComingSoon = city.comingSoon;
-
-            return (
-              <div key={key} className="col-12 col-sm-6 col-lg-3">
-                <div
-                  className={`${styles.card} ${isComingSoon ? styles.comingSoon : ""}`}
-                >
-                  <div className={styles.iconWrapper}>
-                    {city.icon ? (
-                      <Image
-                        src={city.icon}
-                        alt={t(`cities.${key}.name`)}
-                        width={120}
-                        height={120}
-                        className={styles.cityIcon}
-                      />
-                    ) : (
-                      <span className={styles.placeholderIcon}>
-                        {city.emoji}
-                      </span>
-                    )}
-                  </div>
-                  <h3 className={styles.cityName}>
-                    {t(`cities.${key}.name`)}
-                  </h3>
-                  <p className={styles.cityDesc}>
-                    {t(`cities.${key}.description`)}
-                  </p>
+        <div className={styles.grid}>
+          {CITY_CARDS.map((city) => (
+            <article
+              key={city.variant}
+              className={`${styles.card} ${styles[city.variant]} ${city.status === "soon" ? styles.coming : ""}`}
+            >
+              <div className={styles.cardHead}>
+                <div className={styles.icon}>
+                  {city.iconId ? (
+                    <Image
+                      src={`/map-icons-svg/${city.iconId}.svg`}
+                      alt=""
+                      width={88}
+                      height={88}
+                    />
+                  ) : (
+                    <span className={styles.iconTba}>TBA</span>
+                  )}
+                </div>
+                <div className={styles.title}>
+                  <h3>{t(`cards.${city.variant}.name`)}</h3>
                   <div className={styles.meta}>
-                    <span className={styles.routeCount}>
-                      {t(`cities.${key}.routeCount`)}
+                    <span className={styles.pill}>{t(`cards.${city.variant}.routes`)}</span>
+                    <span
+                      className={`${styles.pill} ${styles[`status${city.status}`]}`}
+                    >
+                      {t(`status.${city.status}`)}
                     </span>
-                    {isComingSoon && (
-                      <span className={styles.badge}>{t("comingSoon")}</span>
-                    )}
                   </div>
                 </div>
               </div>
-            );
-          })}
+              <p className={styles.body}>{t(`cards.${city.variant}.body`)}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>

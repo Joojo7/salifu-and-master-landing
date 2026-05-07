@@ -1,100 +1,111 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
+@use "../../styles/section-head" as *;
 
-.section {
+.cast {
+  padding: 5rem 0;
+  background: $blue;
+  border-bottom: $stroke;
   position: relative;
   overflow: hidden;
-  padding: $section-py 0;
+  color: #fff;
 
-  @media (max-width: 767.98px) {
-    padding: $section-py-mobile 0;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.4px, transparent 1.6px);
+    background-size: 14px 14px;
+    pointer-events: none;
   }
+
+  :global(h2) { color: #fff; text-shadow: 6px 6px 0 $ink; }
+  :global(.head-l) p { color: #e8f7ff; }
 }
 
-.bgImage {
-  object-fit: cover;
-  object-position: center 30%;
-  z-index: 0;
-}
+.head { @include section-head; }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba($bg-base, 0.7) 0%,
-    rgba($bg-base, 0.5) 40%,
-    rgba($bg-base, 0.7) 100%
-  );
-  z-index: 1;
-}
-
-.heading {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
   position: relative;
   z-index: 2;
-  font-size: 2.5rem;
-  letter-spacing: -0.025em;
-  color: $text-primary;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  margin-bottom: 2rem;
 
-  @media (max-width: 767.98px) {
-    font-size: 1.85rem;
-  }
+  @media (max-width: 1100px) { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 680px) { grid-template-columns: repeat(2, 1fr); }
 }
 
 .card {
   position: relative;
-  z-index: 2;
-  height: 100%;
+  border: $stroke;
+  border-radius: 20px;
+  padding: 1rem 1rem 1.2rem;
+  background: #fff;
+  color: $ink;
+  box-shadow: $shadow;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: rgba($bg-card, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: $radius-md;
-  padding: 1.5rem 1rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease,
-    transform 0.2s ease;
+  transition: transform 0.2s;
 
-  &:hover {
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    border-color: var(--accent);
-    transform: translateY(-4px);
-  }
+  &:hover { transform: translateY(-6px) rotate(-1deg); }
+
+  h3 { font-family: $font-display; font-style: italic; font-size: 1.6rem; margin-bottom: 0.3rem; }
+  p { font-size: 0.95rem; opacity: 0.9; margin: 0; }
 }
 
-.imageWrapper {
-  margin-bottom: 0.75rem;
+.yellow { background: $yellow; }
+.red { background: $red; color: #fff; }
+.purple { background: $purple; color: #fff; }
+.green { background: $green; color: #fff; }
+.blue { background: $blue; color: #fff; }
 
-  img {
-    width: 140px;
-    height: auto;
-    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+.photo {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border: $stroke-thin;
+  border-radius: 14px;
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.18) 1.2px, transparent 1.4px);
+    background-size: 9px 9px;
+    pointer-events: none;
+    z-index: 2;
   }
-}
 
-.name {
-  font-size: 1rem;
-  color: var(--accent);
-  margin-bottom: 0.1rem;
+  img { object-fit: cover; }
 }
 
 .role {
-  font-size: 0.7rem;
-  color: $text-secondary;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  margin: 0;
+  font-family: $font-poster;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  background: $ink;
+  color: $yellow;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
 }
 
-@media (max-width: 767.98px) {
-  .imageWrapper img {
-    width: 100px;
-  }
-
-  .name {
-    font-size: 0.9rem;
-  }
+.bubble {
+  position: absolute;
+  top: -14px;
+  right: -10px;
+  background: #fff;
+  color: $ink;
+  padding: 0.35rem 0.7rem;
+  font-family: $font-hand;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: $stroke-thin;
+  border-radius: 14px;
+  box-shadow: $shadow-sm;
+  transform: rotate(8deg);
+  z-index: 3;
 }

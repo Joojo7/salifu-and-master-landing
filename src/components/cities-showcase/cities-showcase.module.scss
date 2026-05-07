@@ -1,101 +1,128 @@
-@use "../../styles/variables" as *;
+@use "../../styles/tokens" as *;
+@use "../../styles/section-head" as *;
+
+.cities {
+  padding: 5rem 0;
+  background: $paper;
+  border-bottom: $stroke;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -200px;
+    top: 80px;
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    background: $red;
+    opacity: 0.12;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.5) 1.6px, transparent 1.8px);
+    background-size: 14px 14px;
+    pointer-events: none;
+  }
+}
+
+.head { @include section-head; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+
+  @media (max-width: $bp-mobile) { grid-template-columns: 1fr; }
+}
 
 .card {
-  background: $bg-card;
-  border: 1px solid $border-default;
-  border-radius: $radius-md;
-  padding: 1.75rem 1.25rem;
-  text-align: center;
+  position: relative;
+  background: #fff;
+  border: $stroke;
+  border-radius: 22px;
+  padding: 1.6rem 1.6rem 1.4rem;
+  box-shadow: $shadow-lg;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    opacity: 0.2;
+  }
+}
+
+.accra::after { background: $red; }
+.kumasi::after { background: $green; }
+.cape::after { background: $blue; }
+.tamale::after { background: $coral; }
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.icon {
+  width: 88px;
+  height: 88px;
+  border: $stroke;
+  border-radius: 18px;
+  background: #fff;
+  padding: 6px;
+  box-shadow: $shadow-sm;
+  flex-shrink: 0;
+
+  img { width: 100%; height: 100%; object-fit: contain; }
+}
+
+.iconTba {
+  width: 100%;
   height: 100%;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease,
-    transform 0.2s ease;
-
-  &:hover {
-    border-color: $accent;
-    box-shadow: $shadow-md;
-    transform: translateY(-4px);
-  }
+  display: grid;
+  place-items: center;
+  background: $paper-2;
+  font-family: $font-poster;
+  font-size: 1.6rem;
 }
 
-.comingSoon {
-  opacity: 0.6;
-
-  &:hover {
-    border-color: $border-hover;
-    transform: none;
-    box-shadow: none;
-  }
-}
-
-.iconWrapper {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1rem;
+.title {
   display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  h3 { font-family: $font-display; font-style: italic; font-size: 2rem; margin: 0; }
+}
+
+.meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+.pill {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-}
-
-.cityIcon {
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
-}
-
-.placeholderIcon {
-  font-size: 3.5rem;
-}
-
-.cityName {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $text-primary;
-  margin: 0 0 0.5rem;
-}
-
-.cityDesc {
   font-size: 0.85rem;
-  color: $text-secondary;
-  line-height: 1.5;
-  margin: 0 0 0.75rem;
-}
-
-.meta {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.routeCount {
-  font-size: 0.75rem;
-  color: $text-tertiary;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.badge {
-  font-size: 0.7rem;
+  background: #fff;
+  color: $ink;
   font-weight: 700;
-  color: $accent;
-  background: $accent-light;
-  padding: 0.2rem 0.5rem;
-  border-radius: $radius-sm;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  padding: 0.3rem 0.7rem;
+  border-radius: $radius-pill;
+  border: 2px solid $ink;
 }
 
-@media (max-width: 767.98px) {
-  .card {
-    padding: 1.25rem 1rem;
-  }
+.statuslive { background: $yellow; color: $ink; }
+.statusnew { background: $red; color: #fff; }
+.statussoon { background: $ink; color: $yellow; }
 
-  .iconWrapper {
-    width: 90px;
-    height: 90px;
-  }
-
-  .cityName {
-    font-size: 1rem;
-  }
+.body {
+  margin-top: 1rem;
+  color: #333;
+  font-size: 1rem;
+  position: relative;
+  z-index: 2;
 }
+
+.coming { opacity: 0.92; }

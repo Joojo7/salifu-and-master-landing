@@ -1,0 +1,47 @@
+@use "tokens" as *;
+
+@mixin section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+
+  .head-l {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: flex-start;
+    max-width: 760px;
+  }
+
+  .kicker { @include kicker; }
+
+  h2 { @include section-title; }
+
+  p {
+    font-size: 1.15rem;
+    color: #444;
+    max-width: 560px;
+  }
+
+  .head-r { display: flex; gap: 0.6rem; align-items: center; }
+}
+
+@mixin sect-arrows {
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border: $stroke;
+    border-radius: 50%;
+    background: #fff;
+    font-weight: 900;
+    font-size: 1.3rem;
+    box-shadow: $shadow-sm;
+    cursor: pointer;
+  }
+}

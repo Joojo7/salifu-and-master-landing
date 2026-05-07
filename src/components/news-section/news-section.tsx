@@ -2,90 +2,69 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { getPublishedPosts, getAllPosts } from "@/lib/blog";
-import type { BlogPostMeta } from "@/types/blog";
+import { DESKTOP_SCREENSHOT_SRC } from "@/lib/constants";
 import styles from "./news-section.module.scss";
 
-const CATEGORY_COLORS: Record<string, string> = {
-  "core-gameplay": "#f59e0b",
-  characters: "#a78bfa",
-  routes: "#22c55e",
-  vehicles: "#3b82f6",
-  competition: "#ef4444",
-  progression: "#06b6d4",
-  events: "#f97316",
-  modes: "#8b5cf6",
-  tech: "#64748b",
-  "coming-soon": "#71717a",
+type Props = {
+  locale: string;
 };
 
-function FeaturedCard({ post, locale }: { post: BlogPostMeta; locale: string }) {
-  const color = CATEGORY_COLORS[post.category] ?? "#f59e0b";
+const FALLBACK_BANNER = DESKTOP_SCREENSHOT_SRC.gameplaySunsetDriving;
+const HOMEPAGE_LIMIT = 3;
+const isDev = process.env.NODE_ENV === "development";
 
-  return (
-    <Link href={`/${locale}/news/${post.slug}`} className={styles.featured}>
-      {post.banner && (
-        <Image
-          src={post.banner}
-          alt={post.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className={styles.featuredBanner}
-        />
-      )}
-      <div className={styles.featuredOverlay} />
-      <div className={`d-flex flex-column justify-content-end ${styles.featuredContent}`}>
-        <span className={styles.featuredCategory} style={{ color }}>
-          {post.category.replace("-", " ")}
-        </span>
-        <h3 className={styles.featuredTitle}>{post.title}</h3>
-        <p className={styles.featuredSummary}>{post.summary}</p>
-      </div>
-    </Link>
-  );
+function formatCategory(category: string): string {
+  return `★ ${category.replace(/-/g, " ").toUpperCase()}`;
 }
 
-function SmallCard({ post, locale }: { post: BlogPostMeta; locale: string }) {
-  const color = CATEGORY_COLORS[post.category] ?? "#f59e0b";
-
-  return (
-    <Link href={`/${locale}/news/${post.slug}`} className={styles.small}>
-      <div className={`d-flex flex-column gap-1 ${styles.smallContent}`}>
-        <span className={styles.smallCategory} style={{ color }}>
-          {post.category.replace("-", " ")}
-        </span>
-        <h4 className={styles.smallTitle}>{post.title}</h4>
-        <p className={styles.smallSummary}>{post.summary}</p>
-      </div>
-    </Link>
-  );
-}
-
-export async function NewsSection({ locale }: { locale: string }) {
+export async function NewsSection({ locale }: Props) {
   const t = await getTranslations("NewsSection");
-  const isDev = process.env.NODE_ENV === "development";
-  const posts = isDev ? getAllPosts().slice(0, 4) : getPublishedPosts().slice(0, 4);
+  const posts = (isDev ? getAllPosts() : getPublishedPosts()).slice(0, HOMEPAGE_LIMIT);
 
   if (posts.length === 0) return null;
 
-  const [featured, ...rest] = posts;
-
   return (
-    <section className={styles.section}>
+    <section className={styles.news} id="news">
       <div className="container">
-        <div className={`d-flex align-items-center justify-content-between ${styles.header}`}>
-          <h2 className={styles.heading}>{t("title")}</h2>
-          <Link href={`/${locale}/news`} className={styles.seeAll}>
-            {t("seeAll")}
-          </Link>
+        <div className={styles.head}>
+          <div className="head-l">
+            <span className="kicker">{t("kicker")}</span>
+            <h2>{t("title")}</h2>
+          </div>
+          <div className="head-r">
+            <Link href={`/${locale}/news`} className={styles.seeAll}>
+              {t("seeAll")} →
+            </Link>
+          </div>
         </div>
 
         <div className={styles.grid}>
-          <FeaturedCard post={featured} locale={locale} />
-          <div className={styles.sidebar}>
-            {rest.map((post) => (
-              <SmallCard key={post.slug} post={post} locale={locale} />
-            ))}
-          </div>
+          {posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/${locale}/news/${post.slug}`}
+              className={styles.card}
+            >
+              <div className={styles.img}>
+                <Image
+                  src={post.banner ?? FALLBACK_BANNER}
+                  alt={post.title}
+                  fill
+                  sizes="(max-width: 768px) 90vw, 33vw"
+                />
+              </div>
+              <div className={styles.body}>
+                <span className={styles.tag}>{formatCategory(post.category)}</span>
+                <h3>{post.title}</h3>
+                <p>{post.summary}</p>
+                {post.publishDate && (
+                  <div className={styles.meta}>
+                    <span>{post.publishDate}</span>
+                  </div>
+                )}
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>

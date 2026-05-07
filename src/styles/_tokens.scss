@@ -1,0 +1,123 @@
+// =====================================================================
+// Salifu & Master, Landing Redesign Tokens
+// Comic-poster theme: warm cream, hard ink, saturated reds/yellows/blues,
+// thick borders, hard-offset shadows.
+// =====================================================================
+
+$paper:        #fff4d6;
+$paper-2:      #ffe7a8;
+$ink:          #0d0d0d;
+$ink-2:        #1a1a1a;
+
+$red:          #ee2737;
+$red-dark:     #c01b27;
+$yellow:       #ffcd1c;
+$yellow-2:     #ffb300;
+$blue:         #1f9bd6;
+$blue-dark:    #0c6da0;
+$green:        #1faa5a;
+$coral:        #ff7a3d;
+$pink:         #ffb3c7;
+$purple:       #7a4cd1;
+
+$stroke:        4px solid $ink;
+$stroke-thin:   3px solid $ink;
+$shadow:        6px 6px 0 $ink;
+$shadow-sm:     4px 4px 0 $ink;
+$shadow-lg:     10px 10px 0 $ink;
+
+$radius-sm:     12px;
+$radius-md:     16px;
+$radius-lg:     18px;
+$radius-pill:   999px;
+
+$font-display:  "Fraunces", serif;
+$font-body:     "Familjen Grotesk", system-ui, sans-serif;
+$font-poster:   "Bowlby One SC", sans-serif;
+$font-hand:     "Caveat", cursive;
+
+@mixin section-title {
+  font-family: $font-display;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: .95;
+  letter-spacing: -.01em;
+  color: $yellow;
+  text-shadow:
+    6px 6px 0 $ink,
+    -2px -2px 0 $ink,
+    2px -2px 0 $ink,
+    -2px 2px 0 $ink,
+    2px 2px 0 $ink;
+}
+
+@mixin halftone($dot: rgba(0,0,0,.35), $size: 8px) {
+  background-image: radial-gradient($dot 1.4px, transparent 1.6px);
+  background-size: $size $size;
+}
+
+@mixin halftone-yellow {
+  background:
+    radial-gradient($yellow-2 1.6px, transparent 1.8px) 0 0/14px 14px,
+    $yellow;
+}
+
+@mixin halftone-red {
+  background:
+    radial-gradient(rgba(0,0,0,.28) 1.4px, transparent 1.6px) 0 0/12px 12px,
+    $red;
+}
+
+@mixin halftone-blue {
+  background:
+    radial-gradient(rgba(255,255,255,.35) 1.4px, transparent 1.6px) 0 0/14px 14px,
+    $blue;
+}
+
+@mixin poster-card($bg: #fff, $shadow: $shadow) {
+  background: $bg;
+  border: $stroke;
+  border-radius: $radius-lg;
+  box-shadow: $shadow;
+}
+
+@mixin btn($bg: $yellow, $color: $ink) {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: 1rem 1.6rem;
+  border: $stroke;
+  border-radius: $radius-pill;
+  font-family: $font-body;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  background: $bg;
+  color: $color;
+  box-shadow: $shadow;
+  transition: transform .15s ease, box-shadow .15s ease;
+
+  &:hover { transform: translate(-2px,-2px); box-shadow: 8px 8px 0 $ink; }
+  &:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 $ink; }
+}
+
+@mixin kicker {
+  display: inline-block;
+  background: $ink;
+  color: $yellow;
+  font-family: $font-poster;
+  font-size: .85rem;
+  letter-spacing: .18em;
+  padding: .4rem .9rem;
+  border: 2px solid $ink;
+  transform: rotate(-2deg);
+}
+
+$container-max:    1240px;
+$container-wide:   1300px;
+$section-py:       6rem;
+$section-py-mobile: 4rem;
+$bp-mobile:        900px;

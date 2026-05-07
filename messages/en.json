@@ -14,13 +14,25 @@
     "about": "About",
     "news": "News"
   },
+  "TopTicker": {
+    "text": "NOW PLAYING ★ CAPE COAST JUST DROPPED ★ 14 ROUTES LIVE ★ 3 CITIES ★ NEW TROTRO: HYUNDAI COUNTY ★ SEASONAL LEADERBOARD OPEN ★ FREE ROAM MODE ★"
+  },
   "Hero": {
     "title": "Salifu & Master",
+    "sticker": "LIVE NOW · NO DOWNLOAD · BROWSER",
     "tagline": "Pick up passengers. Make your sales. Survive the streets.",
+    "taglineLine1": "Pick up passengers.",
+    "taglineLine2": "Make your sales.",
+    "taglineLine3": "Survive the streets.",
     "playNow": "Play Now",
     "learnMore": "Learn More",
     "subtext": "Free. No download. Play in your browser.",
-    "playCta": "Play Now"
+    "playCta": "Play Now",
+    "statCards": {
+      "dailyTarget": { "label": "Daily Target", "value": "GHC 0 / 417" },
+      "round": { "label": "3-Minute Round", "value": "02:41 left" },
+      "passengers": { "label": "Passengers", "value": "9 / 15 picked" }
+    }
   },
   "PageHero": {
     "playNow": "Play Now"
@@ -304,6 +316,7 @@
     "title": "Characters",
     "subtitle": "Meet the people of Salifu & Master",
     "metaDescription": "Meet the characters of Salifu & Master: Salifu the mate, Master Kofi the driver, Serwaa, Amelia the food vendor, and Dr. Panie.",
+    "inTheGame": "★ In the Game",
     "characters": {
       "salifu": {
         "name": "Salifu",
@@ -341,6 +354,9 @@
     "title": "Cities of Ghana",
     "subtitle": "Explore the real cities behind the game",
     "metaDescription": "Discover the cities of Salifu & Master. Drive trotro routes through Greater Accra, Kumasi, Cape Coast, and Tamale, each inspired by real Ghanaian streets and culture.",
+    "routesHeading": "★ Routes",
+    "cultureHeading": "★ Culture",
+    "comingSoon": "COMING SOON",
     "cities": {
       "accra": {
         "name": "Greater Accra",
@@ -421,7 +437,9 @@
     }
   },
   "CtaBanner": {
-    "heading": "Your trotro is waiting.",
+    "kicker": "★ Your trotro is waiting",
+    "headingLine1": "Charley,",
+    "headingLine2": "jump in.",
     "subtext": "Free. No download. Play in your browser.",
     "cta": "Play Now"
   },
@@ -609,23 +627,237 @@
   "Footer": {
     "logo": "Salifu & Master",
     "badge": "Made with pancakes",
+    "blurb": "A trotro/danfo game set in West Africa. Pick up passengers. Make your sales. Survive the streets.",
+    "location": "Built in Accra \u00B7 Kuala Lumpur",
     "copyright": "\u00A9 {year} Salifu & Master. All rights reserved.",
+    "columns": {
+      "game": "Game",
+      "about": "About",
+      "follow": "Follow"
+    },
     "links": {
       "about": "About",
       "howToPlay": "How to Play",
       "characters": "Characters",
       "cities": "Cities",
+      "news": "News",
       "contact": "Contact",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service"
     },
     "social": {
-      "twitter": "Twitter"
+      "twitter": "Twitter / X \u00B7 @salifumate"
     }
   },
   "NewsSection": {
-    "title": "Latest News",
-    "seeAll": "See All"
+    "kicker": "★ Latest News",
+    "title": "Fresh from the dev log",
+    "seeAll": "See all"
+  },
+  "FeaturesCarousel": {
+    "kicker": "★ Features",
+    "title": "The full hustle",
+    "sub": "Buy trotros. Drive real Ghanaian routes. Meet the crew. Climb the leaderboard. Five corners of the game, pick one to dive in.",
+    "prev": "Previous",
+    "next": "Next",
+    "items": {
+      "shop": {
+        "title": "The Trotro Shop",
+        "desc": "Browse and buy trotros, from the classic Peugeot J5 to the Hyundai County. Each vehicle has unique capacity, speed, and master's cut stats.",
+        "burst": "SHOP"
+      },
+      "routes": {
+        "title": "Real Ghanaian Routes",
+        "desc": "Drive actual routes across Accra, Kumasi, and Cape Coast. 14 routes with real street names and landmarks.",
+        "burst": "NEW!"
+      },
+      "cast": {
+        "title": "Meet the Crew",
+        "desc": "Master Kofi runs the show. Amelia sells jollof. Serwaa keeps you sharp. Every character shapes your journey.",
+        "burst": "CAST"
+      },
+      "hustle": {
+        "title": "Hustle & Survive",
+        "desc": "Pick up passengers, manage your resources, dodge traffic. Every route is a test of skill and timing.",
+        "burst": "GO!"
+      },
+      "compete": {
+        "title": "Upgrade & Compete",
+        "desc": "Earn money, unlock better trotros, climb the leaderboard. Your fleet is your legacy.",
+        "burst": "WIN!"
+      }
+    }
+  },
+  "RoutesSection": {
+    "kicker": "★ Routes",
+    "title": "Real routes. Real streets.",
+    "sub": "Drive actual trotro corridors across Ghana's cities, from Accra to Cape Coast and beyond.",
+    "teaser": "🌊 Cape Coast just dropped. More cities on the way.",
+    "pickHeading": "Pick your corridor",
+    "pickPill": "14 routes live",
+    "highlights": {
+      "authentic": {
+        "title": "🗺️ Authentic Locations",
+        "desc": "Every route is based on real roads and landmarks you'd find on the ground."
+      },
+      "difficulty": {
+        "title": "📈 Choose Your Difficulty",
+        "desc": "Pick your challenge level before each run. Harder difficulty means more traffic, tighter targets, and bigger payoffs."
+      },
+      "growing": {
+        "title": "🌍 Always Growing",
+        "desc": "3 cities and 14 routes live, with Tamale and more on the way. The hustle never stops."
+      }
+    },
+    "tiles": {
+      "madina-kaneshie": "Madina, Kaneshie",
+      "kasoa-mallam": "Kasoa, Mallam",
+      "lapaz-achimota": "Lapaz, Achimota",
+      "afienya-odorkor": "Afienya, Odorkor",
+      "madina-tema": "Madina, Tema",
+      "tema-ashaiman": "Tema, Ashaiman",
+      "grand-tour-accra": "Grand Tour Accra",
+      "kejetia-adum": "Kejetia, Adum",
+      "coastal-road": "Coastal Road",
+      "coastal-sweep": "Coastal Sweep",
+      "castle-loop": "Castle Loop",
+      "hilltop-express": "Hilltop Express",
+      "forest-trail": "Forest Trail",
+      "mountain-loop": "Mountain Loop"
+    }
+  },
+  "CitiesShowcase": {
+    "kicker": "★ Cities",
+    "titleLine1": "Multiple cities.",
+    "titleLine2": "One hustle.",
+    "sub": "Explore real trotro corridors across Ghana's biggest cities.",
+    "status": { "live": "LIVE", "new": "JUST DROPPED", "soon": "COMING SOON" },
+    "cards": {
+      "accra": {
+        "name": "Greater Accra",
+        "routes": "🚐 8 routes",
+        "body": "The bustling capital region. Navigate through Madina, Kaneshie, Circle and beyond."
+      },
+      "kumasi": {
+        "name": "Kumasi",
+        "routes": "🚐 1 route",
+        "body": "The Garden City. Navigate through Kejetia Market, Adum, and the Ashanti cultural heartland."
+      },
+      "cape": {
+        "name": "Cape Coast",
+        "routes": "🚐 5 routes",
+        "body": "The historic coastal city. Drive past castles, fishing harbours, and winding hillside streets."
+      },
+      "tamale": {
+        "name": "Tamale",
+        "routes": "🚐 Routes TBA",
+        "body": "The northern capital. Dusty roads, vibrant markets, and a whole new challenge."
+      }
+    }
+  },
+  "Characters": {
+    "kicker": "★ The cast",
+    "title": "Meet the crew",
+    "sub": "Five faces, one street. Each one shapes how your day ends.",
+    "items": {
+      "salifu": {
+        "bubble": "that's you!",
+        "role": "The Mate",
+        "name": "Salifu",
+        "blurb": "You. A trotro mate hustling the streets to make your daily sales."
+      },
+      "masterKofi": {
+        "bubble": "oya pay!",
+        "role": "The Driver",
+        "name": "Master Kofi",
+        "blurb": "Your boss. He takes his cut, and he's watching your every move."
+      },
+      "serwaa": {
+        "bubble": "come see me",
+        "role": "The Girlfriend",
+        "name": "Serwaa",
+        "blurb": "Your peace of mind. Visit her to restore your sanity, but it'll cost you."
+      },
+      "amelia": {
+        "bubble": "jollof?",
+        "role": "The Food Vendor",
+        "name": "Amelia",
+        "blurb": "Charley! You dey hungry? Waakye and Jollof to keep you going."
+      },
+      "drPanie": {
+        "bubble": "let me see",
+        "role": "The Doctor",
+        "name": "Dr. Panie",
+        "blurb": "Patch yourself up when the streets take their toll. Health comes at a price."
+      }
+    }
+  },
+  "PowerUps": {
+    "kicker": "★ Power-ups",
+    "title": "Charley, stock up.",
+    "sub": "Eleven consumables to help you survive the run. Spend wisely, Master Kofi still takes his cut.",
+    "more": { "title": "+ More soon", "desc": "Brewing in the lab" },
+    "items": {
+      "iron-stomach": {
+        "name": "Iron Stomach",
+        "desc": "Hunger drains slower"
+      },
+      "second-meal": { "name": "Second Meal", "desc": "Free refill at Amelia" },
+      "cool-head": { "name": "Cool Head", "desc": "Sanity holds longer" },
+      "serwaa-blessing": {
+        "name": "Serwaa's Blessing",
+        "desc": "Sanity bonus visit"
+      },
+      "second-wind": { "name": "Second Wind", "desc": "Restore lost health" },
+      "quick-hands": { "name": "Quick Hands", "desc": "Pick up faster" },
+      "patient-crowd": {
+        "name": "Patient Crowd",
+        "desc": "Wider stop windows"
+      },
+      "overtime": { "name": "Overtime", "desc": "+30 seconds" },
+      "bargain-hunter": { "name": "Bargain Hunter", "desc": "NPC discounts" },
+      "masters-mercy": {
+        "name": "Master's Mercy",
+        "desc": "Smaller cut today"
+      },
+      "slow-burn": { "name": "Slow Burn", "desc": "All stats decay slower" }
+    }
+  },
+  "GameplayShowcase": {
+    "kicker": "★ Mobile",
+    "title": "Play anywhere",
+    "sub": "Optimized for mobile. Same hustle, smaller screen.",
+    "cards": {
+      "road": {
+        "title": "Hit the Road",
+        "desc": "Drive through Ghana's busiest streets right from your phone. Tap to pick up passengers and make your daily sales."
+      },
+      "boss": {
+        "title": "Meet Your Boss",
+        "desc": "Master Kofi sets the rules. Listen to his instructions before each run, your earnings depend on it."
+      },
+      "ranks": {
+        "title": "Climb the Ranks",
+        "desc": "Compete on the seasonal leaderboard. See how you stack up against other mates across Ghana."
+      },
+      "levelUp": {
+        "title": "Level Up Your Mate",
+        "desc": "Unlock upgrades for Salifu. Reduce hunger, boost health, and stay sane longer on the streets."
+      }
+    }
+  },
+  "ScreenshotGallery": {
+    "kicker": "★ Gallery",
+    "title": "See it in action",
+    "sub": "Gameplay frames straight from the streets.",
+    "tiles": {
+      "sunset": "SUNSET HUSTLE",
+      "pickup": "PICK UP",
+      "map": "CITY MAP",
+      "gbawe": "GBAWE",
+      "dansoman": "DANSOMAN",
+      "shop": "SHOP"
+    }
   },
   "NewsPage": {
     "title": "News",
