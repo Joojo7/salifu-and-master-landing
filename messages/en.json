@@ -161,12 +161,12 @@
       "serwaa": {
         "name": "Serwaa",
         "role": "The Girlfriend",
-        "description": "Your peace of mind. Visit her to restore your sanity — but it'll cost you."
+        "description": "Your peace of mind. Visit her to restore your sanity, but it'll cost you."
       },
       "amelia": {
         "name": "Amelia",
         "role": "The Food Vendor",
-        "description": "\"Charley! You dey hungry?\" Waakye and Jollof to keep you going."
+        "description": "\"challey! You dey hung?\" Waakye and Jollof to keep you going."
       },
       "drPanie": {
         "name": "Dr. Panie",
@@ -438,7 +438,7 @@
   },
   "CtaBanner": {
     "kicker": "★ Your trotro is waiting",
-    "headingLine1": "Charley,",
+    "headingLine1": "challey,",
     "headingLine2": "jump in.",
     "subtext": "Free. No download. Play in your browser.",
     "cta": "Play Now"
@@ -761,13 +761,13 @@
     "sub": "Five faces, one street. Each one shapes how your day ends.",
     "items": {
       "salifu": {
-        "bubble": "that's you!",
+        "bubble": "You dat!",
         "role": "The Mate",
         "name": "Salifu",
         "blurb": "You. A trotro mate hustling the streets to make your daily sales."
       },
       "masterKofi": {
-        "bubble": "oya pay!",
+        "bubble": "sia where my money dey?",
         "role": "The Driver",
         "name": "Master Kofi",
         "blurb": "Your boss. He takes his cut, and he's watching your every move."
@@ -779,10 +779,10 @@
         "blurb": "Your peace of mind. Visit her to restore your sanity, but it'll cost you."
       },
       "amelia": {
-        "bubble": "jollof?",
+        "bubble": "Come chop",
         "role": "The Food Vendor",
         "name": "Amelia",
-        "blurb": "Charley! You dey hungry? Waakye and Jollof to keep you going."
+        "blurb": "challey! You dey hungry? Waakye and Jollof to keep you going."
       },
       "drPanie": {
         "bubble": "let me see",
@@ -794,7 +794,7 @@
   },
   "PowerUps": {
     "kicker": "★ Power-ups",
-    "title": "Charley, stock up.",
+    "title": "challey, stock up.",
     "sub": "Eleven consumables to help you survive the run. Spend wisely, Master Kofi still takes his cut.",
     "more": { "title": "+ More soon", "desc": "Brewing in the lab" },
     "items": {
