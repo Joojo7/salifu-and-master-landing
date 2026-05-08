@@ -1,12 +1,16 @@
 ---
-title: "Amelia the Food Vendor"
+title: Amelia the Food Vendor
 slug: amelia-food-vendor
 category: characters
 status: ready
 publishDate: null
-twitterThread: null
-tags: [npc, vendor, food, amelia]
-summary: "Waakye and jollof on the roadside. She keeps you fed."
+twitterThread: twitter-drafts/amelia-food-vendor-thread.md
+tags:
+  - npc
+  - vendor
+  - food
+  - amelia
+summary: Waakye and jollof on the roadside. She keeps you fed.
 ---
 
 # Amelia the Food Vendor

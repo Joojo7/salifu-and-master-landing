@@ -1,12 +1,16 @@
 ---
-title: "Serwaa, Your Girlfriend"
+title: 'Serwaa, Your Girlfriend'
 slug: serwaa-girlfriend
 category: characters
 status: ready
 publishDate: null
-twitterThread: null
-tags: [npc, serwaa, sanity, relationship]
-summary: "Visit her to restore sanity. The cheapest five cedis you will ever spend."
+twitterThread: twitter-drafts/serwaa-girlfriend-thread.md
+tags:
+  - npc
+  - serwaa
+  - sanity
+  - relationship
+summary: Visit her to restore sanity. The cheapest five cedis you will ever spend.
 ---
 
 # Serwaa, Your Girlfriend

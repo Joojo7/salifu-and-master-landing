@@ -1,12 +1,16 @@
 ---
-title: "Dr. Panie"
+title: Dr. Panie
 slug: dr-panie
 category: characters
 status: ready
 publishDate: null
-twitterThread: null
-tags: [npc, vendor, medicine, health]
-summary: "The roadside pharmacist. Paracetamol, herbal mixtures, he keeps you alive."
+twitterThread: twitter-drafts/dr-panie-thread.md
+tags:
+  - npc
+  - vendor
+  - medicine
+  - health
+summary: 'The roadside pharmacist. Paracetamol, herbal mixtures, he keeps you alive.'
 ---
 
 # Dr. Panie

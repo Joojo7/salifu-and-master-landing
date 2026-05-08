@@ -1,12 +1,18 @@
 ---
-title: "Your Trotro Fleet"
+title: Your Trotro Fleet
 slug: trotro-fleet
 category: vehicles
 status: ready
 publishDate: null
-twitterThread: null
-tags: [trotro, vehicles, capacity, speed]
-summary: "Ten vehicles from the classic VW T3 to the massive Etalon A079. Every bus is different."
+twitterThread: twitter-drafts/trotro-fleet-thread.md
+tags:
+  - trotro
+  - vehicles
+  - capacity
+  - speed
+summary: >-
+  Ten vehicles from the classic VW T3 to the massive Etalon A079. Every bus is
+  different.
 ---
 
 # Your Trotro Fleet

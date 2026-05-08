@@ -1,12 +1,16 @@
 ---
-title: "Accra, the Starting City"
+title: 'Accra, the Starting City'
 slug: accra-starting-city
 category: routes
 status: ready
 publishDate: null
-twitterThread: null
-tags: [map, accra, routes, ghana]
-summary: "Where every mate begins. Routes through the heart of the capital."
+twitterThread: twitter-drafts/accra-starting-city-thread.md
+tags:
+  - map
+  - accra
+  - routes
+  - ghana
+summary: Where every mate begins. Routes through the heart of the capital.
 ---
 
 # Accra, the Starting City
