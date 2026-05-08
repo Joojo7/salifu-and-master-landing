@@ -53,26 +53,22 @@ export async function PrivacyContent() {
                 {LIST_SECTIONS.informationCollected.map((sub) => (
                   <div key={sub} className="mb-3">
                     <p className={styles.highlight}>
-                      {t(
-                        `sections.informationCollected.${sub}.title`
-                      )}
+                      {t(`sections.informationCollected.${sub}.title`)}
                     </p>
                     <p className={styles.paragraph}>
-                      {t(
-                        `sections.informationCollected.${sub}.description`
-                      )}
+                      {t(`sections.informationCollected.${sub}.description`)}
                     </p>
                     {sub === "googleSignIn" && (
                       <ul className={styles.list}>
-                        {(
-                          ["email", "displayName", "photoUrl"] as const
-                        ).map((item) => (
-                          <li key={item}>
-                            {t(
-                              `sections.informationCollected.googleSignIn.items.${item}`
-                            )}
-                          </li>
-                        ))}
+                        {(["email", "displayName", "photoUrl"] as const).map(
+                          (item) => (
+                            <li key={item}>
+                              {t(
+                                `sections.informationCollected.googleSignIn.items.${item}`,
+                              )}
+                            </li>
+                          ),
+                        )}
                       </ul>
                     )}
                     {sub === "gameplayData" && (
@@ -87,7 +83,7 @@ export async function PrivacyContent() {
                         ).map((item) => (
                           <li key={item}>
                             {t(
-                              `sections.informationCollected.gameplayData.items.${item}`
+                              `sections.informationCollected.gameplayData.items.${item}`,
                             )}
                           </li>
                         ))}
@@ -124,9 +120,7 @@ export async function PrivacyContent() {
                 </p>
                 <ul className={styles.list}>
                   {LIST_SECTIONS.dataUsage.map((item) => (
-                    <li key={item}>
-                      {t(`sections.dataUsage.items.${item}`)}
-                    </li>
+                    <li key={item}>{t(`sections.dataUsage.items.${item}`)}</li>
                   ))}
                 </ul>
               </>
@@ -155,25 +149,19 @@ export async function PrivacyContent() {
                   {LIST_SECTIONS.thirdParty.map((service) => (
                     <li key={service}>
                       <span className={styles.highlight}>
-                        {t(
-                          `sections.thirdParty.services.${service}.name`
-                        )}
+                        {t(`sections.thirdParty.services.${service}.name`)}
                       </span>
                       {" — "}
                       {t(
-                        `sections.thirdParty.services.${service}.description`
+                        `sections.thirdParty.services.${service}.description`,
                       )}{" "}
                       <a
-                        href={t(
-                          `sections.thirdParty.services.${service}.url`
-                        )}
+                        href={t(`sections.thirdParty.services.${service}.url`)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.link}
                       >
-                        {t(
-                          `sections.thirdParty.services.${service}.link`
-                        )}
+                        {t(`sections.thirdParty.services.${service}.link`)}
                       </a>
                     </li>
                   ))}
@@ -190,14 +178,10 @@ export async function PrivacyContent() {
                   {LIST_SECTIONS.yourRights.map((right) => (
                     <li key={right}>
                       <span className={styles.highlight}>
-                        {t(
-                          `sections.yourRights.items.${right}.title`
-                        )}
+                        {t(`sections.yourRights.items.${right}.title`)}
                       </span>
                       {" — "}
-                      {t(
-                        `sections.yourRights.items.${right}.description`
-                      )}
+                      {t(`sections.yourRights.items.${right}.description`)}
                     </li>
                   ))}
                 </ul>
@@ -210,10 +194,10 @@ export async function PrivacyContent() {
                   {t("sections.contact.description")}
                 </p>
                 <a
-                  href="mailto:designblox00@gmail.com"
+                  href="mailto:customer.support@salifuandmaster.com"
                   className={styles.contactEmail}
                 >
-                  designblox00@gmail.com
+                  customer.support@salifuandmaster.com
                 </a>
               </>
             )}

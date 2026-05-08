@@ -93,10 +93,7 @@ export async function TermsContent() {
                 </p>
                 <p className={styles.paragraph}>
                   {t("sections.advertising.privacy")}{" "}
-                  <Link
-                    href={`/${locale}/privacy`}
-                    className={styles.link}
-                  >
+                  <Link href={`/${locale}/privacy`} className={styles.link}>
                     {t("sections.advertising.privacyLink")}
                   </Link>
                 </p>
@@ -127,10 +124,10 @@ export async function TermsContent() {
                   {t("sections.contact.description")}
                 </p>
                 <a
-                  href="mailto:designblox00@gmail.com"
+                  href="mailto:customer.support@salifuandmaster.com"
                   className={styles.contactEmail}
                 >
-                  designblox00@gmail.com
+                  customer.support@salifuandmaster.com
                 </a>
               </>
             )}
