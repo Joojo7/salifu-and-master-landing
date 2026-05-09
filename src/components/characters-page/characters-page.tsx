@@ -15,6 +15,7 @@ export async function CharactersContent() {
             return (
               <article
                 key={c.key}
+                id={c.key}
                 className={`${styles.card} ${styles[c.color]} ${reversed ? styles.reversed : ""}`}
               >
                 <div className={styles.photo}>

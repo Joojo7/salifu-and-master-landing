@@ -767,7 +767,7 @@
         "blurb": "You. A trotro mate hustling the streets to make your daily sales."
       },
       "masterKofi": {
-        "bubble": "sia where my money dey?",
+        "bubble": "Pay up!",
         "role": "The Driver",
         "name": "Master Kofi",
         "blurb": "Your boss. He takes his cut, and he's watching your every move."
@@ -796,6 +796,7 @@
     "kicker": "★ Power-ups",
     "title": "challey, stock up.",
     "sub": "Eleven consumables to help you survive the run. Spend wisely, Master Kofi still takes his cut.",
+    "learnMore": "How to play",
     "more": { "title": "+ More soon", "desc": "Brewing in the lab" },
     "items": {
       "iron-stomach": {

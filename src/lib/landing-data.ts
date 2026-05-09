@@ -13,25 +13,36 @@ export const FEATURES = [
 ] as const;
 
 export type RouteColor = "red" | "yellow" | "blue" | "green" | "coral" | "purple";
+export type CityPageKey = "accra" | "kumasi" | "capeCost" | "tamale";
 
-export const ROUTE_TILES: Array<{ id: string; color: RouteColor }> = [
-  { id: "madina-kaneshie", color: "red" },
-  { id: "kasoa-mallam", color: "yellow" },
-  { id: "lapaz-achimota", color: "blue" },
-  { id: "afienya-odorkor", color: "green" },
-  { id: "madina-tema", color: "coral" },
-  { id: "tema-ashaiman", color: "purple" },
-  { id: "grand-tour-accra", color: "yellow" },
-  { id: "kejetia-adum", color: "red" },
-  { id: "coastal-road", color: "blue" },
-  { id: "coastal-sweep", color: "green" },
-  { id: "castle-loop", color: "coral" },
-  { id: "hilltop-express", color: "purple" },
-  { id: "forest-trail", color: "green" },
-  { id: "mountain-loop", color: "red" },
+export const ROUTE_TILES: Array<{ id: string; color: RouteColor; cityKey: CityPageKey }> = [
+  { id: "madina-kaneshie", color: "red", cityKey: "accra" },
+  { id: "kasoa-mallam", color: "yellow", cityKey: "accra" },
+  { id: "lapaz-achimota", color: "blue", cityKey: "accra" },
+  { id: "afienya-odorkor", color: "green", cityKey: "accra" },
+  { id: "madina-tema", color: "coral", cityKey: "accra" },
+  { id: "tema-ashaiman", color: "purple", cityKey: "accra" },
+  { id: "grand-tour-accra", color: "yellow", cityKey: "accra" },
+  { id: "kejetia-adum", color: "red", cityKey: "kumasi" },
+  { id: "coastal-road", color: "blue", cityKey: "capeCost" },
+  { id: "coastal-sweep", color: "green", cityKey: "capeCost" },
+  { id: "castle-loop", color: "coral", cityKey: "capeCost" },
+  { id: "hilltop-express", color: "purple", cityKey: "capeCost" },
+  { id: "forest-trail", color: "green", cityKey: "capeCost" },
+  { id: "mountain-loop", color: "red", cityKey: "capeCost" },
 ];
 
 export type CityVariant = "accra" | "kumasi" | "cape" | "tamale";
+
+const CITY_VARIANT_TO_PAGE_KEY: Record<CityVariant, CityPageKey> = {
+  accra: "accra",
+  kumasi: "kumasi",
+  cape: "capeCost",
+  tamale: "tamale",
+};
+
+export const cityPageKeyForVariant = (variant: CityVariant): CityPageKey =>
+  CITY_VARIANT_TO_PAGE_KEY[variant];
 
 export const CITY_CARDS: Array<{
   variant: CityVariant;

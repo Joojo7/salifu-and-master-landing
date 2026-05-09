@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getLocale, getTranslations } from "next-intl/server";
 import { CAST } from "@/lib/landing-data";
 import styles from "./characters.module.scss";
 
 export async function Characters() {
   const t = await getTranslations("Characters");
+  const locale = await getLocale();
 
   return (
     <section className={styles.cast} id="characters">
@@ -19,7 +21,11 @@ export async function Characters() {
 
         <div className={styles.grid}>
           {CAST.map((c) => (
-            <article key={c.key} className={`${styles.card} ${styles[c.color]}`}>
+            <Link
+              key={c.key}
+              href={`/${locale}/characters#${c.key}`}
+              className={`${styles.card} ${styles[c.color]}`}
+            >
               <span className={styles.bubble}>{t(`items.${c.key}.bubble`)}</span>
               <div className={styles.photo}>
                 <Image src={c.img} alt={t(`items.${c.key}.name`)} fill sizes="20vw" />
@@ -27,7 +33,7 @@ export async function Characters() {
               <span className={styles.role}>{t(`items.${c.key}.role`)}</span>
               <h3>{t(`items.${c.key}.name`)}</h3>
               <p>{t(`items.${c.key}.blurb`)}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

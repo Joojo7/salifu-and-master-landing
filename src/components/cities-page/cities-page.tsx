@@ -15,6 +15,7 @@ export async function CitiesContent() {
             return (
               <article
                 key={city.key}
+                id={city.key}
                 className={`${styles.card} ${styles[city.color]} ${reversed ? styles.reversed : ""}`}
               >
                 <div className={styles.icon}>

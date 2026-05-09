@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
-import { CITY_CARDS } from "@/lib/landing-data";
+import Link from "next/link";
+import { getLocale, getTranslations } from "next-intl/server";
+import { CITY_CARDS, cityPageKeyForVariant } from "@/lib/landing-data";
 import styles from "./cities-showcase.module.scss";
 
 export async function CitiesShowcase() {
   const t = await getTranslations("CitiesShowcase");
+  const locale = await getLocale();
 
   return (
     <section className={styles.cities} id="cities">
@@ -23,8 +25,9 @@ export async function CitiesShowcase() {
 
         <div className={styles.grid}>
           {CITY_CARDS.map((city) => (
-            <article
+            <Link
               key={city.variant}
+              href={`/${locale}/cities#${cityPageKeyForVariant(city.variant)}`}
               className={`${styles.card} ${styles[city.variant]} ${city.status === "soon" ? styles.coming : ""}`}
             >
               <div className={styles.cardHead}>
@@ -53,7 +56,7 @@ export async function CitiesShowcase() {
                 </div>
               </div>
               <p className={styles.body}>{t(`cards.${city.variant}.body`)}</p>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

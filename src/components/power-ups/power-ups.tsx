@@ -1,10 +1,12 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getLocale, getTranslations } from "next-intl/server";
 import { POWER_UPS } from "@/lib/landing-data";
 import styles from "./power-ups.module.scss";
 
 export async function PowerUps() {
   const t = await getTranslations("PowerUps");
+  const locale = await getLocale();
 
   return (
     <section className={styles.powerups} id="power-ups">
@@ -14,6 +16,11 @@ export async function PowerUps() {
             <span className="kicker">{t("kicker")}</span>
             <h2>{t("title")}</h2>
             <p>{t("sub")}</p>
+          </div>
+          <div className="head-r">
+            <Link href={`/${locale}/how-to-play`} className={styles.learnMore}>
+              {t("learnMore")} →
+            </Link>
           </div>
         </div>
 
@@ -30,7 +37,7 @@ export async function PowerUps() {
               <p>{t(`items.${id}.desc`)}</p>
             </div>
           ))}
-          <div className={`${styles.tile} ${styles.tileMore}`}>
+          <Link href={`/${locale}/how-to-play`} className={`${styles.tile} ${styles.tileMore}`}>
             <Image
               src="/consumable-icons/iron-stomach.svg"
               alt=""
@@ -40,7 +47,7 @@ export async function PowerUps() {
             />
             <h4>{t("more.title")}</h4>
             <p>{t("more.desc")}</p>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

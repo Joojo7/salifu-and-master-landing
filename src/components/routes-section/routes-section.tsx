@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import Link from "next/link";
+import { getLocale, getTranslations } from "next-intl/server";
 import { ROUTE_TILES, ROUTE_MARQUEE_TEXT } from "@/lib/landing-data";
 import styles from "./routes-section.module.scss";
 
@@ -7,6 +8,7 @@ const HIGHLIGHTS = ["authentic", "difficulty", "growing"] as const;
 
 export async function RoutesSection() {
   const t = await getTranslations("RoutesSection");
+  const locale = await getLocale();
 
   return (
     <section className={styles.routes} id="routes">
@@ -33,12 +35,20 @@ export async function RoutesSection() {
 
       <div className="container" style={{ paddingBottom: "5rem" }}>
         <div className={styles.gridHead}>
-          <h3>{t("pickHeading")}</h3>
+          <h3>
+            <Link href={`/${locale}/cities`} className={styles.headingLink}>
+              {t("pickHeading")} →
+            </Link>
+          </h3>
           <span className={styles.pill}>{t("pickPill")}</span>
         </div>
         <div className={styles.grid}>
           {ROUTE_TILES.map((tile) => (
-            <a key={tile.id} className={`${styles.tile} ${styles[tile.color]}`}>
+            <Link
+              key={tile.id}
+              href={`/${locale}/cities#${tile.cityKey}`}
+              className={`${styles.tile} ${styles[tile.color]}`}
+            >
               <Image
                 src={`/map-icons-svg/${tile.id}.svg`}
                 alt=""
@@ -46,7 +56,7 @@ export async function RoutesSection() {
                 height={80}
               />
               <span>{t(`tiles.${tile.id}`)}</span>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
