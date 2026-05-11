@@ -4,8 +4,33 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Familjen_Grotesk, Fraunces, Bowlby_One_SC, Caveat } from "next/font/google";
 import { routing } from "@/i18n/routing";
-import { SITE_URL } from "@/lib/constants";
+import { ADSENSE_CLIENT_ID, SITE_URL } from "@/lib/constants";
+import { CookieBanner } from "@/components/cookie-banner/cookie-banner";
+import { CONSENT_STORAGE_KEY, CONSENT_VERSION } from "@/types/consent";
 import "../globals.scss";
+
+const consentDefaultScript = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+var __smConsent = "denied";
+try {
+  var raw = window.localStorage.getItem(${JSON.stringify(CONSENT_STORAGE_KEY)});
+  if (raw) {
+    var parsed = JSON.parse(raw);
+    if (parsed && parsed.version === ${CONSENT_VERSION} && parsed.status === "accepted") {
+      __smConsent = "granted";
+    }
+  }
+} catch (e) {}
+gtag("consent", "default", {
+  ad_storage: __smConsent,
+  ad_user_data: __smConsent,
+  ad_personalization: __smConsent,
+  analytics_storage: __smConsent,
+  wait_for_update: 500,
+});
+`;
 
 const fontBody = Familjen_Grotesk({
   subsets: ["latin"],
@@ -85,8 +110,19 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={fontClasses}>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: consentDefaultScript }} />
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <CookieBanner />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

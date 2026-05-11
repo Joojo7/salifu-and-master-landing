@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getTranslations, getLocale } from "next-intl/server";
+import { AdSlot } from "@/components/ad-slot/ad-slot";
+import { AD_SLOTS } from "@/lib/constants";
 import styles from "./about-page.module.scss";
 
 type SectionColor = "yellow" | "red" | "blue" | "green";
@@ -31,6 +33,8 @@ export async function AboutContent() {
               <p className={styles.paragraph}>{t(`${key}.description`)}</p>
             </article>
           ))}
+
+          <AdSlot slot={AD_SLOTS.articleInline} />
 
           <article className={`${styles.card} ${styles.green}`}>
             <span className={styles.kicker}>★ {t("howToPlayBrief.title")}</span>

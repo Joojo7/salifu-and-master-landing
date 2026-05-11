@@ -1,0 +1,13 @@
+@use "../../styles/tokens" as *;
+
+.wrap {
+  margin: 2rem auto;
+  min-height: 100px;
+  width: 100%;
+  max-width: $container-max;
+  overflow: hidden;
+
+  ins {
+    width: 100%;
+  }
+}

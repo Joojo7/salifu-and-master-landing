@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { AdSlot } from "@/components/ad-slot/ad-slot";
+import { AD_SLOTS } from "@/lib/constants";
 import { RouteCollage } from "./route-collage";
 import { IconCollage, type CollageVariant } from "./icon-collage";
 import styles from "./how-to-play-page.module.scss";
@@ -69,6 +71,8 @@ export async function HowToPlayContent() {
             );
           })}
         </div>
+
+        <AdSlot slot={AD_SLOTS.articleInline} />
 
         <div className={styles.tipsSection}>
           <span className={styles.kicker}>★ {t("tips.title")}</span>

@@ -1,6 +1,13 @@
 export const SITE_URL = "https://salifuandmaster.com";
 export const GAME_URL = "https://play.salifuandmaster.com/";
 
+export const ADSENSE_CLIENT_ID = "ca-pub-2882403014606841";
+
+export const AD_SLOTS = {
+  articleInline: "8890691533",
+  newsListInline: "1670677061",
+} as const;
+
 export const HERO_BANNER_SRC = "/assets/all-character-hero-banner.png";
 export const LOGO_SRC = "/assets/hero-logo.png";
 export const NAV_LOGO_SRC = "/assets/short-logo.png";

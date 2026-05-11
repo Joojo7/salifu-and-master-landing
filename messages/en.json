@@ -649,6 +649,13 @@
       "twitter": "Twitter / X \u00B7 @salifumate"
     }
   },
+  "CookieBanner": {
+    "title": "Cookies on Salifu & Master",
+    "body": "We use cookies to keep the site running, remember your preferences, and serve ads through Google AdSense. Reject and we'll only use what we need to keep things working.",
+    "accept": "Accept all",
+    "reject": "Reject non-essential",
+    "learnMore": "Privacy policy"
+  },
   "NewsSection": {
     "kicker": "★ Latest News",
     "title": "Fresh from the dev log",

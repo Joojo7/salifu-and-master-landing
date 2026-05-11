@@ -1,7 +1,12 @@
+import { Fragment } from "react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { CITY_PAGE_CARDS } from "@/lib/landing-data";
+import { AdSlot } from "@/components/ad-slot/ad-slot";
+import { AD_SLOTS } from "@/lib/constants";
 import styles from "./cities-page.module.scss";
+
+const AD_AFTER_INDEX = 1;
 
 export async function CitiesContent() {
   const t = await getTranslations("CitiesPage");
@@ -13,8 +18,8 @@ export async function CitiesContent() {
           {CITY_PAGE_CARDS.map((city, i) => {
             const reversed = i % 2 !== 0;
             return (
+              <Fragment key={city.key}>
               <article
-                key={city.key}
                 id={city.key}
                 className={`${styles.card} ${styles[city.color]} ${reversed ? styles.reversed : ""}`}
               >
@@ -50,6 +55,8 @@ export async function CitiesContent() {
                   </p>
                 </div>
               </article>
+                {i === AD_AFTER_INDEX && <AdSlot slot={AD_SLOTS.articleInline} />}
+              </Fragment>
             );
           })}
         </div>

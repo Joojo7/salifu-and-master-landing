@@ -55,6 +55,10 @@
   }
 }
 
+.adRow {
+  grid-column: 1 / -1;
+}
+
 .empty {
   color: $ink;
   padding: 4rem 0;

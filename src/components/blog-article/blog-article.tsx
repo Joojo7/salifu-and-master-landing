@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { BlogPost } from "@/types/blog";
+import { AdSlot } from "@/components/ad-slot/ad-slot";
+import { AD_SLOTS } from "@/lib/constants";
 import { ShareButtons } from "./share-buttons";
 import styles from "./blog-article.module.scss";
 
@@ -55,10 +57,12 @@ export function BlogArticle({ post, locale }: { post: BlogPost; locale: string }
               />
             </div>
           </div>
+          <AdSlot slot={AD_SLOTS.articleInline} />
           <div
             className={styles.content}
             dangerouslySetInnerHTML={{ __html: post.contentHtml }}
           />
+          <AdSlot slot={AD_SLOTS.articleInline} />
         </article>
       </div>
     </section>
