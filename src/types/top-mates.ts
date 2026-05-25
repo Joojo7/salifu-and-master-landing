@@ -1,4 +1,4 @@
-export interface TopDriverEntry {
+export interface TopMateEntry {
   rank: number;
   userId: string;
   displayName: string;
@@ -7,15 +7,15 @@ export interface TopDriverEntry {
   uniqueRoutes: number;
 }
 
-export interface TopDriversCycle {
+export interface TopMatesCycle {
   date: string;
   weekStart: string;
   weekEnd: string;
   seasonName: string;
-  entries: TopDriverEntry[];
+  entries: TopMateEntry[];
 }
 
 export interface PodiumCardProps {
-  entry: TopDriverEntry;
+  entry: TopMateEntry;
   size: "lg" | "md" | "sm";
 }

@@ -1,6 +1,6 @@
 import { Navii } from "@usenavii/react";
-import type { PodiumCardProps } from "@/types/top-drivers";
-import styles from "./top-drivers-podium.module.scss";
+import type { PodiumCardProps } from "@/types/top-mates";
+import styles from "./top-mates-podium.module.scss";
 
 const MEDAL: Record<number, string> = {
   1: "🥇",

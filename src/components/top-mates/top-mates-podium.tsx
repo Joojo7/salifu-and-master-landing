@@ -1,10 +1,10 @@
 import { GAME_URL } from "@/lib/constants";
-import type { TopDriversCycle } from "@/types/top-drivers";
+import type { TopMatesCycle } from "@/types/top-mates";
 import { PodiumCard } from "./podium-card";
-import styles from "./top-drivers-podium.module.scss";
+import styles from "./top-mates-podium.module.scss";
 
 interface Props {
-  cycle: TopDriversCycle;
+  cycle: TopMatesCycle;
 }
 
 const formatRange = (start: string, end: string): string => {
@@ -15,7 +15,7 @@ const formatRange = (start: string, end: string): string => {
   return `${fmt(s)} – ${fmt(e)}, ${e.getFullYear()}`;
 };
 
-export function TopDriversPodium({ cycle }: Props) {
+export function TopMatesPodium({ cycle }: Props) {
   const first = cycle.entries.find((e) => e.rank === 1);
   const second = cycle.entries.find((e) => e.rank === 2);
   const third = cycle.entries.find((e) => e.rank === 3);
@@ -33,7 +33,7 @@ export function TopDriversPodium({ cycle }: Props) {
         </span>
 
         <h1 className={styles.title}>
-          Top <em>5</em> drivers
+          Top <em>5</em> mates
         </h1>
 
         <p className={styles.subtitle}>{formatRange(cycle.weekStart, cycle.weekEnd)}</p>

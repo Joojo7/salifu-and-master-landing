@@ -1,14 +1,14 @@
 // Weekly top-driver standings. Add a new entry per cycle. The `date` key is the
 // cycle's end date in ISO `YYYY-MM-DD` (this matches the URL segment
-// `/[locale]/top-drivers/[date]`).
+// `/[locale]/top-mates/[date]`).
 //
 // Data is a static snapshot, pulled once from `leaderboard_totals` in prod and
 // committed here. Refresh by re-running the aggregation query and updating the
 // matching entry.
 
-import type { TopDriversCycle } from "@/types/top-drivers";
+import type { TopMatesCycle } from "@/types/top-mates";
 
-const CYCLES: Record<string, TopDriversCycle> = {
+const CYCLES: Record<string, TopMatesCycle> = {
   "2026-05-23": {
     date: "2026-05-23",
     weekStart: "2026-05-17",
@@ -59,10 +59,10 @@ const CYCLES: Record<string, TopDriversCycle> = {
   },
 };
 
-export function getTopDriversCycle(date: string): TopDriversCycle | null {
+export function getTopMatesCycle(date: string): TopMatesCycle | null {
   return CYCLES[date] ?? null;
 }
 
-export function getAllTopDriverDates(): string[] {
+export function getAllTopMateDates(): string[] {
   return Object.keys(CYCLES);
 }
