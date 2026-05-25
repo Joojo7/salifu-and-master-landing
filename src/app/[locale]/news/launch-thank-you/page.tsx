@@ -11,10 +11,10 @@ type Props = {
 export const metadata: Metadata = {
   title: "Thank you — Launch Week — Salifu & Master",
   description:
-    "214 drivers. 312 runs. GHC 148K earned. Thank you for showing up to launch week.",
+    "214 mates. 312 runs. GHC 148K earned. Thank you for showing up to launch week.",
   openGraph: {
     title: "Thank you — Launch Week",
-    description: "214 drivers showed up to drive trotros across Ghana in week one.",
+    description: "214 mates showed up to hustle trotros across Ghana in week one.",
   },
 };
 

@@ -11,7 +11,7 @@ tags:
   - thank-you
   - milestones
 summary: >-
-  214 drivers. 312 runs. GHC 148K earned. A short note on the first week and
+  214 mates. 312 runs. GHC 148K earned. A short note on the first week and
   what comes next.
 ---
 

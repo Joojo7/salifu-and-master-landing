@@ -4,9 +4,9 @@ import styles from "./launch-thank-you.module.scss";
 
 const STATS: StatTile[] = [
   {
-    label: "Drivers",
+    label: "Mates",
     value: "214",
-    detail: "Signed up to play",
+    detail: "Signed up to hustle",
     accent: "yellow",
     rotation: "r1",
   },
@@ -20,14 +20,14 @@ const STATS: StatTile[] = [
   {
     label: "Earnings",
     value: "GHC 148K",
-    detail: "Distributed across all drivers",
+    detail: "Collected across the streets",
     accent: "blue",
     rotation: "r3",
   },
   {
     label: "Routes",
     value: "13",
-    detail: "Unique journeys driven",
+    detail: "Unique journeys hustled",
     accent: "green",
     rotation: "r1",
   },
@@ -51,7 +51,7 @@ export function LaunchThankYou() {
 
         <p className={styles.tagline}>
           We launched <u>Salifu &amp; Master</u> last week. You showed up.
-          You drove. You posted. You DM&apos;d screenshots. You made the
+          You hustled. You posted. You DM&apos;d screenshots. You made the
           first week feel like a station on a Friday evening.
         </p>
 
