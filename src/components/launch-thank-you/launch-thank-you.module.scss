@@ -1,0 +1,205 @@
+@use "../../styles/tokens" as *;
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $paper;
+  padding: 4rem 1.25rem 6rem;
+}
+
+.halftone {
+  @include halftone(rgba(0, 0, 0, 0.18));
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(255, 205, 28, 0.4), transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(31, 155, 214, 0.25), transparent 55%);
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  max-width: 920px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: $yellow;
+  color: $ink;
+  padding: 0.5rem 1rem;
+  border: $stroke-thin;
+  border-radius: $radius-pill;
+  font-family: $font-poster;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: $shadow-sm;
+  transform: rotate(-2deg);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $red;
+  box-shadow: 0 0 0 2px $ink;
+}
+
+.title {
+  @include section-title;
+  color: $ink;
+  text-shadow:
+    6px 6px 0 $yellow,
+    -2px -2px 0 $yellow,
+    2px -2px 0 $yellow,
+    -2px 2px 0 $yellow,
+    2px 2px 0 $yellow;
+  margin: 0;
+
+  em {
+    font-style: normal;
+    color: $red;
+    text-shadow: none;
+  }
+}
+
+.tagline {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  color: $ink;
+  background: #fff;
+  border: $stroke;
+  border-radius: $radius-md;
+  box-shadow: $shadow;
+  padding: 1rem 1.25rem;
+  max-width: 720px;
+  margin: 0;
+
+  u {
+    text-decoration: none;
+    background: $red;
+    color: #fff;
+    padding: 0 0.3em;
+    border-radius: 4px;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.statcard {
+  @include poster-card(#fff, $shadow);
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.yellow { background: $yellow; }
+.red { background: $red; color: #fff; }
+.blue { background: $blue; color: #fff; }
+.green { background: $green; color: #fff; }
+
+.r1 { transform: rotate(2deg); }
+.r2 { transform: rotate(-2deg); }
+.r3 { transform: rotate(1.5deg); }
+
+.statValue {
+  font-family: $font-poster;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  line-height: 1;
+}
+
+.statLabel {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.statDetail {
+  font-family: $font-body;
+  font-size: 0.78rem;
+  opacity: 0.85;
+  letter-spacing: 0.04em;
+}
+
+.note {
+  font-family: $font-body;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: $ink;
+  max-width: 640px;
+  margin: 0;
+}
+
+.cta {
+  @include btn($red, #fff);
+  font-family: $font-poster;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.signoff {
+  font-family: $font-hand;
+  font-size: 1.6rem;
+  color: $ink;
+  line-height: 1.2;
+  margin-top: 1rem;
+
+  strong {
+    font-weight: 700;
+    font-size: 1.8rem;
+  }
+}
+
+.stripe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 36px;
+  background: repeating-linear-gradient(
+    90deg,
+    $yellow 0 40px,
+    $ink 40px 80px
+  );
+  border-top: $stroke;
+}

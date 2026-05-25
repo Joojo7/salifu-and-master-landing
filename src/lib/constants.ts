@@ -25,6 +25,7 @@ export const NAV_PAGE_LINKS = [
   { key: "characters", href: "/characters" },
   { key: "cities", href: "/cities" },
   { key: "howToPlay", href: "/how-to-play" },
+  { key: "topDrivers", href: "/top-drivers" },
   { key: "news", href: "/news" },
   { key: "about", href: "/about" },
 ] as const;
