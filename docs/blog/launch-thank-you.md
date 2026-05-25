@@ -1,14 +1,18 @@
 ---
-title: "Thank You — Launch Week"
+title: Thank You — Launch Week
 slug: launch-thank-you
 category: launch
 status: ready
-publishDate: "2026-05-25"
+publishDate: '2026-05-25'
 banner: /blog-images/launch-thank-you.png
-
-twitterThread: null
-tags: [launch, thank-you, milestones]
-summary: "214 drivers. 312 runs. GHC 148K earned. A short note on the first week and what comes next."
+twitterThread: twitter-drafts/launch-thank-you-thread.md
+tags:
+  - launch
+  - thank-you
+  - milestones
+summary: >-
+  214 drivers. 312 runs. GHC 148K earned. A short note on the first week and
+  what comes next.
 ---
 
 # Thank You Launch Week
