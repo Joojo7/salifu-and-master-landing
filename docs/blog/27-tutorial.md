@@ -1,6 +1,7 @@
 ---
 title: "Tutorial"
 slug: tutorial
+banner: /map-icons-svg/training.svg
 category: modes
 status: draft
 publishDate: null

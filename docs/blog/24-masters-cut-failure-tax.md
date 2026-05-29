@@ -1,6 +1,7 @@
 ---
 title: "Master's Cut & the Failure Tax"
 slug: masters-cut-failure-tax
+banner: /characters/master-happy.png
 category: events
 status: draft
 publishDate: null

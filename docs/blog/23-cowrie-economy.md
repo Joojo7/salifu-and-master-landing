@@ -1,6 +1,7 @@
 ---
 title: "The Cowrie Economy"
 slug: cowrie-economy
+banner: /consumable-icons/serwaa-blessing.svg
 category: events
 status: draft
 publishDate: null

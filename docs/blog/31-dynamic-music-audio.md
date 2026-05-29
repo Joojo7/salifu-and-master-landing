@@ -1,6 +1,7 @@
 ---
 title: "Dynamic Music & Audio"
 slug: dynamic-music-audio
+banner: /in-game-screenshots/gameplay-odorkor.png
 category: tech
 status: draft
 publishDate: null

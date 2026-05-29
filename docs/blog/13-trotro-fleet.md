@@ -1,6 +1,7 @@
 ---
 title: Your Trotro Fleet
 slug: trotro-fleet
+banner: /in-game-screenshots/trotro-select-front.png
 category: vehicles
 status: ready
 publishDate: null

@@ -1,6 +1,7 @@
 ---
 title: "Cloud Save & Cross-Device Sync"
 slug: cloud-save-sync
+banner: /in-game-screenshots/main-menu.png
 category: tech
 status: draft
 publishDate: null

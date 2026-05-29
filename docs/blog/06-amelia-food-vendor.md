@@ -1,6 +1,7 @@
 ---
 title: Amelia the Food Vendor
 slug: amelia-food-vendor
+banner: /characters/amelia-happy.png
 category: characters
 status: ready
 publishDate: null

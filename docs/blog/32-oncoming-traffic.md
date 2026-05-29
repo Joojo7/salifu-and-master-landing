@@ -1,6 +1,7 @@
 ---
 title: "Oncoming Traffic"
 slug: oncoming-traffic
+banner: /in-game-screenshots/gameplay-dansoman.png
 category: tech
 status: draft
 publishDate: null

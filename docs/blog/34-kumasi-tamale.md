@@ -1,6 +1,7 @@
 ---
 title: "Kumasi & Tamale"
 slug: kumasi-tamale
+banner: /map-icons-svg/kumasi.svg
 category: coming-soon
 status: draft
 publishDate: null

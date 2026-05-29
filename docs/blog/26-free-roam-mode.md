@@ -1,6 +1,7 @@
 ---
 title: "Free Roam Mode"
 slug: free-roam-mode
+banner: /screenshots/desktop-in-game/gameplay-sunset-driving.png
 category: modes
 status: draft
 publishDate: null

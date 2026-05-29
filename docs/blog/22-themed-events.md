@@ -1,6 +1,7 @@
 ---
 title: "Themed Events"
 slug: themed-events
+banner: /consumable-icons/masters-mercy.svg
 category: events
 status: draft
 publishDate: null

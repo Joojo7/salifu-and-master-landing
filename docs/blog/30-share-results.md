@@ -1,6 +1,7 @@
 ---
 title: "Share Your Results"
 slug: share-results
+banner: /screenshots/earn-stars-at-day-end.png
 category: tech
 status: draft
 publishDate: null

@@ -1,6 +1,7 @@
 ---
 title: "Cosmetics Preview"
 slug: cosmetics-preview
+banner: /in-game-screenshots/trotro-sprinter.png
 category: coming-soon
 status: draft
 publishDate: null

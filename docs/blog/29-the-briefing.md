@@ -1,6 +1,7 @@
 ---
 title: "The Briefing"
 slug: the-briefing
+banner: /screenshots/mobile-in-game/master-kofi-dialogue.png
 category: tech
 status: draft
 publishDate: null

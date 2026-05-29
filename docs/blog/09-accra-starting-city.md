@@ -1,6 +1,7 @@
 ---
 title: 'Accra, the Starting City'
 slug: accra-starting-city
+banner: /map-icons-svg/accra.svg
 category: routes
 status: ready
 publishDate: null

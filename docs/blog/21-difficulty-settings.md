@@ -1,6 +1,7 @@
 ---
 title: "Difficulty Settings"
 slug: difficulty-settings
+banner: /map-icons-svg/grand-tour.svg
 category: progression
 status: draft
 publishDate: null

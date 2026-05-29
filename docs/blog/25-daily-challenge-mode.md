@@ -1,6 +1,7 @@
 ---
 title: "Daily Challenge Mode"
 slug: daily-challenge-mode
+banner: /resource-icons-svg/time.svg
 category: modes
 status: draft
 publishDate: null

@@ -1,6 +1,7 @@
 ---
 title: Dr. Panie
 slug: dr-panie
+banner: /characters/dr-panie-happy.png
 category: characters
 status: ready
 publishDate: null

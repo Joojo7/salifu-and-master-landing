@@ -1,6 +1,7 @@
 ---
 title: 'Serwaa, Your Girlfriend'
 slug: serwaa-girlfriend
+banner: /characters/serwaa-wink.png
 category: characters
 status: ready
 publishDate: null
