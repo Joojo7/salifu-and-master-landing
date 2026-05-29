@@ -1,13 +1,17 @@
 ---
-title: "PvP Challenges"
+title: PvP Challenges
 slug: pvp-challenges
 category: competition
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/pvp-challenges-thread.md
 banner: /screenshots/pick-up-passengers-at-stops.png
-tags: [pvp, multiplayer, challenges, head-to-head]
-summary: "Same route. Same bus. Same loadout. Whose mate is sharper?"
+tags:
+  - pvp
+  - multiplayer
+  - challenges
+  - head-to-head
+summary: Same route. Same bus. Same loadout. Whose mate is sharper?
 ---
 
 # PvP Challenges

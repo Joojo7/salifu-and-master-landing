@@ -1,13 +1,20 @@
 ---
-title: "Upgrade Trees"
+title: Upgrade Trees
 slug: upgrade-trees
 category: vehicles
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/upgrade-trees-thread.md
 banner: /in-game-screenshots/upgrade-shop.png
-tags: [upgrades, progression, capacity, speed, stamina]
-summary: "Capacity, speed, stamina, health, sanity, reaction. Six trees, fourteen upgrades, one career."
+tags:
+  - upgrades
+  - progression
+  - capacity
+  - speed
+  - stamina
+summary: >-
+  Capacity, speed, stamina, health, sanity, reaction. Six trees, fourteen
+  upgrades, one career.
 ---
 
 # Upgrade Trees

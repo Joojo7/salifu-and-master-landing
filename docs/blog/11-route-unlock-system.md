@@ -1,13 +1,19 @@
 ---
-title: "Route Difficulty & Unlock System"
+title: Route Difficulty & Unlock System
 slug: route-unlock-system
 category: routes
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/route-unlock-system-thread.md
 banner: /in-game-screenshots/route-select-wide.png
-tags: [progression, routes, unlock, stars]
-summary: "Easy to hard, route by route. The progression chain that keeps every player honest."
+tags:
+  - progression
+  - routes
+  - unlock
+  - stars
+summary: >-
+  Easy to hard, route by route. The progression chain that keeps every player
+  honest.
 ---
 
 # Route Difficulty & Unlock System

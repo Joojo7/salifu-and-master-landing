@@ -1,13 +1,19 @@
 ---
-title: "Leveling System"
+title: Leveling System
 slug: leveling-system
 category: progression
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/leveling-system-thread.md
 banner: /resource-icons-svg/money-target.svg
-tags: [level, progression, unlocks, mate]
-summary: "Every three routes completed, your mate goes up a level. Simple, honest, and the gate to almost everything."
+tags:
+  - level
+  - progression
+  - unlocks
+  - mate
+summary: >-
+  Every three routes completed, your mate goes up a level. Simple, honest, and
+  the gate to almost everything.
 ---
 
 # Leveling System

@@ -1,13 +1,17 @@
 ---
-title: "Weekly Leaderboard & Hall of Fame"
+title: Weekly Leaderboard & Hall of Fame
 slug: leaderboard-hall-of-fame
 category: competition
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/leaderboard-hall-of-fame-thread.md
 banner: /screenshots/mobile-in-game/leaderboard.png
-tags: [leaderboard, ranking, competitive, hall-of-fame]
-summary: "Every Sunday the board resets. The mates who finish on top join the legends."
+tags:
+  - leaderboard
+  - ranking
+  - competitive
+  - hall-of-fame
+summary: Every Sunday the board resets. The mates who finish on top join the legends.
 ---
 
 # Weekly Leaderboard & Hall of Fame

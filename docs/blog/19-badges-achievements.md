@@ -1,13 +1,19 @@
 ---
-title: "Badges & Achievements"
+title: Badges & Achievements
 slug: badges-achievements
 category: progression
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/badges-achievements-thread.md
 banner: /resource-icons-svg/money-3star.svg
-tags: [badges, achievements, milestones, mastery]
-summary: "Six badges. Five tiers each. Small symbols that tell the story of a mate's career."
+tags:
+  - badges
+  - achievements
+  - milestones
+  - mastery
+summary: >-
+  Six badges. Five tiers each. Small symbols that tell the story of a mate's
+  career.
 ---
 
 # Badges & Achievements

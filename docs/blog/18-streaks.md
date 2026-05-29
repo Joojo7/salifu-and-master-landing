@@ -1,13 +1,19 @@
 ---
-title: "Streaks"
+title: Streaks
 slug: streaks
 category: progression
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/streaks-thread.md
 banner: /assets/flaming-knuckle.png
-tags: [streaks, daily, consecutive, motivation]
-summary: "Two flames burn in the game. One for showing up every day. One for finishing without failing."
+tags:
+  - streaks
+  - daily
+  - consecutive
+  - motivation
+summary: >-
+  Two flames burn in the game. One for showing up every day. One for finishing
+  without failing.
 ---
 
 # Streaks

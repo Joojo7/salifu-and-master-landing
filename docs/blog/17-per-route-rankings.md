@@ -1,13 +1,19 @@
 ---
-title: "Per-Route Rankings"
+title: Per-Route Rankings
 slug: per-route-rankings
 category: competition
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/per-route-rankings-thread.md
 banner: /map-icons-svg/madina-kaneshie.svg
-tags: [ranking, stats, best-times, mastery]
-summary: "Every route keeps its own book. Best stars, best earnings, fastest run, perfect days, no-vendor runs."
+tags:
+  - ranking
+  - stats
+  - best-times
+  - mastery
+summary: >-
+  Every route keeps its own book. Best stars, best earnings, fastest run,
+  perfect days, no-vendor runs.
 ---
 
 # Per-Route Rankings

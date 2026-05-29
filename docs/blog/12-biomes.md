@@ -1,13 +1,20 @@
 ---
-title: "Biomes"
+title: Biomes
 slug: biomes
 category: routes
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/biomes-thread.md
 banner: /map-icons-svg/coastal-road.svg
-tags: [environment, forest, coast, hills, historic]
-summary: "Every grid cell carries a biome. The biome decides what you see, what you hear, and how the road feels."
+tags:
+  - environment
+  - forest
+  - coast
+  - hills
+  - historic
+summary: >-
+  Every grid cell carries a biome. The biome decides what you see, what you
+  hear, and how the road feels.
 ---
 
 # Biomes

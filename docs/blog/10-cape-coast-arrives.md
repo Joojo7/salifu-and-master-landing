@@ -1,13 +1,19 @@
 ---
-title: "Cape Coast Arrives"
+title: Cape Coast Arrives
 slug: cape-coast-arrives
 category: routes
 status: ready
 publishDate: null
-twitterThread: null
+twitterThread: twitter-drafts/cape-coast-arrives-thread.md
 banner: /map-icons-svg/cape-coast.svg
-tags: [map, cape-coast, routes, biomes]
-summary: "Seven routes through forest, hills, coast, and the historic castle district. The old capital joins the map."
+tags:
+  - map
+  - cape-coast
+  - routes
+  - biomes
+summary: >-
+  Seven routes through forest, hills, coast, and the historic castle district.
+  The old capital joins the map.
 ---
 
 # Cape Coast Arrives
