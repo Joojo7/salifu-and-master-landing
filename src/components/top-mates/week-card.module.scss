@@ -1,0 +1,170 @@
+@use "../../styles/tokens" as *;
+
+.weekCard {
+  @include poster-card(#fff, $shadow);
+  display: block;
+  padding: 1.25rem 1.25rem 1rem;
+  color: $ink;
+  text-decoration: none;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+}
+
+.weekCard:hover {
+  transform: translateY(-4px);
+  box-shadow: $shadow-lg;
+}
+
+.weekCardLatest {
+  background: $yellow;
+  border: $stroke;
+  box-shadow: $shadow-lg;
+
+  .weekTop3Item {
+    background: #fff;
+  }
+
+  .weekEntryEarnings {
+    color: $ink;
+  }
+}
+
+.weekCardLatest:hover {
+  box-shadow: 12px 12px 0 $ink;
+}
+
+.weekCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.weekTitle {
+  font-family: $font-display;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin: 0;
+  color: $ink;
+  text-align: left;
+  line-height: 1.05;
+}
+
+.weekDates {
+  font-family: $font-body;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: rgba(13, 13, 13, 0.65);
+  margin: 0.25rem 0 0;
+  text-align: left;
+}
+
+.latestBadge {
+  flex-shrink: 0;
+  background: $red;
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border: $stroke-thin;
+  border-radius: $radius-pill;
+  font-family: $font-poster;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0 $ink;
+  transform: rotate(3deg);
+}
+
+.weekTop3 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+  .weekTop3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.weekTop3Item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: $stroke-thin;
+  border-radius: $radius-sm;
+  padding: 0.5rem 0.6rem;
+  box-shadow: 3px 3px 0 $ink;
+}
+
+.weekMedal {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  filter: drop-shadow(1px 1px 0 $ink);
+}
+
+.weekAvatar {
+  border-radius: 50%;
+  border: $stroke-thin;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.weekEntryText {
+  min-width: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.weekEntryName {
+  font-family: $font-display;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.1;
+  color: $ink;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.weekEntryEarnings {
+  font-family: $font-poster;
+  font-size: 0.85rem;
+  color: $red;
+  margin-top: 0.15rem;
+}
+
+.weekFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 2px dashed rgba(13, 13, 13, 0.35);
+}
+
+.weekFooterText {
+  font-family: $font-poster;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $ink;
+}
+
+.weekFooterArrow {
+  font-family: $font-poster;
+  font-size: 1.1rem;
+  color: $red;
+  transition: transform 0.18s ease;
+}
+
+.weekCard:hover .weekFooterArrow {
+  transform: translateX(4px);
+}

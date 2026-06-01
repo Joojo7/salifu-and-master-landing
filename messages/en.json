@@ -872,5 +872,16 @@
     "title": "News",
     "subtitle": "What we are building, how we are building it, and why it matters.",
     "metaDescription": "Dev logs, feature deep-dives, and behind-the-scenes stories from the Salifu & Master team."
+  },
+  "TopMatesIndex": {
+    "metaTitle": "Top mates by week, Salifu & Master",
+    "metaDescription": "Every closed weekly cycle of the Salifu & Master top mates leaderboard, latest first.",
+    "sticker": "Every week, fresh winners",
+    "titleLead": "Top ",
+    "titleHighlight": "mates",
+    "titleTrail": " by week",
+    "subtitle": "The weekly leaderboard resets every Sunday. Each row is a closed cycle.",
+    "latestBadge": "Latest",
+    "seeFullPodium": "See full podium"
   }
 }

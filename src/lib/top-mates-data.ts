@@ -9,6 +9,54 @@
 import type { TopMatesCycle } from "@/types/top-mates";
 
 const CYCLES: Record<string, TopMatesCycle> = {
+  "2026-05-30": {
+    date: "2026-05-30",
+    weekStart: "2026-05-24",
+    weekEnd: "2026-05-30",
+    seasonName: "Week of May 24",
+    entries: [
+      {
+        rank: 1,
+        userId: "3172bf78-a924-4708-a1a8-3b9cc9724649",
+        displayName: "thanos",
+        totalEarnings: 14973,
+        totalRuns: 42,
+        uniqueRoutes: 10,
+      },
+      {
+        rank: 2,
+        userId: "85974f3c-7a56-4b0e-bba7-92585de064a9",
+        displayName: "LordRa",
+        totalEarnings: 14310,
+        totalRuns: 39,
+        uniqueRoutes: 9,
+      },
+      {
+        rank: 3,
+        userId: "26917829-f372-4025-91cd-2c108f659bac",
+        displayName: "Smoke",
+        totalEarnings: 10115,
+        totalRuns: 19,
+        uniqueRoutes: 4,
+      },
+      {
+        rank: 4,
+        userId: "f315a76c-e930-4726-a9cf-4a7b133d4eb9",
+        displayName: "Sisi",
+        totalEarnings: 5998,
+        totalRuns: 20,
+        uniqueRoutes: 5,
+      },
+      {
+        rank: 5,
+        userId: "a20323a0-cf0c-4612-a61d-9e33e42d81eb",
+        displayName: "Barima",
+        totalEarnings: 5409,
+        totalRuns: 6,
+        uniqueRoutes: 6,
+      },
+    ],
+  },
   "2026-05-23": {
     date: "2026-05-23",
     weekStart: "2026-05-17",
@@ -65,4 +113,13 @@ export function getTopMatesCycle(date: string): TopMatesCycle | null {
 
 export function getAllTopMateDates(): string[] {
   return Object.keys(CYCLES);
+}
+
+// Newest first. ISO `YYYY-MM-DD` keys sort lexicographically the same as
+// chronologically, so reverse-sort is correct.
+export function getAllTopMatesCycles(): TopMatesCycle[] {
+  return Object.keys(CYCLES)
+    .sort()
+    .reverse()
+    .map((date) => CYCLES[date]);
 }

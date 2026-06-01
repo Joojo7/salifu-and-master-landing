@@ -1,13 +1,40 @@
-import { redirect } from "next/navigation";
-import { getAllTopMateDates } from "@/lib/top-mates-data";
+import { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Nav } from "@/components/nav/nav";
+import { Footer } from "@/components/footer/footer";
+import { TopMatesList } from "@/components/top-mates/top-mates-list";
+import { getAllTopMatesCycles } from "@/lib/top-mates-data";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "TopMatesIndex" });
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+    },
+  };
+}
+
 export default async function TopMatesIndex({ params }: Props) {
   const { locale } = await params;
-  // Latest cycle is always the largest ISO date when sorted lexicographically.
-  const latest = [...getAllTopMateDates()].sort().reverse()[0];
-  redirect(`/${locale}/top-mates/${latest}`);
+  setRequestLocale(locale);
+
+  const cycles = getAllTopMatesCycles();
+
+  return (
+    <>
+      <Nav />
+      <main>
+        <TopMatesList cycles={cycles} locale={locale} />
+      </main>
+      <Footer />
+    </>
+  );
 }

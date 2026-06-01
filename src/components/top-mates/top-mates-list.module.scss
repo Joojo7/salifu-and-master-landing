@@ -1,0 +1,104 @@
+@use "../../styles/tokens" as *;
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: $blue;
+  padding: 4rem 1.25rem 7rem;
+}
+
+.halftone {
+  @include halftone(rgba(0, 0, 0, 0.35));
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(255, 205, 28, 0.4), transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(238, 39, 55, 0.3), transparent 55%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.55) 80%, $ink 100%);
+}
+
+.inner {
+  position: relative;
+  z-index: 2;
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: $yellow;
+  color: $ink;
+  padding: 0.5rem 1rem;
+  border: $stroke-thin;
+  border-radius: $radius-pill;
+  font-family: $font-poster;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: $shadow-sm;
+  transform: rotate(-2deg);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $red;
+  box-shadow: 0 0 0 2px $ink;
+}
+
+.title {
+  @include section-title;
+  margin: 0;
+
+  em {
+    font-style: normal;
+    color: $red;
+  }
+}
+
+.subtitle {
+  font-family: $font-body;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  text-shadow: 2px 2px 0 $ink;
+  max-width: 560px;
+}
+
+.weekList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.stripe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 36px;
+  background: repeating-linear-gradient(90deg, $yellow 0 40px, $ink 40px 80px);
+  border-top: $stroke;
+}
