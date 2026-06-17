@@ -9,6 +9,54 @@
 import type { TopMatesCycle } from "@/types/top-mates";
 
 const CYCLES: Record<string, TopMatesCycle> = {
+  "2026-06-13": {
+    date: "2026-06-13",
+    weekStart: "2026-06-07",
+    weekEnd: "2026-06-13",
+    seasonName: "Week of June 7",
+    entries: [
+      {
+        rank: 1,
+        userId: "f315a76c-e930-4726-a9cf-4a7b133d4eb9",
+        displayName: "Sisi",
+        totalEarnings: 34389,
+        totalRuns: 91,
+        uniqueRoutes: 13,
+      },
+      {
+        rank: 2,
+        userId: "d18281ad-f589-4607-ab8b-3597d74a48a2",
+        displayName: "Fairy",
+        totalEarnings: 23704,
+        totalRuns: 61,
+        uniqueRoutes: 12,
+      },
+      {
+        rank: 3,
+        userId: "e2070164-a73e-4d6e-b236-6d5f8752f06e",
+        displayName: "Hidden-drygon",
+        totalEarnings: 7035,
+        totalRuns: 8,
+        uniqueRoutes: 4,
+      },
+      {
+        rank: 4,
+        userId: "ab5485c6-b073-46f7-a4dd-dd21552842fa",
+        displayName: "Small-boy-big-God",
+        totalEarnings: 1544,
+        totalRuns: 2,
+        uniqueRoutes: 2,
+      },
+      {
+        rank: 5,
+        userId: "edbc07b6-25d1-4f6f-a944-f944845e82bb",
+        displayName: "Gabby",
+        totalEarnings: 1222,
+        totalRuns: 4,
+        uniqueRoutes: 3,
+      },
+    ],
+  },
   "2026-06-06": {
     date: "2026-06-06",
     weekStart: "2026-05-31",
